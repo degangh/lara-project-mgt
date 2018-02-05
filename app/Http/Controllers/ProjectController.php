@@ -12,11 +12,17 @@ class ProjectController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    
+     public function __construct()
+     {
+         $this->middleware('auth');
+     }
+    
+     public function index(Request $request)
     {
         //
         
-        $projects = Project::where('owner_id', $request->user()->id)->paginate(10);
+        $projects = Project::where('owner_id', $request->user()->id)->get();
 
 
         
