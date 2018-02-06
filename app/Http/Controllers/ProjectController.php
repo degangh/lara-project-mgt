@@ -13,6 +13,7 @@ class ProjectController extends Controller
      * @return \Illuminate\Http\Response
      */
     
+    
      public function __construct()
      {
          $this->middleware('auth');
@@ -51,6 +52,13 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
         //
+        echo "Store method called";
+
+        $request->user()->projects()->create([
+            "name" => $request->name,
+        ]);
+
+        return redirect(url("/projects"));
     }
 
     /**
