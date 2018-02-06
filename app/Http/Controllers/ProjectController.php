@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Project;
+use App\Repositories\ProjectRepository;
 
 class ProjectController extends Controller
 {
@@ -12,23 +12,21 @@ class ProjectController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    protected $projects;
     
     
-     public function __construct()
+     public function __construct(ProjectRepository $projects)
      {
          $this->middleware('auth');
+         $this->projects = $projects;
      }
     
      public function index(Request $request)
     {
         //
         
-        $projects = Project::where('owner_id', $request->user()->id)->get();
-
-
-        
         return view('project', [
-            'projects' => $projects
+            'projects' => $this->projects->forUser($request->user())
             ]);
         
     }
@@ -51,13 +49,12 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        echo "Store method called";
-
+        
+        
         $request->user()->projects()->create([
             "name" => $request->name,
         ]);
-
+        
         return redirect(url("/projects"));
     }
 
