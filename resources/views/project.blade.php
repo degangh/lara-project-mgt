@@ -32,12 +32,20 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
             <div class="panel-heading">My Projects</div>
+            <div class="panel-body">
+            <table class="table table-striped">
                 @foreach ($projects as $project)
-                <div class="panel-body">
+                <tr>
+                <td>
                 {{$project->name}}
-                </div>
+                </td>
+                <td>
+                <a href="{{url('/projects')}}/{{$project->id}}" class="btn btn-default">View</a>
+                </td>
+                </tr>
                 @endforeach
-
+                </div>
+            </table>
             </div>
         </div>
     </div>
