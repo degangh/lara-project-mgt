@@ -52,11 +52,11 @@ class ProjectController extends Controller
     {
         
         
-        $request->user()->projects()->create([
+        $project = $request->user()->projects()->create([
             "name" => $request->name,
         ]);
         
-        return redirect(url("/projects"));
+        return redirect(url("/projects/".$project->id));
     }
 
     /**
