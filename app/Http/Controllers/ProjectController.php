@@ -68,7 +68,10 @@ class ProjectController extends Controller
     public function show(Project $project)
     {
         //
-        var_dump($project);
+        
+        return view('tasks', [
+            'tasks' => $project->tasks
+            ]);
         
     }
 
