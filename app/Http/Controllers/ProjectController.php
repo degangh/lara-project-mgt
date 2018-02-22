@@ -67,7 +67,8 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-       
+        $this->authorize('show', $project);
+        
         return view('tasks', [
             'tasks' => $project->tasks,
             'project' => $project
