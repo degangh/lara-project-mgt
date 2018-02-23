@@ -38,8 +38,8 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        echo "add task";
+        //authorize?
+        
         $task = $request->user()->tasks()->create([
             "name" => $request->name,
             "project_id" => $request->project_id,
