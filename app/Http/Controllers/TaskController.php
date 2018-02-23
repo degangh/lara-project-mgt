@@ -6,6 +6,8 @@ use App\Task;
 use App\Project;
 use App\User;
 
+use \Crypt;
+
 use Illuminate\Http\Request;
 
 class TaskController extends Controller
@@ -42,11 +44,11 @@ class TaskController extends Controller
         
         $task = $request->user()->tasks()->create([
             "name" => $request->name,
-            "project_id" => $request->project_id,
+            "project_id" => Crypt::decrypt($request->project_id),
             "user_id" => $request->user()->id
         ]);
         
-        return redirect(url("/projects/".$request->project_id));
+        return redirect(url("/projects/".Crypt::decrypt($request->project_id)));
     }
 
     /**
