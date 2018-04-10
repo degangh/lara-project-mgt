@@ -42,6 +42,9 @@
                 <td>
                 <a href="{{url('/projects')}}/{{$project->id}}" class="btn btn-default">View</a>
                 </td>
+                <td>
+                <a href="{{url('/projects')}}/{{$project->id}}/edit" class="btn btn-default">Edit</a>
+                </td>
                 </tr>
                 @endforeach
                 </div>

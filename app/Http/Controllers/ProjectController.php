@@ -83,9 +83,12 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request)
     {
         //
+        return view('project', [
+            'projects' => $this->projects->forUser($request->user())
+            ]);
     }
 
     /**
