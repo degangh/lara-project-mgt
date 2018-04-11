@@ -56,7 +56,7 @@ class ProjectController extends Controller
             "name" => $request->name,
         ]);
         
-        return redirect(url("/projects/".$project->id));
+        return redirect(url("/projects"));
     }
 
     /**
@@ -83,11 +83,15 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Request $request)
+    public function edit($id, Request $request)
     {
         //
-        return view('project', [
-            'projects' => $this->projects->forUser($request->user())
+        $current_project=Project::find($id);
+        
+        $projects = $this->projects->forUser($request->user());
+        return view('project_edit', [
+            'projects' => $projects,
+            'current_project' =>$current_project
             ]);
     }
 
@@ -100,7 +104,10 @@ class ProjectController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $project = Project::find($id);
+        $project->name = $request->name;
+        $project->save();
+        return redirect(url("/projects"));
     }
 
     /**
