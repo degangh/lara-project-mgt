@@ -25,4 +25,9 @@ class ProjectPolicy
        
         return $user->id === $project->owner_id;
     }
+
+    public function edit(User $user, Project $project)
+    {
+        return $user->id === $project->owner_id;
+    }
 }

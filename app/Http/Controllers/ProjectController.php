@@ -87,6 +87,8 @@ class ProjectController extends Controller
     {
         //
         $current_project=Project::find($id);
+
+        $this->authorize('edit', $current_project);
         
         $projects = $this->projects->forUser($request->user());
         return view('project_edit', [
