@@ -10,10 +10,10 @@
                 {{$project->name}}
                 </td>
                 <td>
-                <a href="{{url('/projects')}}/{{$project->id}}" class="btn btn-default"><i class="glyphicon glyphicon-folder-open"></i></a>
+                <a href="{{url('/projects')}}/{{$project->id}}" ><i class="glyphicon glyphicon-folder-open"></i></a>
                 </td>
                 <td>
-                <a href="{{url('/projects')}}/{{$project->id}}/edit" class="btn btn-default">Edit</a>
+                <a href="{{url('/projects')}}/{{$project->id}}/edit" ><i class="glyphicon glyphicon-edit"></i></a>
                 </td>
                 </tr>
                 @endforeach
