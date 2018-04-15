@@ -7,6 +7,7 @@ use App\Project;
 use App\User;
 
 use \Crypt;
+use Session;
 
 use Illuminate\Http\Request;
 
@@ -47,7 +48,7 @@ class TaskController extends Controller
             "project_id" => Crypt::decrypt($request->project_id),
             "user_id" => $request->user()->id
         ]);
-        
+        Session::flash('message', 'Task Saved Successfully');
         return redirect(url("/projects/".Crypt::decrypt($request->project_id)));
     }
 

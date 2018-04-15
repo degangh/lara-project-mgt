@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Repositories\ProjectRepository;
 use App\Project;
+use Session;
 
 class ProjectController extends Controller
 {
@@ -55,7 +56,7 @@ class ProjectController extends Controller
         $project = $request->user()->projects()->create([
             "name" => $request->name,
         ]);
-        
+        Session::flash('message', 'Project Created Successfully');
         return redirect(url("/projects"));
     }
 
@@ -109,6 +110,7 @@ class ProjectController extends Controller
         $project = Project::find($id);
         $project->name = $request->name;
         $project->save();
+        Session::flash('message', 'Project Saved Successfully');
         return redirect(url("/projects"));
     }
 
