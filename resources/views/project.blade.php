@@ -2,7 +2,7 @@
 
 @section('content')
 
-@include('layouts.message');
+@include('layouts.message')
 
 @include('layouts.project_create')
 

@@ -10,6 +10,7 @@
 
                     <div class="">
                         <input type="text" name = "name" id="task-name" class="form-control">
+                        
                         <input type="hidden" name = "project_id" value = "{{Crypt::encrypt($project->id)}}" >
                         
                     </div>

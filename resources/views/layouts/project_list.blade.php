@@ -10,7 +10,7 @@
                 {{$project->name}}
                 </td>
                 <td>
-                <a href="{{url('/projects')}}/{{$project->id}}" class="btn btn-default">View</a>
+                <a href="{{url('/projects')}}/{{$project->id}}" class="btn btn-default"><i class="glyphicon glyphicon-folder-open"></i></a>
                 </td>
                 <td>
                 <a href="{{url('/projects')}}/{{$project->id}}/edit" class="btn btn-default">Edit</a>

@@ -56,7 +56,7 @@ class ProjectController extends Controller
         $project = $request->user()->projects()->create([
             "name" => $request->name,
         ]);
-        Session::flash('message', 'Project Created Successfully');
+        Session::flash('success', 'Project Created Successfully');
         return redirect(url("/projects"));
     }
 
@@ -110,7 +110,7 @@ class ProjectController extends Controller
         $project = Project::find($id);
         $project->name = $request->name;
         $project->save();
-        Session::flash('message', 'Project Saved Successfully');
+        Session::flash('success', 'Project Saved Successfully');
         return redirect(url("/projects"));
     }
 
@@ -124,4 +124,16 @@ class ProjectController extends Controller
     {
         //
     }
+
+    /**
+     * list all projects regardless the users
+     * @param null
+     * @return \App\Projects
+     *
+    */
+    public function all()
+    {
+        
+    }
+
 }
