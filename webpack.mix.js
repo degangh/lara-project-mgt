@@ -13,3 +13,6 @@ let mix = require('laravel-mix');
 
 mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css');
+   mix.copy('node_modules/jquery-ui-dist/jquery-ui.min.js', 'public/js');
+   mix.copy('node_modules/jquery-ui-dist/jquery-ui.min.css', 'public/css');
+   mix.copy('node_modules/jquery-ui-dist/images', 'public/css/images');
