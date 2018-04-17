@@ -6,10 +6,20 @@
             <table class="table table-striped">
                 @foreach ($tasks as $task)
                 <tr>
-                <td>
+                <td class="col-md-7">
                 {{$task->name}}
                 </td>
+                <td class="col-md-4">
+                    {{$task->due_time}}
                 <td>
+                <td class="col-md-1">
+                    <form action="{{url('/tasks')}}/{{$project->id}}/complete" method="post">
+                    {{csrf_field()}}
+                    {{ method_field('PATCH') }}
+                <a href="#" class="complete-btn" onclik=""><i class="glyphicon glyphicon-ok"></i></a>
+                
+                </form>
+                </td>
                 
                 </td>
                 </tr>
@@ -20,3 +30,9 @@
         </div>
     </div>
 </div>
+<script>
+jQuery(".complete-btn").click(function(){
+    var form = jQuery(this).parent();
+    form.submit();
+})
+</script>
