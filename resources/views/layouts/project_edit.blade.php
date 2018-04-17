@@ -17,7 +17,7 @@
                 <div class="form-group">
                     <div class="">
                         <button class="btn btn-default">
-                        <i class="fa fa-plus"></i>Save Project
+                        <i class="glyphicon glyphicon-floppy-disk"></i> Save Project
                         </button>
                     </div>
                 </div>

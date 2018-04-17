@@ -15,7 +15,7 @@
                 <div class="form-group">
                     <div class="">
                         <button class="btn btn-default">
-                        <i class="fa fa-plus"></i>Add New Project
+                        <i class="glyphicon glyphicon-plus-sign"></i> Add New Project
                         </button>
                     </div>
                 </div>
