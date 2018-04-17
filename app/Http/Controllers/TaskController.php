@@ -46,7 +46,8 @@ class TaskController extends Controller
         $task = $request->user()->tasks()->create([
             "name" => $request->name,
             "project_id" => Crypt::decrypt($request->project_id),
-            "user_id" => $request->user()->id
+            "user_id" => $request->user()->id,
+            "due_time" => $request->due_date
         ]);
         Session::flash('success', 'Task Saved Successfully');
         return redirect(url("/projects/".Crypt::decrypt($request->project_id)));
@@ -95,5 +96,10 @@ class TaskController extends Controller
     public function destroy(Task $task)
     {
         //
+    }
+
+    public function complete(Task $task)
+    {
+        dd($task);
     }
 }
