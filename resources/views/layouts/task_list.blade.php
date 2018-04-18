@@ -11,14 +11,14 @@
                 </td>
                 <td class="col-md-4">
                     {{$task->due_time}}
-                <td>
+                </td>
                 <td class="col-md-1">
-                    <form action="{{url('/tasks')}}/{{$project->id}}/complete" method="post">
+                    <form></form><form action="{{url('/tasks')}}/{{$task->id}}/complete" method="post">
                     {{csrf_field()}}
                     {{ method_field('PATCH') }}
-                <a href="#" class="complete-btn" onclik=""><i class="glyphicon glyphicon-ok"></i></a>
-                
+                    <a href="#" class="complete-btn" onclik=""><i class="glyphicon glyphicon-ok"></i></a>
                 </form>
+                
                 </td>
                 
                 </td>
