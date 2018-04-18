@@ -13,11 +13,15 @@
                     {{$task->due_time}}
                 </td>
                 <td class="col-md-1">
-                    <form></form><form action="{{url('/tasks')}}/{{$task->id}}/complete" method="post">
-                    {{csrf_field()}}
-                    {{ method_field('PATCH') }}
-                    <a href="#" class="complete-btn" onclik=""><i class="glyphicon glyphicon-ok"></i></a>
-                </form>
+                    @if ($task->is_complete == 0)
+                        <form></form><form action="{{url('/tasks')}}/{{$task->id}}/complete" method="post">
+                        {{csrf_field()}}
+                        {{ method_field('PATCH') }}
+                        <a href="#" class="complete-btn"><i class="glyphicon glyphicon-ok-sign"></i></a>
+                        </form>
+                    @else
+                        <i class="glyphicon glyphicon-ok text-success"></i>
+                    @endif
                 
                 </td>
                 

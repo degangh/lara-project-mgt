@@ -100,6 +100,10 @@ class TaskController extends Controller
 
     public function complete(Task $task)
     {
-        dd($task);
+        $task->is_complete = 1;
+        $task->save();
+        Session::flash('success', 'Task has been marked as completed');
+        return back();
+
     }
 }
