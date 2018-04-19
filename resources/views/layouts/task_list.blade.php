@@ -10,17 +10,17 @@
                 {{$task->name}}
                 </td>
                 <td class="col-md-4">
-                    {{$task->due_time}}
+                    {{ \Carbon\Carbon::parse($task->due_time)->format('d/m/Y')}}
                 </td>
                 <td class="col-md-1">
                     @if ($task->is_complete == 0)
                         <form></form><form action="{{url('/tasks')}}/{{$task->id}}/complete" method="post">
                         {{csrf_field()}}
                         {{ method_field('PATCH') }}
-                        <a href="#" class="complete-btn"><i class="glyphicon glyphicon-ok-sign"></i></a>
+                        <a href="#" class="complete-btn"><i class="glyphicon glyphicon-unchecked"></i></a>
                         </form>
                     @else
-                        <i class="glyphicon glyphicon-ok text-success"></i>
+                        <i class="glyphicon glyphicon-check text-success"></i>
                     @endif
                 
                 </td>
@@ -34,9 +34,35 @@
         </div>
     </div>
 </div>
+
+<div class="popup_confirm" title="Confirm" style="display:none;">
+<div>Confirm to Set this task to completed?</div>
+</div>
 <script>
-jQuery(".complete-btn").click(function(){
-    var form = jQuery(this).parent();
-    form.submit();
-})
+jQuery(function(){
+    var cliked_form = null;
+    
+    jQuery(".popup_confirm").dialog({
+        autoOpen: false,
+        buttons: {
+            "Confirm" : function(){
+                clicked_form.submit();
+                jQuery(this).dialog("close");
+            }, 
+            "Cancel" : function(){
+                jQuery(this).dialog("close");
+            }
+        }
+    });
+
+    jQuery(".complete-btn").click(function(){
+        clicked_form = jQuery(this).parent();
+        jQuery(".popup_confirm").dialog("open");
+    })
+
+    window.setTimeout(function(){
+        jQuery(".alert-success").slideUp(1200);
+    }, 2000)
+});
+
 </script>
