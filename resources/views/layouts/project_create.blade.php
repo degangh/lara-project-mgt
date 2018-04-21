@@ -1,4 +1,4 @@
-<div class="create-project" title="Create a New Project">
+<div class="create-project" title="Create a New Project" style="display:none">
     
             
             <form action="{{ url('/projects') }}" method="post">
