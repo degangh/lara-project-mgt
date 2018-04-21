@@ -60,9 +60,6 @@ jQuery(function(){
         jQuery(".popup_confirm").dialog("open");
     })
 
-    window.setTimeout(function(){
-        jQuery(".alert-success").slideUp(1200);
-    }, 2000)
 });
 
 </script>

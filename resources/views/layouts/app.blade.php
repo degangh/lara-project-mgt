@@ -83,6 +83,11 @@
 
         </div>
     </div>
+    <script>
+    window.setTimeout(function(){
+        jQuery(".alert-success").slideUp(1200);
+    }, 2000)
+    </script>
 
 </body>
 </html>
