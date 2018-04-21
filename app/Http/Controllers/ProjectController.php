@@ -55,6 +55,7 @@ class ProjectController extends Controller
         
         $project = $request->user()->projects()->create([
             "name" => $request->name,
+            "desc" => $request->desc
         ]);
         Session::flash('success', 'Project Created Successfully');
         return redirect(url("/projects"));
@@ -109,6 +110,7 @@ class ProjectController extends Controller
     {
         $project = Project::find($id);
         $project->name = $request->name;
+        $project->desc = $request->desc;
         $project->save();
         Session::flash('success', 'Project Saved Successfully');
         return redirect(url("/projects"));

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Project extends Model
 {
     //
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'desc'];
     public function user(){
         return $this->belongsTo(User::class, "owner_id");
     }
