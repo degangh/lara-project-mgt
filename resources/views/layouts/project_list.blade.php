@@ -13,7 +13,7 @@
                 <a href="{{url('/projects')}}/{{$project->id}}" ><i class="glyphicon glyphicon-folder-open"></i></a>
                 </td>
                 <td>
-                <a href="{{url('/projects')}}/{{$project->id}}/edit" ><i class="glyphicon glyphicon-edit"></i></a>
+                <a href="#" class="edit-project-btn" data-project-name="{{$project->name}}" data-desc="{{$project->desc}}" data-id = "{{$project->id}}"><i class="glyphicon glyphicon-edit"></i></a>
                 </td>
                 </tr>
                 @endforeach

@@ -8,4 +8,6 @@
 
 @include('layouts.project_list')
 
+@include('layouts.project_edit')
+
 @endsection
