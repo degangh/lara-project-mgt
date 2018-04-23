@@ -1,7 +1,6 @@
-<div class="row">
+<div class="row create-task" style="display:none">
     <div class="col-md-8 col-md-offset-2">
-        <div class="panel panel-default">
-            <div class="panel-heading">Add New Task</div>
+        
             <form action="{{ url('/tasks') }}" method="post">
             {{csrf_field()}}
             <div class="panel-body">
@@ -32,13 +31,33 @@
                     </div>
                 </div>
             </div>
-        </div>
+        
     </div>
+
+    
+</div>
+
+<div class="row" style="margin-bottom:15px">
+    <div class="col-md-8 col-md-offset-2">
+        <button class="btn btn-default create-task-btn btn-success pull-right" >
+        <i class="glyphicon glyphicon-plus-sign"></i> Add New Task
+        </button>
     </div>
+</div>
+
     <script>
 jQuery(function(){
 
     jQuery("#due-date").datepicker({"dateFormat": "yy-mm-dd"});
 
+    jQuery(".create-task").dialog({
+        autoOpen: false,
+        width: "500px"
+    })
+
+    jQuery(".create-task-btn").on("click",function(){
+        jQuery(".create-task").dialog("open");
+    });
+
 })
-        </script>
+</script>
