@@ -22,6 +22,7 @@ class ProjectController extends Controller
          $this->middleware('auth');
          $this->projects = $projects;
      }
+
     
      public function index(Request $request)
     {
@@ -51,7 +52,14 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
+        $messages  = [
+            "desc.required" => "Please describe this project"
+        ];
         
+        $request->validate([
+            "name" => "required",
+            "desc" => "required"
+        ], $messages);
         
         $project = $request->user()->projects()->create([
             "name" => $request->name,
@@ -59,6 +67,7 @@ class ProjectController extends Controller
         ]);
         Session::flash('success', 'Project Created Successfully');
         return redirect(url("/projects"));
+ 
     }
 
     /**
