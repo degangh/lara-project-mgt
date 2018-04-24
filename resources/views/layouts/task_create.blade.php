@@ -1,5 +1,5 @@
 <div class="row create-task" style="display:none">
-    <div class="col-md-8 col-md-offset-2">
+
         
             <form action="{{ url('/tasks') }}" method="post">
             {{csrf_field()}}
@@ -32,7 +32,7 @@
                 </div>
             </div>
         
-    </div>
+
 
     
 </div>
