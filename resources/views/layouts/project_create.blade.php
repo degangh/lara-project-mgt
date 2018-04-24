@@ -42,7 +42,9 @@
 jQuery(function(){
     jQuery(".create-project").dialog({
         autoOpen: false,
-        width: "500px"
+        width: "500px",
+        show: {duration: 800},
+        position: {my: "center", at: "center", of: window}
     });
 
     jQuery(".create-project-btn").on("click", function(){
