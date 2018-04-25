@@ -52,7 +52,16 @@ jQuery(function(){
 
     jQuery(".create-task").dialog({
         autoOpen: false,
-        width: "500px"
+        width: "500px",
+        show: {
+            effect: "fade",
+            duration: 800
+        },
+
+        hide: {
+            effect: "fade",
+            duration: 800
+        }
     })
 
     jQuery(".create-task-btn").on("click",function(){
