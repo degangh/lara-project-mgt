@@ -42,6 +42,18 @@ class TaskController extends Controller
     public function store(Request $request)
     {
         //authorize?
+
+        $messages  = [
+            "name.required" => "Task's name is required",
+            "due_time" => "Due time is required"
+        ];
+        
+        $request->validate([
+            "name" => "required",
+            "desc" => "required",
+            "project_id" => "required",
+            "user_id" => "required"
+        ], $messages);
         
         $task = $request->user()->tasks()->create([
             "name" => $request->name,
@@ -50,7 +62,7 @@ class TaskController extends Controller
             "due_time" => $request->due_date
         ]);
         Session::flash('success', 'Task Saved Successfully');
-        return redirect(url("/projects/".Crypt::decrypt($request->project_id)));
+        return redirect(url("/projects/".Crypt::decrypt($request->project_id)));   
     }
 
     /**
