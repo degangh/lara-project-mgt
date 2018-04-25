@@ -45,14 +45,13 @@ class TaskController extends Controller
 
         $messages  = [
             "name.required" => "Task's name is required",
-            "due_time" => "Due time is required"
+            "due_date.required" => "Due time is required"
         ];
         
         $request->validate([
             "name" => "required",
-            "desc" => "required",
+            "due_date" => "required",
             "project_id" => "required",
-            "user_id" => "required"
         ], $messages);
         
         $task = $request->user()->tasks()->create([
