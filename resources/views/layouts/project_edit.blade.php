@@ -1,5 +1,5 @@
 <div class="edit-project row" style="display:none">
-    <form></form><form method="post" id="edit-project-form">
+    <form method="post" id="edit-project-form">
             {{csrf_field()}}
             {{ method_field('PUT') }}
 
