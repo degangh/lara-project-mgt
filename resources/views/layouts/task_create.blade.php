@@ -1,7 +1,7 @@
 <div class="row create-task" style="display:none">
 
         
-            <form action="{{ url('/tasks') }}" method="post">
+            <form action="{{ url('/tasks') }}" method="post" name="create-task-form">
             {{csrf_field()}}
             <div class="panel-body">
                 <div class="row">
@@ -9,7 +9,7 @@
                         <div>Task</div>
 
                     
-                        <input type="text" name = "name" id="task-name" class="form-control">
+                        <input type="text" name = "name" id="task-name" class="form-control required">
                         
                         <input type="hidden" name = "project_id" value = "{{Crypt::encrypt($project->id)}}" >
                     </label>
@@ -18,15 +18,15 @@
                         <div>Due Date</div>
 
                     
-                        <input type="text" name = "due_date" id="due-date" class="form-control">
+                        <input type="text" name = "due_date" id="due-date" readonly class="form-control required">
                         
                     </label>
                     
                 </div>
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <button class="btn btn-default">
-                        <i class="glyphicon glyphicon-plus-sign"></i> Add New Task
+                        <button class="btn btn-default save-task-btn">
+                        <i class="glyphicon glyphicon-plus-sign"></i> Save Task
                         </button>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
         
 
 
-    
+    </form>
 </div>
 
 <div class="row" style="margin-bottom:15px">
@@ -47,6 +47,13 @@
 
     <script>
 jQuery(function(){
+
+    var form_error = [];
+    var form = jQuery("[name='create-task-form']");
+
+    form.find("input").on("change",function(){
+        jQuery(this).parent().removeClass("has-error");
+    })
 
     jQuery("#due-date").datepicker({"dateFormat": "yy-mm-dd"});
 
@@ -67,6 +74,35 @@ jQuery(function(){
     jQuery(".create-task-btn").on("click",function(){
         jQuery(".create-task").dialog("open");
     });
+
+    jQuery(".save-task-btn").on("click", function(e){
+        e.preventDefault();
+        
+        console.log("submit clicked");
+        if (validateForm(form.find("input")))
+        {
+            form.submit();
+        }
+    })
+
+    /*
+       var: inputs: jQuery collections, include input textarea select etc...
+    */
+    function validateForm(inputs)
+    {
+        var flag = true;
+        
+        inputs.each(function(){
+            if (jQuery(this).hasClass("required") && jQuery(this).val() == "")
+            {
+                jQuery(this).parent().addClass("has-error");
+                flag = false;
+            }
+        })
+
+        return flag;
+    }
+
 
 })
 </script>
