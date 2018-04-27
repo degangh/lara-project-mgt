@@ -42,7 +42,12 @@ class TaskController extends Controller
     public function store(Request $request)
     {
         //authorize?
+        $project_id = Crypt::decrypt($request->project_id);
 
+        $project = Project::find($project_id);
+        $this->authorize('edit', $project);
+
+        //
         $messages  = [
             "name.required" => "Task's name is required",
             "due_date.required" => "Due time is required"
@@ -56,7 +61,7 @@ class TaskController extends Controller
         
         $task = $request->user()->tasks()->create([
             "name" => $request->name,
-            "project_id" => Crypt::decrypt($request->project_id),
+            "project_id" => $project_id,
             "user_id" => $request->user()->id,
             "due_time" => $request->due_date
         ]);
