@@ -46,7 +46,15 @@ jQuery(function(){
     jQuery(".create-project").dialog({
         autoOpen: false,
         width: "500px",
-        show: {duration: 800},
+        show: {
+            effect: "fade",
+            duration: 800
+        },
+
+        hide: {
+            effect: "fade",
+            duration: 800
+        },
         position: {my: "center", at: "center", of: window}
     });
 

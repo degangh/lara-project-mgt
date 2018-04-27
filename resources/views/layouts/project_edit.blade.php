@@ -36,7 +36,16 @@ jQuery(function(){
     
     ctrl.dialog({
         autoOpen:false,
-        width:"500px"
+        width:"500px",
+        show: {
+            effect: "fade",
+            duration: 800
+        },
+
+        hide: {
+            effect: "fade",
+            duration: 800
+        }
     });
 
     jQuery(".edit-project-btn").on("click", function(){
