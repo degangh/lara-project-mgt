@@ -118,6 +118,9 @@ class ProjectController extends Controller
     public function update(Request $request, $id)
     {
         $project = Project::find($id);
+        
+        $this->authorize('edit', $project);
+
         $project->name = $request->name;
         $project->desc = $request->desc;
         $project->save();
