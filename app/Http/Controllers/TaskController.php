@@ -116,6 +116,8 @@ class TaskController extends Controller
 
     public function complete(Task $task)
     {
+        $this->authorize("complete", $task);
+        
         $task->is_complete = 1;
         $task->save();
         Session::flash('success', 'Task has been marked as completed');
