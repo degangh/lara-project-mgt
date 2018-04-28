@@ -3,7 +3,9 @@
 namespace App\Providers;
 
 use App\Project;
+use App\Task;
 use App\Policies\ProjectPolicy;
+use App\Policies\TaskPolicy;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
