@@ -15,5 +15,9 @@ class Project extends Model
     public function tasks(){
         return $this->hasMany(Task::class);
     }
+
+    public function members(){
+        return $this->blongsToMany(User::class, "project_user", "project_id" , "user_id");
+    }
     
 }
