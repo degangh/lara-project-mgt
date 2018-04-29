@@ -65,6 +65,9 @@ class ProjectController extends Controller
             "name" => $request->name,
             "desc" => $request->desc
         ]);
+
+        $project->members()->save($request->user());
+        
         Session::flash('success', 'Project Created Successfully');
         return redirect(url("/projects"));
  
