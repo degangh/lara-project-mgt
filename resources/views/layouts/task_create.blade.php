@@ -37,9 +37,13 @@
     </form>
 </div>
 
-<div class="row" style="margin-bottom:15px">
-    <div class="col-md-8 col-md-offset-2">
-        <button class="btn btn-default create-task-btn btn-success pull-right" >
+<div class="row" style="margin-bottom:15px;text-align:right">
+    <div class="col-md-offset-2 col-md-8 col-md-offset-2">
+        <button class="btn btn-default invite-user-btn btn-success" >
+        <i class="glyphicon glyphicon-user"></i> Add Members
+        </button> 
+        
+        <button class="btn btn-default create-task-btn btn-success" >
         <i class="glyphicon glyphicon-plus-sign"></i> Add New Task
         </button>
     </div>
