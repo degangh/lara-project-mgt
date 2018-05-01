@@ -16,3 +16,5 @@ mix.js('resources/assets/js/app.js', 'public/js')
    mix.copy('node_modules/jquery-ui-dist/jquery-ui.min.js', 'public/js');
    mix.copy('node_modules/jquery-ui-dist/jquery-ui.min.css', 'public/css');
    mix.copy('node_modules/jquery-ui-dist/images', 'public/css/images');
+   mix.copy('node_modules/startbootstrap-sb-admin-2/dist/css', 'public/css/sbadmin2');
+   mix.js('node_modules/startbootstrap-sb-admin-2/dist/js/sb-admin-2.min.js', 'public/js/sbadmin2');
