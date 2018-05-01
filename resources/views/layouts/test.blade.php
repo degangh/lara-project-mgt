@@ -15,6 +15,8 @@
     <!-- Styles -->
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
     <link href="{{ mix('css/jquery-ui.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('/css/sbadmin2/sb-admin-2.min.css') }}" rel="stylesheet" />
+    
 
     <!-- Scripts -->
     <script>
@@ -24,6 +26,7 @@
     </script>
     <script src="{{ mix('js/app.js') }}"></script>
     <script src="{{ mix('js/jquery-ui.min.js') }}"></script>
+    <script src="{{ mix('js/sbadmin2/sb-admin-2.min.js') }}"></script>
 </head>
 <body>
 <div id="wrapper">
