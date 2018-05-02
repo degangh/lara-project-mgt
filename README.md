@@ -14,7 +14,7 @@ These instructions will get you a copy of the project up and running on your loc
 PHP 7.0.1 or later
 MySQL
 Laravel Framework
-Bootstrap 3 
+Bootstrap 3/4 
 
 ### Installing
 
