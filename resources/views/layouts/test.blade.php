@@ -33,12 +33,32 @@
 
 <body>
 
-<nav class="navbar navbar-light fixed-top bg-light flex-md-nowrap p-0 border-bottom">
+<nav class="navbar navbar-expand navbar-light sticky-top bg-light flex-md-nowrap p-0 border-bottom">
     <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="">Project</a>
-    <ul class="navbar-nav px-3">
-    <li class="nav-item text-nowrap">Register</li>
-    </u>
+    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex px-3">
+    @guest
+    <li class="nav-item text-nowrap pr-md-3"><a href="" class="nav-link">Login</a></li>
+    <li class="nav-item text-nowrap"><a href="" class="nav-link">Register</a></li>
+    @else
+    <li class="nav-item dropdown pr-md-3">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{ Auth::user()->name }}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                            Logout
+            </a>
+        </div>
+    </ul>
+    </li>
+    @endguest
 </nav>
+
+<div class="container-fluid">
+@yield('content')
+</div>
+</div>
+</div>
 
 
 
