@@ -18,3 +18,7 @@ mix.js('resources/assets/js/app.js', 'public/js')
    mix.copy('node_modules/jquery-ui-dist/images', 'public/css/images');
    mix.copy('node_modules/startbootstrap-sb-admin-2/dist/css', 'public/css/sbadmin2');
    mix.js('node_modules/startbootstrap-sb-admin-2/dist/js/sb-admin-2.min.js', 'public/js/sbadmin2');
+   mix.copy('node_modules/metismenu/dist/metisMenu.min.css', 'public/css/metismenu');
+   mix.copy('node_modules/metismenu/dist/metisMenu.min.css.map', 'public/css/metismenu');
+   mix.copy('node_modules/metismenu/dist/metisMenu.min.js', 'public/js/metismenu');
+   mix.copy('node_modules/metismenu/dist/metisMenu.min.js.map', 'public/js/metismenu');
