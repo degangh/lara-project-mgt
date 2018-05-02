@@ -15,7 +15,7 @@
     <!-- Styles -->
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
     <link href="{{ mix('css/jquery-ui.min.css') }}" rel="stylesheet" />
-    <link href="{{ mix('css/sbadmin2/sb-admin-2.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/sbadmin2/sb-admin-2.min.css') }}" rel="stylesheet" />
 
     <!-- Scripts -->
     <script>
@@ -29,8 +29,8 @@
 </head>
 <body>
 <div id="app">
-    <nav class="navbar navbar-default">
-    <div class="container">
+    <nav class="navbar navbar-default navbar-static-top">
+    <div class="nabar-header">
             <a href="{{ url('/') }}" class="navbar-brand mb-01 h1">
             {{ config('app.name', 'Project') }}
             </a>
