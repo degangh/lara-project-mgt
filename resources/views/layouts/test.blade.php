@@ -16,6 +16,7 @@
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
     <link href="{{ mix('css/jquery-ui.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('/css/sbadmin2/sb-admin-2.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('/css/metismenu/metisMenu.min.css') }}" rel="stylesheet" />
     
 
     <!-- Scripts -->
@@ -26,19 +27,22 @@
     </script>
     <script src="{{ mix('js/app.js') }}"></script>
     <script src="{{ mix('js/jquery-ui.min.js') }}"></script>
-    <script src="{{ mix('js/sbadmin2/sb-admin-2.min.js') }}"></script>
+    
+    <script src="{{ mix('js/metismenu/metisMenu.min.js') }}"></script>
 </head>
+
 <body>
-<div id="wrapper">
-<div class="container-fluid">
-<nav class="navbar navbar-default">
-            <a href="" class="navbar-brand h1">
-            Project
-            </a>
+
+<nav class="navbar navbar-light fixed-top bg-light flex-md-nowrap p-0 border-bottom">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="">Project</a>
+    <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">Register</li>
+    </u>
 </nav>
 
-</div>
 
 
+<script src="{{ mix('js/sbadmin2/sb-admin-2.min.js') }}"></script>
 </body>
+
 </html>
