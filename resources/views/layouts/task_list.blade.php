@@ -1,8 +1,8 @@
 <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-            <div class="panel-heading">Tasks in {{$project->name}}</div>
-            <div class="panel-body">
+        <div class="offset-md-1 col-md-10">
+            <div class="card">
+            <div class="card-header">Tasks in {{$project->name}}</div>
+            <div class="card-body">
             <table class="table table-striped">
                 @foreach ($tasks as $task)
                 <tr>
@@ -17,10 +17,10 @@
                         <form></form><form action="{{url('/tasks')}}/{{$task->id}}/complete" method="post">
                         {{csrf_field()}}
                         {{ method_field('PATCH') }}
-                        <a href="#" class="complete-btn"><i class="glyphicon glyphicon-unchecked"></i></a>
+                        <a href="#" class="complete-btn"><i class="fa fa-square-o"></i></a>
                         </form>
                     @else
-                        <i class="glyphicon glyphicon-check text-success"></i>
+                        <i class="fa fa-check-square text-success"></i>
                     @endif
                 
                 </td>

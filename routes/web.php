@@ -22,3 +22,7 @@ Route::resource('projects', 'ProjectController');
 
 Route::patch('tasks/{task}/complete', 'TaskController@complete');
 Route::resource('tasks', 'TaskController');
+
+Route::get('/test', function(){
+    return view('layouts.test');
+});
