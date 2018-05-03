@@ -37,8 +37,8 @@
     <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="{{url('/')}}">Project</a>
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex px-3">
     @guest
-    <li class="nav-item text-nowrap pr-md-3"><a href="" class="nav-link">Login</a></li>
-    <li class="nav-item text-nowrap"><a href="" class="nav-link">Register</a></li>
+    <li class="nav-item text-nowrap pr-md-3"><a href="{{route('login')}}" class="nav-link">Login</a></li>
+    <li class="nav-item text-nowrap"><a href="{{route('register')}}" class="nav-link">Register</a></li>
     @else
     <li class="nav-item dropdown pr-md-3">
     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -48,6 +48,9 @@
           <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                             Logout
             </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                {{ csrf_field() }}
+            </form>
         </div>
     </ul>
     </li>
