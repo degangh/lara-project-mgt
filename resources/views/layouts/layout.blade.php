@@ -34,7 +34,7 @@
 <body>
 
 <nav class="navbar navbar-expand navbar-light sticky-top bg-light flex-md-nowrap p-0 border-bottom">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="">Project</a>
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="{{url('/')}}">Project</a>
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex px-3">
     @guest
     <li class="nav-item text-nowrap pr-md-3"><a href="" class="nav-link">Login</a></li>
