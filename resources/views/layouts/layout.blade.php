@@ -15,8 +15,8 @@
     <!-- Styles -->
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
     <link href="{{ mix('css/jquery-ui.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('/css/sbadmin2/sb-admin-2.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('/css/metismenu/metisMenu.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('/css/select2/select2.min.css') }}" rel="stylesheet" />
+    
     
 
     <!-- Scripts -->
@@ -28,7 +28,7 @@
     <script src="{{ mix('js/app.js') }}"></script>
     <script src="{{ mix('js/jquery-ui.min.js') }}"></script>
     
-    <script src="{{ mix('js/metismenu/metisMenu.min.js') }}"></script>
+    <script src="{{ mix('js/select2/select2.min.js') }}"></script>
 </head>
 
 <body>
@@ -65,7 +65,7 @@
 
 
 
-<script src="{{ mix('js/sbadmin2/sb-admin-2.min.js') }}"></script>
+
 
 <script>
     window.setTimeout(function(){
