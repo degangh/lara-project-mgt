@@ -21,6 +21,7 @@
     "lodash": "^4.17.4",
     "metismenu": "^2.7.7",
     "popper.js": "^1.14.3",
+    "select2": "^4.0.6-rc.1",
     "startbootstrap-sb-admin-2": "^3.3.7"
   }
 }
