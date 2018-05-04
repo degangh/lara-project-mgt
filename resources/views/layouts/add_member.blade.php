@@ -1,5 +1,11 @@
 <div class="add-members" title="Add members" style="display:none">
     
+    <select name="" class="member-select" multiple>
+        <option value="1">Nicolas</option>
+        <option value="2">Mac</option>
+        <option value="3">Nonoh</option>
+        <option value="4">Tanya</option>
+    </select>
             
 </div>
 
