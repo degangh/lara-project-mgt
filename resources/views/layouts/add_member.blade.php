@@ -1,16 +1,27 @@
 <div class="add-members" title="Add members" style="display:none">
-    
-    <select name="" class="member-select" multiple>
-        <option value="1">Nicolas</option>
-        <option value="2">Mac</option>
-        <option value="3">Nonoh</option>
-        <option value="4">Tanya</option>
-    </select>
-            
+ <form>   
+ <div class="form-group">
+ <lable class="control-label">Members</label>
+
+ <div class="">
+     <select name = "members[]" id="member-select" class="form-control" multiple style="width:100% !important">
+     <option value="1">Nicolas</option>
+     
+     <option value="2">Nonoh</option>
+     <option value="4">Wooloo</option>
+     <option value="100">Degang</option>
+     </select>
+ </div>
+</div>
+  </form>          
 </div>
 
 <script>
 jQuery(function(){
+    
+    //jQuery(".member-select").select2();
+    
+    
     jQuery(".add-member-btn").on("click", function(){
         jQuery(".add-members").dialog("open")
     })
@@ -29,5 +40,8 @@ jQuery(function(){
         },
         position: {my: "center", at: "center", of: window}
     });
+
+    jQuery("#member-select").select2();
+
 })
 </script>
