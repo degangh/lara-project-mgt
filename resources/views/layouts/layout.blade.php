@@ -15,7 +15,7 @@
     <!-- Styles -->
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
     <link href="{{ mix('css/jquery-ui.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('/css/select2/select2.min.css') }}" rel="stylesheet" />
+    <link href="{{ mix('/css/select2/select2.min.css') }}" rel="stylesheet" />
     
     
 
@@ -27,8 +27,11 @@
     </script>
     <script src="{{ mix('js/app.js') }}"></script>
     <script src="{{ mix('js/jquery-ui.min.js') }}"></script>
-    
     <script src="{{ mix('js/select2/select2.min.js') }}"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    
 </head>
 
 <body>
@@ -72,6 +75,7 @@
         jQuery(".alert-success").slideUp(1200);
     }, 2000)
     </script>
+    
 </body>
 
 </html>
