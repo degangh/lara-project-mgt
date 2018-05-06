@@ -41,7 +41,9 @@ jQuery(function(){
         position: {my: "center", at: "center", of: window}
     });
 
-    jQuery("#member-select").select2();
+    jQuery("#member-select").select2({
+        theme: "classic"
+    });
 
 })
 </script>
