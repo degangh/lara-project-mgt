@@ -14,6 +14,6 @@ class TaskTableSeeder extends Seeder
         //
         DB::table("tasks")->insert([
             
-        ])
+        ]);
     }
 }
