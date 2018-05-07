@@ -24,5 +24,5 @@ mix.js('resources/assets/js/app.js', 'public/js')
    mix.copy('node_modules/metismenu/dist/metisMenu.min.js', 'public/js/metismenu');
    mix.copy('node_modules/metismenu/dist/metisMenu.min.js.map', 'public/js/metismenu');
    */
-   mix.js('node_modules/select2/dist/js/select2.min.js', 'public/js/select2');
+   mix.copy('node_modules/select2/dist/js/select2.min.js', 'public/js/select2');
    mix.copy('node_modules/select2/dist/css/select2.min.css', 'public/css/select2');
