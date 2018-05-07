@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Repositories\ProjectRepository;
 use App\Project;
+use App\User;
 use Session;
 
 class ProjectController extends Controller
@@ -65,7 +66,8 @@ class ProjectController extends Controller
             "name" => $request->name,
             "desc" => $request->desc
         ]);
-
+        
+        //save project owner as a default member when creating the project
         $project->members()->save($request->user());
         
         Session::flash('success', 'Project Created Successfully');
@@ -81,12 +83,17 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-  
-        $this->authorize('show', $project);
+        //prepare user list
+        $users = User::all()->sortBy('name');
+
         
+        
+        
+        $this->authorize('show', $project);
         return view('tasks', [
             'tasks' => $project->tasks,
-            'project' => $project
+            'project' => $project,
+            'users' => $users
             ]);
         
     }

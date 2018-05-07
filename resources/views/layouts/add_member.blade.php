@@ -5,11 +5,9 @@
 
  <div class="">
      <select name = "members[]" id="member-select" class="form-control" multiple style="width:100% !important">
-     <option value="1">Nicolas</option>
-     
-     <option value="2">Nonoh</option>
-     <option value="4">Wooloo</option>
-     <option value="100">Degang</option>
+     @foreach ($users as $user)
+        <option value="{{$user->id}}">{{$user->name}}</option>
+     @endforeach
      </select>
  </div>
 </div>
