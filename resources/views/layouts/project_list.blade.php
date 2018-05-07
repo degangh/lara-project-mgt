@@ -1,8 +1,5 @@
 <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-            <div class="panel-heading">My Projects</div>
-            <div class="panel-body">
+    <div class="offset-md-1 col-md-10">
             <table class="table table-striped">
                 @foreach ($projects as $project)
                 <tr>
@@ -10,15 +7,15 @@
                 {{$project->name}}
                 </td>
                 <td>
-                <a href="{{url('/projects')}}/{{$project->id}}" ><i class="glyphicon glyphicon-folder-open"></i></a>
+                <a href="{{url('/projects')}}/{{$project->id}}" ><i class="fa fa-folder-open"></i></a>
                 </td>
                 <td>
-                <a href="#" class="edit-project-btn" data-project-name="{{$project->name}}" data-desc="{{$project->desc}}" data-id = "{{$project->id}}"><i class="glyphicon glyphicon-edit"></i></a>
+                <a href="#" class="edit-project-btn" data-project-name="{{$project->name}}" data-desc="{{$project->desc}}" data-id = "{{$project->id}}"><i class="fa fa-edit"></i></a>
                 </td>
                 </tr>
                 @endforeach
                 </div>
             </table>
-            </div>
-        </div>
+
     </div>
+</div>

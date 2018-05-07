@@ -1,9 +1,10 @@
 <div class="edit-project row" style="display:none">
+    <div class="col-md-12">
     <form method="post" id="edit-project-form">
             {{csrf_field()}}
             {{ method_field('PUT') }}
 
-            <div class="panel-body">
+
                 <div class="form-group">
                     <lable for="project-name" class="control-label">Project Name</label>
 
@@ -22,13 +23,14 @@
 
                 <div class="form-group">
                     <div class="">
-                        <button class="btn btn-default save-project-btn">
-                        <i class="glyphicon glyphicon-floppy-disk"></i> Save Project
+                        <button class="btn btn-defalut save-project-btn">
+                        <i class="fa fa-save"></i> Save Project
                         </button>
                     </div>
                 </div>
-            </div>
+
             </form>
+        </div>
 </div>
 <script>
 jQuery(function(){

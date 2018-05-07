@@ -1,6 +1,6 @@
-<div class="row create-task" style="display:none">
+<div class="row create-task" title="Create a task" style="display:none">
 
-        
+        <div class="col-md-12">
             <form action="{{ url('/tasks') }}" method="post" name="create-task-form">
             {{csrf_field()}}
             <div class="panel-body">
@@ -35,16 +35,17 @@
 
 
     </form>
+    </div>
 </div>
 
 <div class="row" style="margin-bottom:15px;text-align:right">
-    <div class="col-md-offset-2 col-md-8 col-md-offset-2">
-        <button class="btn btn-default invite-user-btn btn-success" >
-        <i class="glyphicon glyphicon-user"></i> Add Members
+    <div class="offset-md-1 col-md-10 mt-2">
+        <button class="btn btn-default add-member-btn btn-success" >
+        <i class="fa fa-user-plus"></i> Add Members
         </button> 
         
         <button class="btn btn-default create-task-btn btn-success" >
-        <i class="glyphicon glyphicon-plus-sign"></i> Add New Task
+        <i class="fa fa-plus"></i> Add New Task
         </button>
     </div>
 </div>

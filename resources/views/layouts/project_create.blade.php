@@ -23,7 +23,7 @@
                 <div class="form-group">
                     <div class="">
                         <button class="btn btn-default new-project-btn">
-                        <i class="glyphicon glyphicon-plus-sign"></i> Save Project
+                        <i class="fa fa-save"></i> Save Project
                         </button>
                     </div>
                 </div>
@@ -31,9 +31,9 @@
   
 </div>
 <div class="row" style="margin-bottom:15px">
-    <div class="col-md-8 col-md-offset-2">
-        <button class="btn btn-default create-project-btn btn-success pull-right" >
-        <i class="glyphicon glyphicon-plus-sign"></i> Add New Project
+    <div class="offset-md-1 col-md-10 pt-2">
+        <button class="btn btn-default create-project-btn btn-success pull-right pt-1 pb-1" >
+        <i class="fa fa-plus"></i> Add New Project
         </button>
     </div>
 </div>
