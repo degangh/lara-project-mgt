@@ -1,15 +1,31 @@
+<style>
+.select2-container {
+    width:100% !important;
+    padding: 0;
+}
+
+.select2-selection__choice {
+    background-color: #ffffff !important;
+}
+</style>
 <div class="add-members" title="Add members" style="display:none">
- <form>   
+ <form method="post" action="{{ url('/projects/members') }}">
+ {{csrf_field}}   
  <div class="form-group">
  <lable class="control-label">Members</label>
 
  <div class="">
-     <select name = "members[]" id="member-select" class="form-control" multiple style="width:100% !important">
+     <select name = "members[]" id="member-select" class="form-control" multiple>
      @foreach ($users as $user)
         <option value="{{$user->id}}">{{$user->name}}</option>
      @endforeach
      </select>
  </div>
+</div>
+<div class="form-group">
+    <button class="btn btn-outline-dark new-project-btn pull-right">
+        <i class="fa fa-user-plus"></i> Add Members
+    </button>
 </div>
   </form>          
 </div>
@@ -40,7 +56,8 @@ jQuery(function(){
     });
 
     jQuery("#member-select").select2({
-        theme: "classic"
+        theme: "classic",
+        width: "resolve"
     });
 
 })
