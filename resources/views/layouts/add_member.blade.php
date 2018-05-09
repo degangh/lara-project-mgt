@@ -9,8 +9,8 @@
 }
 </style>
 <div class="add-members" title="Add members" style="display:none">
- <form method="post" action="{{ url('/projects/members') }}">
- {{csrf_field}}   
+ <form method="post" action="{{ url('/projects/'. $project->id. '/members') }}">
+ {{csrf_field()}}   
  <div class="form-group">
  <lable class="control-label">Members</label>
 
