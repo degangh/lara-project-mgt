@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Project;
 use App\User;
+use Session;
 
 class ProjectMemberController extends Controller
 {
@@ -18,6 +19,9 @@ class ProjectMemberController extends Controller
             $ProjectMember = User::find($member);
             $project->members()->save($ProjectMember);
         }
+
+        Session::flash('success', 'Members Saved Successfully');
+        return redirect(url("/projects/".$project->id)); 
 
     }
 }
