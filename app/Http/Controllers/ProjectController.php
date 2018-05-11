@@ -7,6 +7,7 @@ use App\Repositories\ProjectRepository;
 use App\Project;
 use App\User;
 use Session;
+use Auth;
 
 class ProjectController extends Controller
 {
@@ -68,7 +69,8 @@ class ProjectController extends Controller
         ]);
         
         //save project owner as a default member when creating the project
-        $project->members()->save($request->user());
+        //owner will not be saved to project_user
+        //$project->members()->save($request->user());
         
         Session::flash('success', 'Project Created Successfully');
         return redirect(url("/projects"));
@@ -84,11 +86,7 @@ class ProjectController extends Controller
     public function show(Project $project)
     {
         //prepare user list
-        $users = User::all()->sortBy('name');
-
-        
-        
-        
+        $users = User::all()->except($project->owner_id)->sortBy('name');
         $this->authorize('show', $project);
         return view('tasks', [
             'tasks' => $project->tasks,
