@@ -8,6 +8,7 @@
     background-color: #ffffff !important;
 }
 </style>
+
 <div class="add-members" title="Add members" style="display:none">
  <form method="post" action="{{ url('/projects/'. $project->id. '/members') }}">
  {{csrf_field()}}   
@@ -17,7 +18,11 @@
  <div class="">
      <select name = "members[]" id="member-select" class="form-control" multiple>
      @foreach ($users as $user)
-        <option value="{{$user->id}}">{{$user->name}}</option>
+        <option value="{{$user->id}}" 
+        @if (in_array($user->id, $project->members->pluck('id')->toArray()))  
+            selected = "selected"
+        @endif 
+        >{{$user->name}}</option>
      @endforeach
      </select>
  </div>
@@ -29,6 +34,7 @@
 </div>
   </form>          
 </div>
+
 
 <script>
 jQuery(function(){
