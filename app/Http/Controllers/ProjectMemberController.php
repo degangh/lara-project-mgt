@@ -13,6 +13,9 @@ class ProjectMemberController extends Controller
     //
     public function store(Project $project, Request $request)
     {
+        //detach all users in the first place
+        $project->members()->detach();
+        
         //dd($request->members);
         foreach ($request->members as $member)
         {
