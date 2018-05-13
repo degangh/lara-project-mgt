@@ -29,10 +29,18 @@ class ProjectController extends Controller
      public function index(Request $request)
     {
         //
-        
+        //current login user's project
+        $myProjects = $this->projects->forUser($request->user());
+    
+        $memberProjects = Auth::user()->onProjects->sortBy("create_at");
+    
+        //merge 2 collections
+
+        $projects = $myProjects->merge($memberProjects)->sortBy("create_at");
         return view('project', [
-            'projects' => $this->projects->forUser($request->user())
+            'projects' => $projects
             ]);
+        
         
     }
 
