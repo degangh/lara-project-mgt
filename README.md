@@ -14,7 +14,7 @@ These instructions will get you a copy of the project up and running on your loc
 PHP 7.0.1 or later
 MySQL
 Laravel Framework
-Bootstrap 3/4 
+Bootstrap 4 
 
 ### Installing
 
@@ -23,13 +23,6 @@ Clone git repo to your local folder, or download zipped file and unzip
 Run "composer install"
 Run "php artisan migrate" to initialize the database
 Point your browser to your local server
-```
-
-
-And repeat
-
-```
-until finished
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
@@ -60,19 +53,19 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Laravel](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [comopser](https://maven.apache.org/) - Dependency Management
-* [Homestead](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Laravel](https://laravel.com/) - The PHP Framework For Web Artisans
+* [comopser](https://getcomposer.org/) - A package manager for PHP
+* [Homestead](https://laravel.com/docs/5.0/homestead) - A development environment pre-packaged Vagrant "box"
 
 
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+* to be defined 
 
 ## Authors
 
-* **nicolash** - *Initial work* - [PurpleBooth](https://github.com/degangh)
+* **nicolash** - *Initial work* - [Degang(AKA: Nicolas)](https://github.com/degangh)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
@@ -82,6 +75,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* Laravel Community
+* Laracast.com
