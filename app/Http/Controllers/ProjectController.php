@@ -95,7 +95,7 @@ class ProjectController extends Controller
     {
         //prepare user list
         $users = User::all()->except($project->owner_id)->sortBy('name');
-        $this->authorize('show', $project);
+        //$this->authorize('show', $project);
         return view('tasks', [
             'tasks' => $project->tasks,
             'project' => $project,
