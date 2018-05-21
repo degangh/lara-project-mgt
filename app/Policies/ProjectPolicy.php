@@ -23,12 +23,13 @@ class ProjectPolicy
     public function show(User $user,Project $project)
     {
         $onProject = false;
+
         
         foreach ($project->members as $member)
         {
-            if ($user == $members) $onProject = true;
+            if ($user->id == $member->id) $onProject = true;
         }
-
+        
         return ( ($user->id === $project->owner_id) || $onProject);
     }
 
