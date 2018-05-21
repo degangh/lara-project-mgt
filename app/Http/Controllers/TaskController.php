@@ -45,7 +45,7 @@ class TaskController extends Controller
         $project_id = Crypt::decrypt($request->project_id);
 
         $project = Project::find($project_id);
-        $this->authorize('edit', $project);
+        $this->authorize('show', $project);
 
         //
         $messages  = [
