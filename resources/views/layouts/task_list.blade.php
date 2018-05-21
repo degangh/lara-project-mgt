@@ -6,8 +6,11 @@
             <table class="table table-striped">
                 @foreach ($tasks as $task)
                 <tr>
-                <td class="col-md-7">
+                <td class="col-md-6">
                 {{$task->name}}
+                </td>
+                <td class="col-md-1">
+                {{$task->user->name}}
                 </td>
                 <td class="col-md-4">
                     {{ \Carbon\Carbon::parse($task->due_time)->format('d/m/Y')}}
