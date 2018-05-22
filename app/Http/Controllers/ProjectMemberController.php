@@ -11,6 +11,11 @@ use Session;
 class ProjectMemberController extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware('auth');   
+    }
+
     public function store(Project $project, Request $request)
     {
         //detach all users in the first place
