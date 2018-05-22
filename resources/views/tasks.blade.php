@@ -3,9 +3,9 @@
 @section('content')
 
 @include('layouts.message')
-@include ('layouts.task_create')
-@include ('layouts.task_list')
-@include ('layouts.member_list')
-@include ('layouts.add_member')
+@include ('layouts.task.task_create')
+@include ('layouts.task.task_list')
+@include ('layouts.member.member_list')
+@include ('layouts.member.add_member')
 
 @endsection

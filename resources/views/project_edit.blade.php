@@ -2,7 +2,7 @@
 
 @section('content')
 @include('layouts.message')
-@include('layouts.project_edit')
+@include('layouts.project.project_edit')
 
-@include('layouts.project_list')
+@include('layouts.project.project_list')
 @endsection
