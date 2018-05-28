@@ -6,13 +6,13 @@
             <table class="table table-striped">
                 @foreach ($users as $user)
                 <tr>
-                <td class="col-md-2">
+                <td class="33%">
                 {{$user->name}}
                 </td>
-                <td class="col-md-6">
+                <td class="33%">
                 {{$user->email}}
                 </td>
-                <td class="col-md-4">
+                <td class="33%">
                     {{ \Carbon\Carbon::parse($user->created_at)->format('d/m/Y')}}
                 </td>
                 
