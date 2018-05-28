@@ -22,7 +22,7 @@
             </form>
                 <div class="form-group">
                     <div class="">
-                        <button class="btn btn-default new-project-btn">
+                        <button class="btn btn-primary new-project-btn">
                         <i class="fa fa-save"></i> Save Project
                         </button>
                     </div>

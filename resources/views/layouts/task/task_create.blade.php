@@ -25,8 +25,8 @@
                 </div>
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <button class="btn btn-default save-task-btn">
-                        <i class="glyphicon glyphicon-plus-sign"></i> Save Task
+                        <button class="btn btn-primary save-task-btn">
+                        <i class="fa fasave"></i> Save Task
                         </button>
                     </div>
                 </div>
