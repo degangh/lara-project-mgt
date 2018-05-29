@@ -46,7 +46,7 @@
     </form>
         <div class="form-group">
             <div class="">
-                <button class="btn btn-primary new-project-btn">
+                <button class="btn btn-primary save-user-btn">
                 <i class="fa fa-save"></i> Save User
                 </button>
             </div>
@@ -64,6 +64,10 @@ jQuery(function(){
 
     jQuery(".create-user-btn").on("click", function(){
         jQuery(".edit-user").dialog("open");
+    })
+
+    jQuery(".save-user-btn").on("click", function(){
+        jQuery("[name='edit-user-form']").submit();
     })
 })
 </script>
