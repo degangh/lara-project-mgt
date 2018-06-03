@@ -40,7 +40,7 @@
             <lable for="repeat-password" class="control-label">Email</label>
 
             <div class="">
-                <input type="password" id= "repeat-password" name = "repeat_password" class="form-control required">
+                <input type="password" id= "repeat-password" name = "password_confirmation" class="form-control required">
             </div>
         </div>
     </form>
