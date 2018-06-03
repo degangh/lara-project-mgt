@@ -4,10 +4,10 @@
 
 @include('layouts.message')
 
-@include('layouts.project.project_create')
+@include('layouts.project.create')
 
-@include('layouts.project.project_list')
+@include('layouts.project.list')
 
-@include('layouts.project.project_edit')
+@include('layouts.project.edit')
 
 @endsection
