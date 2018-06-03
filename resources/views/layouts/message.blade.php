@@ -5,7 +5,7 @@
 @endif
 
 @if(Session::has('errors'))
-          <div class="alert alert-danger alert-dismissible fade in mt-2 p1">
+          <div class="alert alert-danger alert-dismissible fade-in mt-2 p1">
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
             </button>
