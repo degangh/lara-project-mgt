@@ -23,7 +23,7 @@
 
                 <div class="form-group">
                     <div class="">
-                        <button class="btn btn-defalut save-project-btn">
+                        <button class="btn btn-primary save-project-btn">
                         <i class="fa fa-save"></i> Save Project
                         </button>
                     </div>
