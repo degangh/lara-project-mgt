@@ -120,6 +120,12 @@ class TaskController extends Controller
         //
     }
 
+    /**
+     * Mark task as completed.
+     *
+     * @param  \App\Task  $task
+     * @return \Illuminate\Http\Response
+     */
     public function complete(Task $task)
     {
         $this->authorize("complete", $task);
