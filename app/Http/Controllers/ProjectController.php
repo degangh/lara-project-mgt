@@ -88,7 +88,7 @@ class ProjectController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Projects $project
      * @return \Illuminate\Http\Response
      */
     public function show(Project $project)
@@ -108,6 +108,7 @@ class ProjectController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function edit($id, Request $request)

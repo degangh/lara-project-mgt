@@ -16,6 +16,13 @@ class ProjectMemberController extends Controller
         $this->middleware('auth');   
     }
 
+    /**
+     * Add memebers into a project
+     *
+     * @param  \App\Projects  $project
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function store(Project $project, Request $request)
     {
         //detach all users in the first place
