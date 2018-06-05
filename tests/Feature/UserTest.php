@@ -27,4 +27,12 @@ class UserTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    public function testUserBtn()
+    {
+        $this->withoutMiddleware();
+        $response = $this->get('/users');
+
+        $response->assertSee("Add New User");
+    }
 }
