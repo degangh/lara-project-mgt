@@ -74,7 +74,41 @@ class BasicRoutingTest extends TestCase
         $response->assertStatus(200);
     }
 
+    /* open a project belong to a specific user 
 
+    */
+    public function testSeeNewProjectButton()
+    {
+        $user = User::first();
+        $project = $user->projects()->first();
+        \Auth::login($user);
+        $response = $this->actingAs($user)->get('/projects');
+        $response->assertSee("Add New Project");
+    }
+
+    /* open a project belong to a specific user 
+
+    */
+    public function testSeeMemberButton()
+    {
+        $user = User::first();
+        $project = $user->projects()->first();
+        \Auth::login($user);
+        $response = $this->actingAs($user)->get('/projects/'.$project->id);
+        $response->assertSee("Add Members");
+    }
+
+    /* open a project belong to a specific user 
+
+    */
+    public function testSeeTaskButton()
+    {
+        $user = User::first();
+        $project = $user->projects()->first();
+        \Auth::login($user);
+        $response = $this->actingAs($user)->get('/projects/'.$project->id);
+        $response->assertSee("Add New Task");
+    }
 
 
 }
