@@ -20,7 +20,9 @@ class BasicRoutingTest extends TestCase
 
         $response->assertStatus(302);
     }
+    /* visit uri without login
 
+    */
     public function testProjectNoLogin()
     {
         $response = $this->get('/projects');
@@ -28,6 +30,9 @@ class BasicRoutingTest extends TestCase
         $response->assertStatus(302);
     }
 
+    /* visit uri without login
+
+    */
     public function testOpenProjectNoLogin()
     {
         $response = $this->get('/projects/1');
@@ -35,6 +40,9 @@ class BasicRoutingTest extends TestCase
         $response->assertStatus(302);
     }
 
+    /* visit uri without login
+
+    */
     public function testProjectWithUser()
     {
         $user = factory(User::class)->create();
