@@ -43,6 +43,29 @@ class BasicRoutingTest extends TestCase
         $response->assertStatus(200);
     }
 
+    /* user list
+
+    */
+    public function testUserWithUser()
+    {
+        $user = factory(User::class)->create();
+        $response = $this->actingAs($user)->get('/projects');
+
+        $response->assertStatus(200);
+    }
+
+    /* open a project belong to a specific user 
+
+    */
+    public function testOpenProjectWithUser()
+    {
+        $user = User::first();
+        $project = $user->projects()->first();
+        \Auth::login($user);
+        $response = $this->actingAs($user)->get('/projects/'.$project->id);
+        $response->assertStatus(200);
+    }
+
 
 
 
