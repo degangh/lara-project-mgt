@@ -15,18 +15,7 @@ class UserTest extends TestCase
         $this->assertTrue(true);
     }
 
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
-    public function testUserController()
-    {
-        $this->withoutMiddleware();
-        $response = $this->get('/users');
-
-        $response->assertStatus(200);
-    }
+    
 
     public function testUserBtn()
     {
