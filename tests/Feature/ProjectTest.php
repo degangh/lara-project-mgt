@@ -24,7 +24,6 @@ class ProjectTest extends TestCase
     public function testProjectCreation()
     {
         $user = factory(User::class)->create();
-        \Auth::login($user);
         $project = factory(Project::class)->make();
         $response = $this->actingAs($user)
         ->post(route('projects.store'), [
