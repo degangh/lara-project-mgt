@@ -34,4 +34,17 @@ class ProjectTest extends TestCase
         $response->assertSessionHas("success","Project Created Successfully");
 
     }
+
+
+    public function testProjectEdit()
+    {
+        $user = User::first();
+        $project = $user->projects()->first();
+        $response = $this->actingAs($user)->put(route("projects.update", ['id' => $project->id]), [
+            'name' => $project->name,
+            'desc' => $project->desc
+        ]);
+
+        $response->assertSessionHas("success","Project Saved Successfully");
+    }
 }
