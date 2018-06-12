@@ -47,4 +47,21 @@ class ProjectTest extends TestCase
 
         $response->assertSessionHas("success","Project Saved Successfully");
     }
+
+    public function testProjectAddMember()
+    {
+        $user = User::first();
+        $project = $user->projects()->first();
+        $members = User::where("id", "!=", $user->id)->take(3);
+        $member_id = array();
+        $members->each(function($member){
+            $member_id[] = $member->id;
+        });
+
+        $response = $this->actingAs($user)->post(url("projects/".$project->id."/members"), [
+            "members" => $member_id
+        ]);
+        $response->assertStatus(302);
+        $response->assertSessionHas("success","Members Saved Successfully");
+    }
 }
