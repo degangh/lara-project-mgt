@@ -40,11 +40,11 @@
 
 <div class="row" style="margin-bottom:15px;text-align:right">
     <div class="offset-md-1 col-md-10 mt-2">
-        <button class="btn btn-default add-member-btn btn-success" >
+        <button class="btn btn-sm add-member-btn btn-success" >
         <i class="fa fa-user-plus"></i> Add Members
         </button> 
         
-        <button class="btn btn-default create-task-btn btn-success" >
+        <button class="btn btn-sm create-task-btn btn-success" >
         <i class="fa fa-plus"></i> Add New Task
         </button>
     </div>

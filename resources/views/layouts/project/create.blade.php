@@ -5,7 +5,7 @@
             {{csrf_field()}}
             
                 <div class="form-group">
-                    <lable for="project-name" class="control-label">Project Name</label>
+                    <lable for="project-name" class="control-label">Name</label>
 
                     <div class="">
                         <input type="text" name = "name" id="project-name" class="form-control required">
@@ -13,7 +13,7 @@
                 </div>
 
                 <div class="form-group">
-                    <lable for="project-name" class="control-label">Project Name</label>
+                    <lable for="project-name" class="control-label">Description</label>
 
                     <div class="">
                         <textarea name = "desc" class="form-control required" rows="3"></textarea>
@@ -32,7 +32,7 @@
 </div>
 <div class="row" style="margin-bottom:15px">
     <div class="offset-md-1 col-md-10 pt-2">
-        <button class="btn btn-default create-project-btn btn-success pull-right pt-1 pb-1" >
+        <button class="btn btn-sm create-project-btn btn-success pull-right pt-1 pb-1" >
         <i class="fa fa-plus"></i> Add New Project
         </button>
     </div>
