@@ -47,6 +47,10 @@
         <button class="btn btn-sm create-task-btn btn-success" >
         <i class="fa fa-plus"></i> Add New Task
         </button>
+
+        <button class="btn btn-sm upload-btn btn-success" >
+        <i class="fa fa-plus"></i> Add New File
+        </button>
     </div>
 </div>
 
