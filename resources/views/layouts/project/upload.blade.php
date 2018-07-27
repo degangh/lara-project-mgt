@@ -9,7 +9,7 @@
  </div>
 </div>
 <div class="form-group">
-    <button class="btn btn-outline-dark new-project-btn pull-right">
+    <button class="btn btn-primary btn-sm new-project-btn pull-right">
         <i class="fa fa-user-plus"></i> Upload
     </button>
 </div>
