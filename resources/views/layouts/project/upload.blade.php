@@ -1,5 +1,5 @@
 <div class="upload-file" title="Upload Project File" style="display:none">
- <form method="post" action="{{ url('/projects/'. $project->id. '/file') }}">
+ <form method="post" enctype='multipart/form-data' action="{{ url('/projects/'. $project->id. '/file') }}">
  {{csrf_field()}}   
  <div class="form-group">
  <lable class="control-label">Upload</label>
