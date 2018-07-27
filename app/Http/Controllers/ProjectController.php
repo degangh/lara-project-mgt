@@ -167,4 +167,9 @@ class ProjectController extends Controller
         
     }
 
+    public function file(Project $project)
+    {
+        
+    }
+
 }
