@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Repositories\ProjectRepository;
+use Illuminate\Support\Facades\Storage;
 use App\Project;
 use App\User;
 use Session;
@@ -167,9 +168,21 @@ class ProjectController extends Controller
         
     }
 
-    public function file(Project $project)
+    public function file(Request $request, Project $project)
     {
-        dd($_FILES);
+        //dd($_FILES);
+        $file = $request->file('attchement');
+        /*
+        dd($project->id, 
+        Auth::user()->id, 
+        $file->getClientOriginalName(),
+        uniqid()
+        );*/
+
+        $path = Storage::putFileAs('upload', $request->file('attchement'), uniqid(). "-" .$file->getClientOriginalName());
+
+        dd($path);
+       
     }
 
 }
