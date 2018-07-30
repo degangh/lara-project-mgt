@@ -171,18 +171,20 @@ class ProjectController extends Controller
     public function file(Request $request, Project $project)
     {
         //dd($_FILES);
-        $file = $request->file('attchement');
-        /*
-        dd($project->id, 
-        Auth::user()->id, 
-        $file->getClientOriginalName(),
-        uniqid()
-        );*/
+        $uploadedFile = $request->file('attchement');
+        
+        $filename = $uploadedFile->getClientOriginalName();
+        
+        $path = Storage::putFileAs('upload', $request->file('attchement'), uniqid(). "-" .$filename);
 
-        $path = Storage::putFileAs('upload', $request->file('attchement'), uniqid(). "-" .$file->getClientOriginalName());
+        $file = $request->user()->files()->create([
+            'original_name' => $filename,
+            'path' => $path,
+            'project_id' => $project->id
+        ]);
 
-        dd($path);
-       
+        Session::flash('success', 'File ' . $filename . ' uploaded Successfully');
+        return back();
     }
 
 }
