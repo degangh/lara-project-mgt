@@ -4,7 +4,12 @@
            <div class='card'>
             <div class="card-header">Files in Project {{$project->name}}</div>
             <div class="card-body">
-            file list
+            <table class="table table-striped">
+                @foreach ($files as $file)
+                <tr>
+                <td>{{$file->original_name}}</td>
+                </tr>
+                @endforeach
             </div>
            </div>
         </div>
