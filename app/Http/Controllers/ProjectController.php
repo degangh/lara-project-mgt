@@ -170,7 +170,8 @@ class ProjectController extends Controller
 
     public function file(Request $request, Project $project)
     {
-        //dd($_FILES);
+        $this->authorize('edit', $project);
+
         $uploadedFile = $request->file('attchement');
         
         $filename = $uploadedFile->getClientOriginalName();
