@@ -8,6 +8,8 @@
                 @foreach ($files as $file)
                 <tr>
                 <td>{{$file->original_name}}</td>
+                <td>{{$file->created_at}}</td>
+                <td>{{$file->user->name}}</td>
                 </tr>
                 @endforeach
             </div>
