@@ -7,7 +7,7 @@
             <table class="table table-striped">
                 @foreach ($files as $file)
                 <tr>
-                <td>{{$file->original_name}}</td>
+                <td><a href="{{url('/file/')}}/{{$file->id}}">{{$file->original_name}}</a></td>
                 <td>{{$file->created_at}}</td>
                 <td>{{$file->user->name}}</td>
                 </tr>

@@ -27,6 +27,8 @@ Route::resource('tasks', 'TaskController');
 
 Route::post('/projects/{project}/members', 'ProjectMemberController@store');
 
+Route::get('/file/{file}', 'FileController@download');
+
 Route::get('/dashboard', 'DashboardController@index');
 Route::get('/test', function(){
     return view('layouts.test');
