@@ -12,4 +12,9 @@ class ProjectRepository
                         ->orderBy('created_at', 'asc')
                         ->get();
     }
+
+    public function members(Project $project)
+    {
+
+    }
 }
