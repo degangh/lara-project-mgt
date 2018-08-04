@@ -97,13 +97,11 @@ class ProjectController extends Controller
     {
         //prepare user list
         $users = User::all()->except($project->owner_id)->sortBy('name');
-        $files = File::all()->sortBy('created_at');
         $this->authorize('show', $project);
         return view('tasks', [
             'tasks' => $project->tasks,
             'project' => $project,
-            'users' => $users,
-            'files' => $files
+            'users' => $users
             ]);
         
     }

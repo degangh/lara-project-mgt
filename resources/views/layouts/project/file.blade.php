@@ -5,7 +5,7 @@
             <div class="card-header">Files in Project {{$project->name}}</div>
             <div class="card-body">
             <table class="table table-striped">
-                @foreach ($files as $file)
+                @foreach ($project->files as $file)
                 <tr>
                 <td><a href="{{url('/file/')}}/{{$file->id}}">{{$file->original_name}}</a></td>
                 <td>{{$file->created_at}}</td>
