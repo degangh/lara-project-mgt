@@ -115,7 +115,7 @@ class ProjectController extends Controller
      */
     public function edit($id, Request $request)
     {
-        //
+        /*
         $current_project=Project::find($id);
 
         $this->authorize('edit', $current_project);
@@ -124,7 +124,7 @@ class ProjectController extends Controller
         return view('project_edit', [
             'projects' => $projects,
             'current_project' =>$current_project
-            ]);
+            ]);*/
     }
 
     /**
