@@ -21,7 +21,8 @@ class AuthServiceProvider extends ServiceProvider
     protected $policies = [
         'App\Model' => 'App\Policies\ModelPolicy',
         Project::class => ProjectPolicy::class,
-        Task::class => TaskPolicy::class
+        Task::class => TaskPolicy::class,
+        File::class => FilePolicy::class
     ];
 
     /**
