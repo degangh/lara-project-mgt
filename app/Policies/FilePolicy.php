@@ -18,9 +18,9 @@ class FilePolicy
     {
         //
     }
-
-    public function download(User $user, Project $project)
+    
+    public function download(User $user, File $file)
     {
-        
+        return true;
     }
 }
