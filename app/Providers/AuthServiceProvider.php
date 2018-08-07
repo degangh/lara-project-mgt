@@ -5,8 +5,10 @@ namespace App\Providers;
 use Laravel\Passport\Passport;
 use App\Project;
 use App\Task;
+use App\File;
 use App\Policies\ProjectPolicy;
 use App\Policies\TaskPolicy;
+use App\Policies\FilePolicy;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;

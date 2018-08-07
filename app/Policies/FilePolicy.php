@@ -3,6 +3,7 @@
 namespace App\Policies;
 
 use App\User;
+use App\File;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class FilePolicy
@@ -21,6 +22,6 @@ class FilePolicy
     
     public function download(User $user, File $file)
     {
-        return true;
+        return $user == $file->user || $file->project->members->contains('id', $user->id);
     }
 }
