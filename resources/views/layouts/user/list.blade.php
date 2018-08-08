@@ -12,8 +12,11 @@
                 <td class="33%">
                 {{$user->email}}
                 </td>
-                <td class="33%">
+                <td class="23%">
                     {{ \Carbon\Carbon::parse($user->created_at)->format('d/m/Y')}}
+                </td>
+                <td class="10%">
+                {{ $user->is_active ? 'Activated' : 'De-Activated'}}
                 </td>
                 
                 </tr>
