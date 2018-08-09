@@ -9,7 +9,7 @@
                 <td class="33%">
                 {{$user->name}}
                 </td>
-                <td class="33%">
+                <td class="23%">
                 {{$user->email}}
                 </td>
                 <td class="23%">
@@ -17,6 +17,17 @@
                 </td>
                 <td class="10%">
                 {{ $user->is_active ? 'Activated' : 'De-Activated'}}
+                </td>
+                <td class="10%">
+                @if($user->is_active == 1)
+                <button class='btn btn-default'>
+                De-Activate
+                </button>
+                @else
+                <button class='btn btn-default'>
+                Recover
+                </button>
+                @endif
                 </td>
                 
                 </tr>

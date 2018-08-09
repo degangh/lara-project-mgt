@@ -21,8 +21,11 @@ Route::get('/home', 'ProjectController@index')->name('home');
 Route::resource('projects', 'ProjectController');
 Route::post('/projects/{project}/file', 'ProjectController@file');
 Route::resource('users', 'UserController');
+Route:: patch('users/{user}/deactivate', 'UserController@deactivate');
+Route::patch('users/{user}/activate', 'UserController@activate');
 
 Route::patch('tasks/{task}/complete', 'TaskController@complete');
+
 Route::resource('tasks', 'TaskController');
 
 Route::post('/projects/{project}/members', 'ProjectMemberController@store');

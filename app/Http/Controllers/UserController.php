@@ -114,4 +114,14 @@ class UserController extends Controller
     {
         //
     }
+
+    public function deactivate(User $user)
+    {
+        dd($user);
+    }
+
+    public function activate(User $user)
+    {
+        dd($user);
+    }
 }
