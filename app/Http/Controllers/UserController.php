@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Session;
 
 class UserController extends Controller
 {
@@ -66,7 +67,7 @@ class UserController extends Controller
             "password" => bcrypt($request->password)
         ]);
 
-        redirect("/users");
+        return redirect("/users");
 
     }
 
@@ -115,13 +116,15 @@ class UserController extends Controller
         //
     }
 
-    public function deactivate(User $user)
+    public function updateActiveStatus(User $user, $status)
     {
-        dd($user);
-    }
+        $is_active = ($status == 'activate') ? 1 : 0;
 
-    public function activate(User $user)
-    {
-        dd($user);
+        $user->is_active = $is_active;
+
+        $user->save();
+
+        Session::flash('success', 'User Status updated Successfully');
+        return redirect("/users");
     }
 }
