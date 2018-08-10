@@ -14,7 +14,13 @@ class FileController extends Controller
       
      }
     
-    //
+    /**
+     * download file in upload folder.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  File $file
+     * @return \Illuminate\Http\Response
+     */
     public function download(Request $request, File $file)
     {        
         $this->authorize("download", $file);

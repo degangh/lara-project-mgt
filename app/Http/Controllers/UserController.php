@@ -116,6 +116,14 @@ class UserController extends Controller
         //
     }
 
+    /**
+     * toggle user's is_active status
+     *
+     * @param  App\User  $user
+     * @param  string $status
+     * @return \Illuminate\Http\Response
+     */
+
     public function updateActiveStatus(User $user, $status)
     {
         $is_active = ($status == 'activate') ? 1 : 0;
