@@ -124,10 +124,12 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function updateActiveStatus(User $user, $status)
+    public function updateActiveStatus(User $user, $action)
     {
-        $is_active = ($status == 'activate') ? 1 : 0;
-
+        $this->authorize("edit", User::class);
+        
+        $is_active = ($action == 'activate') ? 1 : 0;
+        
         $user->is_active = $is_active;
 
         $user->save();
