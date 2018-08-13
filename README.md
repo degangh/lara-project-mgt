@@ -11,10 +11,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-PHP 7.0.1 or later
-MySQL
-Laravel Framework
-Bootstrap 4 
+* PHP 7.0.1 or later
+* MySQL
+* Laravel Framework
+* Bootstrap 4 
 
 ### Installing
 
@@ -56,6 +56,8 @@ Add additional notes about how to deploy this on a live system
 * [Laravel](https://laravel.com/) - The PHP Framework For Web Artisans
 * [comopser](https://getcomposer.org/) - A package manager for PHP
 * [Homestead](https://laravel.com/docs/5.0/homestead) - A development environment pre-packaged Vagrant "box"
+* Composer
+* npm
 
 
 
