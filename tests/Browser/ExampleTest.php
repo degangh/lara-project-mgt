@@ -27,14 +27,5 @@ class ExampleTest extends DuskTestCase
         });
     }
 
-    public function testLogin()
-    {
-        $this->browse(function ($browser) {
-            $browser->visit('/')
-                    ->type('email', 'hdg@sina.com')
-                    ->type('password', '123456')
-                    ->press('Login')
-                    ->assertSee('Project List');
-        });
-    }
+    
 }
