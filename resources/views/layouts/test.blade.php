@@ -28,7 +28,7 @@
     <script src="{{ mix('js/app.js') }}"></script>
     <script src="{{ mix('js/jquery-ui.min.js') }}"></script>
     
-    <script src="{{ mix('js/metismenu/metisMenu.min.js') }}"></script>
+    <script src="{{ asset('/js/metismenu/metisMenu.min.js') }}"></script>
 </head>
 
 <body>
@@ -62,7 +62,7 @@
 
 
 
-<script src="{{ mix('js/sbadmin2/sb-admin-2.min.js') }}"></script>
+<script src="{{ asset('/js/sbadmin2/sb-admin-2.min.js') }}"></script>
 </body>
 
 </html>
