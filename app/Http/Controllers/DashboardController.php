@@ -22,7 +22,9 @@ class DashboardController extends Controller
 
         $taskCount = Task::count();
 
-        echo ":" . $userCount . ":" . $taskCount;
+        $incompleteCount = Task::where('is_complete', 0)->count();
+
+        echo ":" . $userCount . ":" . $taskCount . ":" . $incompleteCount;
         
     }
 }
