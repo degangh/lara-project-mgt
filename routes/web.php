@@ -34,5 +34,5 @@ Route::get('/file/{file}', 'FileController@download');
 
 Route::get('/dashboard', 'DashboardController@index');
 Route::get('/test', function(){
-    return view('layouts.test');
+    return view('layouts.test2');
 });
