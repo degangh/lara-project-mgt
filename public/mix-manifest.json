@@ -1,8 +1,13 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
+    "/js/sbadmin2/sb-admin-2.min.js": "/js/sbadmin2/sb-admin-2.min.js",
     "/js/jquery-ui.min.js": "/js/jquery-ui.min.js",
     "/css/jquery-ui.min.css": "/css/jquery-ui.min.css",
+    "/css/metismenu/metisMenu.min.css": "/css/metismenu/metisMenu.min.css",
+    "/css/metismenu/metisMenu.min.css.map": "/css/metismenu/metisMenu.min.css.map",
+    "/js/metismenu/metisMenu.min.js": "/js/metismenu/metisMenu.min.js",
+    "/js/metismenu/metisMenu.min.js.map": "/js/metismenu/metisMenu.min.js.map",
     "/js/select2/select2.min.js": "/js/select2/select2.min.js",
     "/css/select2/select2.min.css": "/css/select2/select2.min.css"
 }
