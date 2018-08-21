@@ -10,11 +10,11 @@
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.2.0",
     "axios": "^0.17",
     "bootstrap": "^4.1.1",
     "bootstrap-sass": "^3.3.7",
     "cross-env": "^5.1",
-    "font-awesome": "FortAwesome/Font-Awesome",
     "jquery": "^3.2",
     "jquery-ui-dist": "^1.12.1",
     "laravel-mix": "^2.0",
