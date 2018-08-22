@@ -14,13 +14,12 @@
 
    <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
     <!-- Custom fonts for this template-->
+
     
-
-    <!-- Page level plugin CSS-->
-    <link href="https://blackrockdigital.github.io/startbootstrap-sb-admin/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
-
+    
     <!-- Custom styles for this template-->
-    <link href="https://blackrockdigital.github.io/startbootstrap-sb-admin/css/sb-admin.css" rel="stylesheet">
+    <link href="{{ mix('/css/sbadmin/sb-admin.css') }}" rel="stylesheet">
+
 
     <script>
         window.Laravel = {!! json_encode([
@@ -191,14 +190,15 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="https://blackrockdigital.github.io/startbootstrap-sb-admin/vendor/jquery/jquery.min.js"></script>
+
     <script src="{{ mix('js/app.js') }}"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="https://blackrockdigital.github.io/startbootstrap-sb-admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="{{ mix('js/sbadmin/sb-admin.min.js') }}"></script>
+    <script src="{{ mix('js/jquery.easing.js') }}"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="https://blackrockdigital.github.io/startbootstrap-sb-admin/js/sb-admin.min.js"></script>
+    
 
   </body>
 
