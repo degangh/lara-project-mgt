@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 
   <head>
 
@@ -132,9 +132,8 @@
           </ol>
 
           <!-- Page Content -->
-          <h1>Blank Page</h1>
-          <hr>
-          <p>This is a great starting point for new custom pages.</p>
+          
+          @yield('content')
 
         </div>
         <!-- /.container-fluid -->
