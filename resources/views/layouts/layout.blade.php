@@ -29,7 +29,7 @@
 
   </head>
 
-  <body id="page-top">
+  <body id="page-top" >
 
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
@@ -86,9 +86,21 @@
       <!-- Sidebar -->
       <ul class="sidebar navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">
+          <a class="nav-link" href="/dashboard">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/projects">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Projects</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/users">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Users</span>
           </a>
         </li>
         <li class="nav-item dropdown">
