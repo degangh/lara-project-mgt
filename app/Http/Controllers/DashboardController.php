@@ -12,11 +12,11 @@ class DashboardController extends Controller
     //
     public function index()
     {
-        echo 'dashboard'; //to do
+        
 
         $projectCount = Project::count();
 
-        echo $projectCount;
+        
 
         $userCount = User::count();
 
@@ -24,7 +24,12 @@ class DashboardController extends Controller
 
         $incompleteCount = Task::where('is_complete', 0)->count();
 
-        echo ":" . $userCount . ":" . $taskCount . ":" . $incompleteCount;
+        return view ('dashboard', [
+            'userCount' => $userCount,
+            'taskCount' => $taskCount,
+            'incompleteCount' => $incompleteCount,
+            'projectCount' => $projectCount
+        ]);
         
     }
 }
