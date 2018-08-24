@@ -1,7 +1,8 @@
-<div class="row">
-    <div class="offset-md-1 col-md-10">
-        <div class="card">
-            <div class="card-header">Project List</div>
+<!-- Area Chart Example-->
+<div class="card mb-3">
+            <div class="card-header">
+              <i class="fas fa-chart-area"></i>
+              Area Chart Example</div>
             <div class="card-body">
             <table class="table table-striped">
                 @foreach ($projects as $project)
@@ -25,8 +26,7 @@
                 </tr>
                 @endforeach
                 </div>
-            </table>
+            </table>  
             </div>
-        </div>
-    </div>
-</div>
+            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+ </div>
