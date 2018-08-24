@@ -13,8 +13,12 @@
     <title>{{ config('app.name', 'Project') }}</title>
 
    <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
+   <link href="{{ mix('/css/jquery-ui.min.css') }}" rel="stylesheet">
     <!-- Custom fonts for this template-->
+<!-- Bootstrap core JavaScript-->
 
+    <script src="{{ mix('js/app.js') }}"></script>
+    <script src="{{ mix('js/jquery-ui.min.js') }}"></script>
     
     
     <!-- Custom styles for this template-->
@@ -182,9 +186,7 @@
       </div>
     </div>
 
-    <!-- Bootstrap core JavaScript-->
-
-    <script src="{{ mix('js/app.js') }}"></script>
+    
 
     <!-- Core plugin JavaScript-->
     <script src="{{ mix('js/sbadmin/sb-admin.min.js') }}"></script>
