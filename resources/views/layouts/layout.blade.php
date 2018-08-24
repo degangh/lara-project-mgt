@@ -93,13 +93,13 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/projects">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <i class="fas fa-fw fa-project-diagram"></i>
             <span>Projects</span>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/users">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <i class="fas fa-fw fa-users"></i>
             <span>Users</span>
           </a>
         </li>
