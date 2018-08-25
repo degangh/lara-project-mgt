@@ -12,6 +12,7 @@
                 <td>{{$file->user->name}}</td>
                 </tr>
                 @endforeach
+            </table>
             </div>
            </div>
         </div>
