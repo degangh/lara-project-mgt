@@ -1,4 +1,4 @@
-<!-- Area Chart Example-->
+<!-- Project List -->
 <div class="card mb-3">
             <div class="card-header">
               <i class="fas fa-fw fa-project-diagram"></i>

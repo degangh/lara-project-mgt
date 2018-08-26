@@ -1,7 +1,7 @@
-<div class="row">
-        <div class="offset-md-1 col-md-10">
+
             <div class="card">
-            <div class="card-header">Tasks in {{$project->name}}</div>
+            <div class="card-header">
+            <i class='fas fa-tasks'></i> Tasks in {{$project->name}}</div>
             <div class="card-body">
             <table class="table table-striped">
                 @foreach ($tasks as $task)
@@ -35,8 +35,7 @@
             </table>
             </div>
         </div>
-    </div>
-</div>
+    
 
 <div class="popup_confirm" title="Confirm" style="display:none;">
 <div>Confirm to Set this task to completed?</div>

@@ -1,8 +1,8 @@
 
-<div class="row mt-3 p-3">
-        <div class="offset-md-1 col-md-10">
-           <div class='card'>
-            <div class="card-header">Files in Project {{$project->name}}</div>
+           <div class='card m-3'>
+            <div class="card-header">
+            <i class='far fa-file'></i> 
+            Files in Project {{$project->name}}</div>
             <div class="card-body">
             <table class="table table-striped">
                 @foreach ($project->files as $file)
@@ -15,5 +15,4 @@
             </table>
             </div>
            </div>
-        </div>
-</div>
+       

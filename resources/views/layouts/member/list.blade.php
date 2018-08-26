@@ -1,8 +1,8 @@
 
-<div class="row mt-3">
-        <div class="offset-md-1 col-md-10">
-            <div class="card">
-            <div class="card-header">Members in {{$project->name}}</div>
+
+            <div class="card mt-3">
+            <div class="card-header">
+            <i class='fas fa-users'></i> Members in {{$project->name}}</div>
                 <div class="card-body text-nowrap">
                 <div class="row">
                 <div class="card col-md-2 m-1 p-1" >
@@ -23,5 +23,4 @@
             
             </div>
         </div>
-    </div>
-</div>
+   
