@@ -20,7 +20,7 @@
                         <form></form><form action="{{url('/tasks')}}/{{$task->id}}/complete" method="post">
                         {{csrf_field()}}
                         {{ method_field('PATCH') }}
-                        <a href="#" class="complete-btn"><i class="fa fa-square-o"></i></a>
+                        <a href="#" class="complete-btn"><i class="far fa-square"></i></a>
                         </form>
                     @else
                         <i class="fa fa-check-square text-success"></i>
