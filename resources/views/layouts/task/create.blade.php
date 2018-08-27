@@ -38,8 +38,8 @@
     </div>
 </div>
 
-<div class="row" style="margin-bottom:15px;text-align:right">
-    <div class="offset-md-1 col-md-10 mt-2">
+<div class="row" style="margin-bottom:15px;">
+    <div class="col-md-12 mt-2">
         <button class="btn btn-sm add-member-btn btn-success" >
         <i class="fa fa-user-plus"></i> Add Members
         </button> 
