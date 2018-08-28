@@ -17,8 +17,8 @@ mix.js('resources/assets/js/app.js', 'public/js')
    mix.copy('node_modules/jquery-ui-dist/jquery-ui.min.css', 'public/css');
    mix.copy('node_modules/jquery-ui-dist/images', 'public/css/images');
    
-   mix.js('node_modules/startbootstrap-sb-admin/js/sb-admin.min.js', 'public/js/sbadmin')
-   .sass('node_modules/startbootstrap-sb-admin/scss/sb-admin.scss', 'public/css/sbadmin');
+   mix.js('node_modules/startbootstrap-sb-admin/js/sb-admin.min.js', 'public/js/sbadmin');
+   mix.sass('resources/assets/sass/sb-admin.scss', 'public/css/sbadmin');
    mix.copy('node_modules/metismenu/dist/metisMenu.min.css', 'public/css/metismenu');
    mix.copy('node_modules/metismenu/dist/metisMenu.min.css.map', 'public/css/metismenu');
    mix.copy('node_modules/metismenu/dist/metisMenu.min.js', 'public/js/metismenu');
