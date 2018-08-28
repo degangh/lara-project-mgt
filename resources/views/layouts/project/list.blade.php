@@ -14,7 +14,7 @@
                 @endif
                 </td>
                 <td>
-                <a href="{{url('/projects')}}/{{$project->id}}" ><i class="fa fa-folder-open"></i></a>
+                <a href="{{url('/projects')}}/{{$project->id}}" ><i class="far fa-folder-open"></i></a>
                 </td>
                 <td>
                 @if ($project->user->id == Auth::user()->id)
