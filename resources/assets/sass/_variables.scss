@@ -36,3 +36,11 @@ $input-color-placeholder: lighten($text-color, 30%);
 
 // Panels
 $panel-default-heading-bg: #fff;
+
+// Tables
+$table-cell-padding:          .5rem;
+$table-cell-padding-sm:       .25rem;
+
+// Card
+$card-spacer-y:                     .5rem !default;
+$card-spacer-x:                     .75rem !default;
