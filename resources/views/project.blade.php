@@ -5,9 +5,9 @@
 <!-- Breadcrumbs-->
 <ol class="breadcrumb">
     <li class="breadcrumb-item">
-        <a href="/">Projects</a>
+        <a href="/dashboard">Dashboard</a>
     </li>
-    <!--li class="breadcrumb-item active">Blank Page</li-->
+    <li class="breadcrumb-item active">Project</li>
 </ol>
 
 
