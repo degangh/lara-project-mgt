@@ -41,15 +41,16 @@
 <div class="row" style="margin-bottom:15px;">
     <div class="col-md-12 mt-2">
         <button class="btn btn-sm add-member-btn btn-success" >
-        <i class="fa fa-user-plus"></i> Add Members
+        <i class="fa fa-user-plus"></i> 
+        <span class='d-none d-md-inline'>Add Members</span>
         </button> 
         
         <button class="btn btn-sm create-task-btn btn-success" >
-        <i class="fa fa-plus"></i> Add New Task
+        <i class="fas fa-tasks"></i> <span class='d-none d-md-inline'>Add New Task</span>
         </button>
 
         <button class="btn btn-sm upload-btn btn-success" >
-        <i class="fa fa-plus"></i> Add New File
+        <i class="fas fa-file-upload"></i> <span class='d-none d-md-inline'>Add New File</span>
         </button>
     </div>
 </div>
@@ -68,7 +69,9 @@ jQuery(function(){
 
     jQuery(".create-task").dialog({
         autoOpen: false,
-        width: "500px",
+        modal: true,
+        width: 'auto',
+        maxWidth: "500px",
         show: {
             effect: "fade",
             duration: 800
@@ -77,7 +80,8 @@ jQuery(function(){
         hide: {
             effect: "fade",
             duration: 800
-        }
+        }, 
+        fluid: true
     })
 
     jQuery(".create-task-btn").on("click",function(){

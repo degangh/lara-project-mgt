@@ -27,7 +27,9 @@ jQuery(function(){
 
     jQuery(".upload-file").dialog({
         autoOpen: false,
-        width: "500px",
+        modal: true,
+        width: 'auto',
+        maxWidth: "500px",
         show: {
             effect: "fade",
             duration: 800
