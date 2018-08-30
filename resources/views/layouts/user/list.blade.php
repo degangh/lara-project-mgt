@@ -3,7 +3,8 @@
 <i class="fas fa-fw fa-users"></i>
 User List</div>
 <div class="card-body">
-<table class="table table-striped table-responsive">
+<div class='table-responsive'>
+<table class="table table-striped">
     @foreach ($users as $user)
     <tr>
     <td class="33%">
@@ -37,6 +38,7 @@ User List</div>
     </tr>
     @endforeach
     </table>
+    </div>
     </div>
 
 </div>

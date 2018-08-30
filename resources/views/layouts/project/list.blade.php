@@ -4,6 +4,7 @@
               <i class="fas fa-fw fa-project-diagram"></i>
               Project List</div>
             <div class="card-body">
+            <div class="table-responsive">
             <table class="table table-striped">
                 @foreach ($projects as $project)
                 <tr>
@@ -27,6 +28,7 @@
                 @endforeach
                 </div>
             </table>  
+            </div>
             </div>
             <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
  </div>

@@ -3,6 +3,7 @@
             <div class="card-header">
             <i class='fas fa-tasks'></i> Tasks in {{$project->name}}</div>
             <div class="card-body">
+            <div class="table-responsive">
             <table class="table table-striped">
                 @foreach ($tasks as $task)
                 <tr>
@@ -33,6 +34,7 @@
                 @endforeach
                 </div>
             </table>
+            </div>
             </div>
         </div>
     
