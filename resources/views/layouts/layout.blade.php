@@ -30,7 +30,7 @@
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
-
+    <script src="{{ asset('js/select2/select2.min.js') }}"></script>
   </head>
 
   <body id="page-top" class='sidebar-toggled'>
@@ -200,6 +200,7 @@
     <!-- Core plugin JavaScript-->
     <script src="{{ mix('js/sbadmin/sb-admin.min.js') }}"></script>
     <script src="{{ mix('js/jquery.easing.js') }}"></script>
+    
 
     <!-- Custom scripts for all pages-->
     
