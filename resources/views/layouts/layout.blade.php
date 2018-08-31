@@ -31,6 +31,7 @@
         ]) !!};
     </script>
     <script src="{{ asset('js/select2/select2.min.js') }}"></script>
+    <link href="{{ asset('css/select2/select2.min.css') }}" rel="stylesheet">
   </head>
 
   <body id="page-top" class='sidebar-toggled'>
