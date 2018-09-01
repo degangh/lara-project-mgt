@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Project') }}</title>
+    <title>@lang('layout.page_title')</title>
 
    <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
    <link href="{{ mix('/css/jquery-ui.min.css') }}" rel="stylesheet">
@@ -49,14 +49,13 @@
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown no-arrow mx-1">
           <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-bell fa-fw"></i>
-            <span class="badge badge-danger">9+</span>
+            <i class="fas fa-globe fa-fw"></i>
+            
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" href="#">English</a>
+            <a class="dropdown-item" href="#">Chinese</a>
+            
           </div>
         </li>
         <li class="nav-item dropdown no-arrow mx-1">

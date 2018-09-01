@@ -33,6 +33,12 @@ Route::post('/projects/{project}/members', 'ProjectMemberController@store');
 Route::get('/file/{file}', 'FileController@download');
 
 Route::get('/dashboard', 'DashboardController@index');
+
+Route::get('setLang/{locale}', function ($locale) {
+    App::setLocale($locale);
+
+    //
+});
 Route::get('/test', function(){
     return view('layouts.test2');
 });
