@@ -34,8 +34,9 @@ Route::get('/file/{file}', 'FileController@download');
 
 Route::get('/dashboard', 'DashboardController@index');
 
-Route::get('setLang/{locale}', function ($locale) {
-    App::setLocale($locale);
+Route::get('lang/{locale}', function ($locale) {
+    Session::put('locale', $locale);
+    return back();
 
     //
 });
