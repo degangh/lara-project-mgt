@@ -53,8 +53,8 @@
             
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
-            <a class="dropdown-item" href="#">English</a>
-            <a class="dropdown-item" href="#">Chinese</a>
+            <a class="dropdown-item" href="/lang/en">English</a>
+            <a class="dropdown-item" href="/lang/zh-CN">Chinese</a>
             
           </div>
         </li>
