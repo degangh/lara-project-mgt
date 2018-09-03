@@ -15,5 +15,9 @@ return [
 
     'page_title' => '项目工具',
     'logout' => '安全退出',
+    'dashboard' => '仪表盘',
+    'projects' => '项目',
+    'users' => '用户',
+    'footer' => '项目管理工具2018',
 
 ];

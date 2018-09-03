@@ -4,9 +4,9 @@
 
 <ol class="breadcrumb">
             <li class="breadcrumb-item">
-              <a href="#">Dashboard</a>
+              <a href="#">@lang('dashboard.dashboard')</a>
             </li>
-            <li class="breadcrumb-item active">Overview</li>
+            <li class="breadcrumb-item active">@lang('dashboard.overview')</li>
           </ol>
 
           <!-- Icon Cards-->
@@ -17,10 +17,10 @@
                   <div class="card-body-icon">
                     <i class="fas fa-fw fa-project-diagram"></i>
                   </div>
-                  <div class="mr-5">{{ $projectCount }} Projects</div>
+                  <div class="mr-5">@lang('dashboard.totalProjects', ['projectCount' => $projectCount])</div>
                 </div>
                 <a class="card-footer text-white clearfix small z-1" href="{{url('/projects')}}">
-                  <span class="float-left">View Details</span>
+                  <span class="float-left">@lang('dashboard.view')</span>
                   <span class="float-right">
                     <i class="fas fa-angle-right"></i>
                   </span>
@@ -33,10 +33,10 @@
                   <div class="card-body-icon">
                     <i class="fas fa-fw fa-users"></i>
                   </div>
-                  <div class="mr-5">{{ $userCount}} Members!</div>
+                  <div class="mr-5">@lang('dashboard.totalUsers', ['userCount' => $userCount])</div>
                 </div>
                 <a class="card-footer text-white clearfix small z-1" href="#{{url('/users')}}">
-                  <span class="float-left">View Details</span>
+                  <span class="float-left">@lang('dashboard.view')</span>
                   <span class="float-right">
                     <i class="fas fa-angle-right"></i>
                   </span>
@@ -49,10 +49,10 @@
                   <div class="card-body-icon">
                     <i class="fas fa-fw fa-shopping-cart"></i>
                   </div>
-                  <div class="mr-5">{{ $taskCount}} New Tasks!</div>
+                  <div class="mr-5">@lang('dashboard.totalTasks', ['incompleteCount' => $incompleteCount])</div>
                 </div>
                 <a class="card-footer text-white clearfix small z-1" href="#">
-                  <span class="float-left">View Details</span>
+                  <span class="float-left">@lang('dashboard.view')</span>
                   <span class="float-right">
                     <i class="fas fa-angle-right"></i>
                   </span>

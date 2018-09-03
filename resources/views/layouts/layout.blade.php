@@ -38,7 +38,7 @@
 
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-      <a class="navbar-brand mr-1" href="index.html">Project</a>
+      <a class="navbar-brand mr-1" href="{{url('/')}}">@lang('layout.page_title')</a>
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
@@ -92,25 +92,25 @@
         <li class="nav-item">
           <a class="nav-link" href="/dashboard">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span>
+            <span>@lang('layout.dashboard')</span>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/projects">
             <i class="fas fa-fw fa-project-diagram"></i>
-            <span>Projects</span>
+            <span>@lang('layout.projects')</span>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/users">
             <i class="fas fa-fw fa-users"></i>
-            <span>Users</span>
+            <span>@lang('layout.users')</span>
           </a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-fw fa-folder"></i>
-            <span>Pages</span>
+            <span>Sample</span>
           </a>
           <div class="dropdown-menu" aria-labelledby="pagesDropdown">
             <h6 class="dropdown-header">Login Screens:</h6>
@@ -126,12 +126,12 @@
         <li class="nav-item">
           <a class="nav-link" href="charts.html">
             <i class="fas fa-fw fa-chart-area"></i>
-            <span>Charts</span></a>
+            <span>Sample</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="tables.html">
             <i class="fas fa-fw fa-table"></i>
-            <span>Tables</span></a>
+            <span>Sample</span></a>
         </li>
       </ul>
 
@@ -151,7 +151,7 @@
         <footer class="sticky-footer">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright © Your Website 2018</span>
+              <span>@lang('layout.footer')</span>
             </div>
           </div>
         </footer>

@@ -15,5 +15,10 @@ return [
 
     'page_title' => 'Project Tool',
     'logout' => 'Log Out',
+    'dashboard' => 'Dashboard',
+    'projects' => 'Projects',
+    'users' => 'Users',
+    'footer' => 'Project Tool 2018',
+
 
 ];
