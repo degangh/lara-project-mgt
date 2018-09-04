@@ -21,7 +21,7 @@ return [
     'footer' => 'Project Tool 2018',
     'english' => 'English',
     'chinese' => 'Chinese',
-    'project' => 'Project'
+    'project' => 'Project',
 
 
 ];
