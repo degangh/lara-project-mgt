@@ -2,7 +2,7 @@
 
             <div class="card mt-3">
             <div class="card-header">
-            <i class='fas fa-users'></i> Members in {{$project->name}}</div>
+            <i class='fas fa-users'></i> @lang('project.members')</div>
                 <div class="card-body text-nowrap">
                 <div class="row">
                 <div class="card col-md-2 m-1 p-1" >

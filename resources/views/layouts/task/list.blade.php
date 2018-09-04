@@ -1,7 +1,7 @@
 
             <div class="card">
             <div class="card-header">
-            <i class='fas fa-tasks'></i> Tasks in {{$project->name}}</div>
+            <i class='fas fa-tasks'></i> @lang('project.task_list')</div>
             <div class="card-body">
             <div class="table-responsive">
             <table class="table table-striped">

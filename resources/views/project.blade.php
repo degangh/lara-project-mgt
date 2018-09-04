@@ -5,9 +5,9 @@
 <!-- Breadcrumbs-->
 <ol class="breadcrumb">
     <li class="breadcrumb-item">
-        <a href="/dashboard">Dashboard</a>
+        <a href="/dashboard">@lang('layout.dashboard')</a>
     </li>
-    <li class="breadcrumb-item active">Project</li>
+    <li class="breadcrumb-item active">@lang('layout.projects')</li>
 </ol>
 
 

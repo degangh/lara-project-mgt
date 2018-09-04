@@ -19,5 +19,8 @@ return [
     'projects' => '项目',
     'users' => '用户',
     'footer' => '项目管理工具2018',
+    'english' => '英文',
+    'chinese' => '中文',
+    'project' => '项目',
 
 ];

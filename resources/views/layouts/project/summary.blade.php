@@ -1,7 +1,7 @@
 
         <div class="card">
             <div class='card-header'>
-            <i class='fas fa-cogs'></i> Project Summary</div>
+            <i class='fas fa-cogs'></i> @lang('project.project_summary')</div>
             <div class = 'card-body'>
             <h5>{{ $project->name }}</h5>
             <div>{{ $project->desc }}</div>

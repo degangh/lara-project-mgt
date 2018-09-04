@@ -2,7 +2,7 @@
 <div class="card mb-3">
             <div class="card-header">
               <i class="fas fa-fw fa-project-diagram"></i>
-              Project List</div>
+              @lang('project.project_list')</div>
             <div class="card-body">
             <div class="table-responsive">
             <table class="table table-striped">

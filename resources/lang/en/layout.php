@@ -19,6 +19,9 @@ return [
     'projects' => 'Projects',
     'users' => 'Users',
     'footer' => 'Project Tool 2018',
+    'english' => 'English',
+    'chinese' => 'Chinese',
+    'project' => 'Project'
 
 
 ];

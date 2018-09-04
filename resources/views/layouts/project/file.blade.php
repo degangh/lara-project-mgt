@@ -2,7 +2,7 @@
            <div class='card m-3'>
             <div class="card-header">
             <i class='far fa-file'></i> 
-            Files in Project {{$project->name}}</div>
+            @lang('project.file')</div>
             <div class="card-body">
             <table class="table table-striped">
                 @foreach ($project->files as $file)

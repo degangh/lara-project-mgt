@@ -53,8 +53,8 @@
             
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
-            <a class="dropdown-item" href="/lang/en">English</a>
-            <a class="dropdown-item" href="/lang/zh-CN">Chinese</a>
+            <a class="dropdown-item" href="/lang/en">@lang('layout.english')</a>
+            <a class="dropdown-item" href="/lang/zh-CN">@lang('layout.chinese')</a>
             
           </div>
         </li>
@@ -107,7 +107,7 @@
             <span>@lang('layout.users')</span>
           </a>
         </li>
-        <li class="nav-item dropdown">
+        <!--li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-fw fa-folder"></i>
             <span>Sample</span>
@@ -132,7 +132,7 @@
           <a class="nav-link" href="tables.html">
             <i class="fas fa-fw fa-table"></i>
             <span>Sample</span></a>
-        </li>
+        </li-->
       </ul>
 
       <div id="content-wrapper">

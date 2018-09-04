@@ -33,7 +33,7 @@
 <div class="row" style="margin-bottom:15px">
     <div class="col-md-12 pt-2">
         <button class="btn btn-sm create-project-btn btn-success pull-right pt-1 pb-1" >
-        <i class="fa fa-plus"></i> Add New Project
+        <i class="fa fa-plus"></i> @lang('project.new_project')
         </button>
     </div>
 </div>
