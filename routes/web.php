@@ -36,6 +36,9 @@ Route::get('/dashboard', 'DashboardController@index');
 
 Route::get('lang/{locale}', function ($locale) {
     Session::put('locale', $locale);
+    $user = Auth::user();
+    $user->locale = $locale;
+    $user->save();
     return back();
 
     //
