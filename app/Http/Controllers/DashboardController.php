@@ -30,11 +30,14 @@ class DashboardController extends Controller
 
         $incompleteCount = Task::where('is_complete', 0)->count();
 
+        $overdueCount = Task::where('is_complete', 0)->where('due_time', '<', date("Y-m-d"))->count();
+
         return view ('dashboard', [
             'userCount' => $userCount,
             'taskCount' => $taskCount,
             'incompleteCount' => $incompleteCount,
-            'projectCount' => $projectCount
+            'projectCount' => $projectCount,
+            'overdueCount' => $overdueCount
         ]);
         
     }

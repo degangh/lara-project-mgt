@@ -18,6 +18,7 @@ return [
 'totalProjects' => ':projectCount Projects',
 'totalUsers' => ':userCount Members',
 'totalTasks' => ':incompleteCount New Tasks',
+'overdueTasks' => ':overdueCount Overdue Tasks',
 'view' => 'View Detail',
 
 

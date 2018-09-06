@@ -19,6 +19,7 @@ return [
 'totalUsers' => '用户总数：:userCount',
 'totalTasks' => '待完成任务：:incompleteCount',
 'view' => '查看详细',
+'overdueTasks' => '过期任务：:overdueCount',
 
 
 ];
