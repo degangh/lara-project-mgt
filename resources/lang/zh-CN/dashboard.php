@@ -20,6 +20,7 @@ return [
 'totalTasks' => '待完成任务：:incompleteCount',
 'view' => '查看详细',
 'overdueTasks' => '过期任务：:overdueCount',
+'onProjects' => '过期任务：:onProjectCount',
 
 
 ];

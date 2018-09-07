@@ -20,6 +20,7 @@ return [
 'totalTasks' => ':incompleteCount New Tasks',
 'overdueTasks' => ':overdueCount Overdue Tasks',
 'view' => 'View Detail',
+'onProjects' => 'In :onProjectCount Teams',
 
 
 ];

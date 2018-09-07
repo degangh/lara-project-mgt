@@ -33,7 +33,7 @@
                   <div class="card-body-icon">
                     <i class="fas fa-fw fa-users"></i>
                   </div>
-                  <div class="mr-5">@lang('dashboard.totalUsers', ['userCount' => $userCount])</div>
+                  <div class="mr-5">@lang('dashboard.onProjects', ['onProjectCount' => $onProjectCount])</div>
                 </div>
                 <a class="card-footer text-white clearfix small z-1" href="#{{url('/users')}}">
                   <span class="float-left">@lang('dashboard.view')</span>
