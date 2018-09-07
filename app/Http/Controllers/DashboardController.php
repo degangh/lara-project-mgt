@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Task;
 use App\Project;
+use Auth;
 
 class DashboardController extends Controller
 {
@@ -20,11 +21,11 @@ class DashboardController extends Controller
     {
         
 
-        $projectCount = Project::count();
+        $projectCount = Project::where('owner_id',Auth::user()->id)->count();
 
-        
+        $onProjectCount = User::find(Auth::user()->id)->onProjects->count();
 
-        $userCount = User::count();
+        //$userCount = User::count();
 
         $taskCount = Task::count();
 
@@ -33,7 +34,7 @@ class DashboardController extends Controller
         $overdueCount = Task::where('is_complete', 0)->where('due_time', '<', date("Y-m-d"))->count();
 
         return view ('dashboard', [
-            'userCount' => $userCount,
+            'userCount' => $onProjectCount,
             'taskCount' => $taskCount,
             'incompleteCount' => $incompleteCount,
             'projectCount' => $projectCount,
