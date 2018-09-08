@@ -22,6 +22,10 @@ return [
     'task_list' => '任务列表',
     'file' => '项目文件',
     'members' => '项目成员',
+    'save' => '保存',
+    'name' => '项目名称',
+    'description' => '项目简介',
+    'edit' => '编辑项目',
 
 
 ];

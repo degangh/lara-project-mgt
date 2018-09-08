@@ -22,6 +22,10 @@ return [
     'task_list' => 'Tasks',
     'file' => 'Project Files',
     'members' => 'Project Members',
+    'save' => 'Save',
+    'name' => 'Project Name',
+    'description' => 'Description',
+    'edit' => 'Edit Project',
 
 
 ];

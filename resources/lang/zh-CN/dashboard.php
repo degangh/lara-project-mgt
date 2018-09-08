@@ -15,12 +15,12 @@ return [
 
 'dashboard' => '仪表盘',
 'overview' => '概览',
-'totalProjects' => '项目总数：:projectCount',
+'totalProjects' => '我的项目：:projectCount',
 'totalUsers' => '用户总数：:userCount',
 'totalTasks' => '待完成任务：:incompleteCount',
 'view' => '查看详细',
 'overdueTasks' => '过期任务：:overdueCount',
-'onProjects' => '过期任务：:onProjectCount',
+'onProjects' => '参与项目：:onProjectCount',
 
 
 ];
