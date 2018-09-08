@@ -1,11 +1,11 @@
-<div class="create-project" title="Create a New Project" style="display:none">
+<div class="create-project" title="@lang('project.new_project')" style="display:none">
     
             
             <form action="{{ url('/projects') }}" method="post" name="create-project-form">
             {{csrf_field()}}
             
                 <div class="form-group">
-                    <lable for="project-name" class="control-label">Name</label>
+                    <lable for="project-name" class="control-label">@lang('project.name')</label>
 
                     <div class="">
                         <input type="text" name = "name" id="project-name" class="form-control required">
@@ -13,7 +13,7 @@
                 </div>
 
                 <div class="form-group">
-                    <lable for="project-name" class="control-label">Description</label>
+                    <lable for="project-name" class="control-label">@lang('project.description')</label>
 
                     <div class="">
                         <textarea name = "desc" class="form-control required" rows="3"></textarea>
@@ -23,7 +23,7 @@
                 <div class="form-group">
                     <div class="">
                         <button class="btn btn-primary new-project-btn">
-                        <i class="fa fa-save"></i> Save Project
+                        <i class="fa fa-save"></i> @lang('project.save')
                         </button>
                     </div>
                 </div>

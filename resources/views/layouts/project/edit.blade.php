@@ -1,4 +1,4 @@
-<div class="edit-project row" style="display:none">
+<div class="edit-project row" title = "@lang('project.edit')" style="display:none">
     <div class="col-md-12">
     <form method="post" id="edit-project-form">
             {{csrf_field()}}
@@ -6,7 +6,7 @@
 
 
                 <div class="form-group">
-                    <lable for="project-name" class="control-label">Project Name</label>
+                    <lable for="project-name" class="control-label">@lang('project.name')</label>
 
                     <div class="">
                         <input type="text" name = "name" value = ""id="project-name" class="form-control">
@@ -14,7 +14,7 @@
                 </div>
 
                 <div class="form-group">
-                    <lable for="project-name" class="control-label">Project Desciption</label>
+                    <lable for="project-name" class="control-label">@lang('project.description')</label>
 
                     <div class="">
                         <textarea name = "desc" class="form-control" rows="3"></textarea>
@@ -24,7 +24,7 @@
                 <div class="form-group">
                     <div class="">
                         <button class="btn btn-primary save-project-btn">
-                        <i class="fa fa-save"></i> Save Project
+                        <i class="fa fa-save"></i> @lang('project.save')
                         </button>
                     </div>
                 </div>
