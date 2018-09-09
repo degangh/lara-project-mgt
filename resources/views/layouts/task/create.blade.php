@@ -1,4 +1,4 @@
-<div class="row create-task" title="Create a task" style="display:none">
+<div class="row create-task" title="@lang('task.create')" style="display:none">
 
         <div class="col-md-12">
             <form action="{{ url('/tasks') }}" method="post" name="create-task-form">
@@ -6,7 +6,7 @@
             <div class="panel-body">
                 <div class="row">
                     <label class="form-group col-md-8">
-                        <div>Task</div>
+                        <div>@lang('task.task')</div>
 
                     
                         <input type="text" name = "name" id="task-name" class="form-control required">
@@ -15,7 +15,7 @@
                     </label>
                     
                     <label class="form-group col-md-4">
-                        <div>Due Date</div>
+                        <div>@lang('task.due_date')</div>
 
                     
                         <input type="text" name = "due_date" id="due-date" readonly class="form-control required">

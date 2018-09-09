@@ -39,8 +39,8 @@
         </div>
     
 
-<div class="popup_confirm" title="Confirm" style="display:none;">
-<div>Confirm to Set this task to completed?</div>
+<div class="popup_confirm" title="@lang('task.confirm')" style="display:none;">
+<div>@lang('task.confirm_text')</div>
 </div>
 <script>
 jQuery(function(){
