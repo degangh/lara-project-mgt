@@ -4,10 +4,10 @@
 <!-- Breadcrumbs-->
 <ol class="breadcrumb">
 <li class="breadcrumb-item">
-        <a href="/dashboard">Dashboard</a>
+        <a href="/dashboard">@lang('dashboard.dashboard')</a>
     </li>
     <li class="breadcrumb-item">
-        Users
+        @lang('dashboard.users')
     </li>
     
 </ol>
