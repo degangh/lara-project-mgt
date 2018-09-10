@@ -1,7 +1,7 @@
 <div class="row" style="margin-bottom:15px">
     <div class="col-md-12 pt-2">
         <button class="btn btn-default create-user-btn btn-success pull-right pt-1 pb-1" >
-        <i class="fa fa-user"></i> Add New User
+        <i class="fa fa-user"></i> @lang('user.create')
         </button>
     </div>
 </div>

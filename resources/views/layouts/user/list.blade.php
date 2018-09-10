@@ -1,7 +1,7 @@
 <div class="card mb-3">
 <div class="card-header">
 <i class="fas fa-fw fa-users"></i>
-User List</div>
+@lang('user.list')</div>
 <div class="card-body">
 <div class='table-responsive'>
 <table class="table table-striped">
@@ -17,7 +17,7 @@ User List</div>
         {{ \Carbon\Carbon::parse($user->created_at)->format('d/m/Y')}}
     </td>
     <td class="10%">
-    {{ $user->is_active ? 'Activated' : 'De-Activated'}}
+    {{ $user->is_active ? __('user.activated') : __('user.deactivated')}}
     </td>
     <td class="10%">
     <form method='post' action="{{url('/users/')}}/{{$user->id}}/{{$user->is_ative == 0 ? 'activate' : 'deactivate'}}">
@@ -25,11 +25,11 @@ User List</div>
     {{method_field('PATCH')}}
     @if($user->is_active == 1)
     <button class='btn btn-outline-secondary btn-sm'>
-    De-Activate
+    @lang('user.deactivated')
     </button>
     @else
     <button class='btn btn-outline-secondary btn-sm'>
-    Recover
+    @lang('user.recover')
     </button>
     @endif
     </form>
