@@ -4,7 +4,7 @@ return [
 
 /*
 |--------------------------------------------------------------------------
-| dashboard Language Lines
+| User Language Lines
 |--------------------------------------------------------------------------
 |
 | The following language lines are used during layout for various
@@ -13,15 +13,10 @@ return [
 |
 */
 
-'dashboard' => 'Dashboard',
-'overview' => 'Overview',
-'totalProjects' => ':projectCount Projects',
-'totalUsers' => ':userCount Members',
-'totalTasks' => ':incompleteCount New Tasks',
-'overdueTasks' => ':overdueCount Overdue Tasks',
-'view' => 'View Detail',
-'onProjects' => 'In :onProjectCount Teams',
-'users' => 'Users'
-
-
+'create' => 'Create A User',
+'list' => 'User List',
+'deactivate' => 'De-Activate',
+'activated' => 'Activated',
+'deactivated' => 'De-Activated',
+'recover' => 'Recover',
 ];

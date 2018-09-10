@@ -21,6 +21,7 @@ return [
 'view' => '查看详细',
 'overdueTasks' => '过期任务：:overdueCount',
 'onProjects' => '参与项目：:onProjectCount',
+'users' => '用户'
 
 
 ];
