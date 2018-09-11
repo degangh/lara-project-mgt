@@ -135,7 +135,7 @@ class UserController extends Controller
 
         $user->save();
 
-        Session::flash('success', 'User Status updated Successfully');
+        Session::flash('success', __('user.update_successfully'));
         return redirect("/users");
     }
 }

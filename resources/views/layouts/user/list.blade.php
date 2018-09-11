@@ -25,7 +25,7 @@
     {{method_field('PATCH')}}
     @if($user->is_active == 1)
     <button class='btn btn-outline-secondary btn-sm'>
-    @lang('user.deactivated')
+    @lang('user.deactivate')
     </button>
     @else
     <button class='btn btn-outline-secondary btn-sm'>

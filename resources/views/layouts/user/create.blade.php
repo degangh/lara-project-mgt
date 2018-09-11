@@ -6,14 +6,14 @@
     </div>
 </div>
 
-<div class="edit-user" title="Create a New User" style="display:none">
+<div class="edit-user" title="@lang('user.create')" style="display:none">
     
             
     <form action="{{ url('/users') }}" method="post" name="edit-user-form">
     {{csrf_field()}}
     
         <div class="form-group">
-            <lable for="project-name" class="control-label">True Name</label>
+            <lable for="project-name" class="control-label">@lang('user.truename')</label>
 
             <div class="">
                 <input type="text" name = "name" id="user-name" class="form-control required">
@@ -21,7 +21,7 @@
         </div>
 
         <div class="form-group">
-            <lable for="user-email" class="control-label">Email</label>
+            <lable for="user-email" class="control-label">@lang('user.email')</label>
 
             <div class="">
                 <input type="text" id = "user-email" name = "email" class="form-control required">
@@ -29,7 +29,7 @@
         </div>
 
         <div class="form-group">
-            <lable for="passowrd" class="control-label">Password</label>
+            <lable for="passowrd" class="control-label">@lang('user.password')</label>
 
             <div class="">
                 <input type="password" id = "password" name = "password" class="form-control required">
@@ -37,7 +37,7 @@
         </div>
 
         <div class="form-group">
-            <lable for="repeat-password" class="control-label">Email</label>
+            <lable for="repeat-password" class="control-label">@lang('user.repeat_password')</label>
 
             <div class="">
                 <input type="password" id= "repeat-password" name = "password_confirmation" class="form-control required">
@@ -47,7 +47,7 @@
         <div class="form-group">
             <div class="">
                 <button class="btn btn-primary save-user-btn">
-                <i class="fa fa-save"></i> Save User
+                <i class="fa fa-save"></i> @lang('user.save')
                 </button>
             </div>
         </div>
