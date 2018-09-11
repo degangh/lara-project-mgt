@@ -19,4 +19,10 @@ return [
 'activated' => 'Activated',
 'deactivated' => 'De-Activated',
 'recover' => 'Recover',
+'update_successfully' => 'User Status updated Successfully',
+'truename' => 'True Name',
+'email' => 'Email',
+'password' => 'Password',
+'repeat_password' => 'Repeat Password',
+'save' => 'Save User',
 ];

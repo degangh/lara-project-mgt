@@ -19,4 +19,10 @@ return [
 'activated' => '已激活',
 'deactivated' => '已禁用',
 'recover' => '恢复',
+'update_successfully' => '用户资料更新成功',
+'truename' => '姓名',
+'email' => '电子邮件',
+'password' => '密码',
+'repeat_password' => '再次输入密码',
+'save' => '保存用户'
 ];
