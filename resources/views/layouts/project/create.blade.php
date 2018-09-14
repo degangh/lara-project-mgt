@@ -45,7 +45,8 @@ jQuery(function(){
 
     jQuery(".create-project").dialog({
         autoOpen: false,
-        width: "500px",
+        mondal: true,
+        width: "auto",
         show: {
             effect: "fade",
             duration: 800

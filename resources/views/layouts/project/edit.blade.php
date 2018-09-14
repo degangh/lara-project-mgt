@@ -23,7 +23,7 @@
 
                 <div class="form-group">
                     <div class="">
-                        <button class="btn btn-primary save-project-btn">
+                        <button class="btn btn-primary btn-sm save-project-btn">
                         <i class="fa fa-save"></i> @lang('project.save')
                         </button>
                     </div>
@@ -38,7 +38,9 @@ jQuery(function(){
     
     ctrl.dialog({
         autoOpen:false,
-        width:"500px",
+        mondal: true,
+        width:'auto',
+        maxWidth: 500,
         show: {
             effect: "fade",
             duration: 800
@@ -61,5 +63,7 @@ jQuery(function(){
         $('#edit-project-form').submit();
     })
 })
+
+
 
 </script>
