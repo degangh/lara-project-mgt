@@ -7,16 +7,17 @@
             <table class="table table-striped">
                 @foreach ($tasks as $task)
                 <tr>
-                <td class="col-md-6">
+                <td class="">
                 {{$task->name}}
                 </td>
-                <td class="col-md-1">
-                {{$task->user->name}}
+               <td class=''>
+               {{$task->user->name}} -> {{$task->assignedTo->name}}
+                
                 </td>
-                <td class="col-md-4">
+                <td class="">
                     {{ \Carbon\Carbon::parse($task->due_time)->format('d/m/Y')}}
                 </td>
-                <td class="col-md-1">
+                <td class="">
                     @if ($task->is_complete == 0)
                         <form></form><form action="{{url('/tasks')}}/{{$task->id}}/complete" method="post">
                         {{csrf_field()}}
