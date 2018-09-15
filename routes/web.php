@@ -34,6 +34,9 @@ Route::get('/file/{file}', 'FileController@download');
 
 Route::get('/dashboard', 'DashboardController@index');
 
+/**
+ * Language setting
+ */
 Route::get('lang/{locale}', function ($locale) {
     Session::put('locale', $locale);
     $user = Auth::user();
@@ -43,6 +46,9 @@ Route::get('lang/{locale}', function ($locale) {
 
     //
 });
+
+Route::get('/tasks/my' , 'TaskController@myTasks');
+
 Route::get('/test', function(){
     return view('layouts.test2');
 });

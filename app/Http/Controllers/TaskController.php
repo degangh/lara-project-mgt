@@ -136,4 +136,15 @@ class TaskController extends Controller
         return back();
 
     }
+
+    /**
+     * Return task assigned to current user
+     * 
+     * @param 
+     * @return 
+     */
+    public function myTask(Request $request)
+    {
+        
+    }
 }
