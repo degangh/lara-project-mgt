@@ -47,7 +47,7 @@ Route::get('lang/{locale}', function ($locale) {
     //
 });
 
-Route::get('/tasks/my' , 'TaskController@myTasks');
+Route::get('/my/tasks' , 'TaskController@myTasks');
 
 Route::get('/test', function(){
     return view('layouts.test2');

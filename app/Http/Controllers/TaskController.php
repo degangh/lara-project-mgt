@@ -143,8 +143,11 @@ class TaskController extends Controller
      * @param 
      * @return 
      */
-    public function myTask(Request $request)
+    public function myTasks(Request $request)
     {
-        
+        $tasks = Task::where('assignee', $request->user()->id);
+
+        return view('my_task', ['tasks' => $tasks]);
+
     }
 }
