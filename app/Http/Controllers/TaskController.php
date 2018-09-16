@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Task;
 use App\Project;
 use App\User;
+use Auth;
 
 use \Crypt;
 use Session;
@@ -145,7 +146,7 @@ class TaskController extends Controller
      */
     public function myTasks(Request $request)
     {
-        $tasks = Task::where('assignee', $request->user()->id);
+        $tasks = Auth::user()->assignedTasks();
 
         return view('my_task', ['tasks' => $tasks]);
 
