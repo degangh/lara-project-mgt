@@ -8,6 +8,9 @@
                 @foreach ($tasks as $task)
                 <tr>
                 <td class="">
+                {{$task->project->name}}
+                </td>
+                <td class="">
                 {{$task->name}}
                 </td>
                

@@ -7,7 +7,7 @@
         <a href="/dashboard">@lang('layout.dashboard')</a>
     </li>
     <li class="breadcrumb-item">
-        <a href="/projects">My Tasks</a>
+        @lang('project.my_tasks')
     </li>
    
 </ol>
