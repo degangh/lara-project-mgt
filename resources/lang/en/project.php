@@ -26,6 +26,7 @@ return [
     'name' => 'Project Name',
     'description' => 'Description',
     'edit' => 'Edit Project',
+    'my_tasks' => 'My Tasks',
 
 
 ];

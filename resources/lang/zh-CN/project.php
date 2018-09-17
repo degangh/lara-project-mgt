@@ -26,6 +26,7 @@ return [
     'name' => '项目名称',
     'description' => '项目简介',
     'edit' => '编辑项目',
+    'my_tasks' => '我的任务',
 
 
 ];
