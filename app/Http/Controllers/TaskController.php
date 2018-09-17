@@ -146,7 +146,7 @@ class TaskController extends Controller
      */
     public function myTasks(Request $request)
     {
-        $tasks = Auth::user()->assignedTasks();
+        $tasks = Auth::user()->assignedTasks()->orderBy('due_time', 'desc')->get();
 
         return view('my_task', ['tasks' => $tasks]);
 
