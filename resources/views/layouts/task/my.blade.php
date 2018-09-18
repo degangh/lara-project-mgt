@@ -8,7 +8,7 @@
                 @foreach ($tasks as $task)
                 <tr>
                 <td class="">
-                {{$task->project->name}}
+                <a href='{{url("projects")}}/{{$task->project->id}}'>{{$task->project->name}}</a>
                 </td>
                 <td class="">
                 {{$task->name}}
@@ -16,6 +16,9 @@
                
                 <td class="">
                     {{ \Carbon\Carbon::parse($task->due_time)->format('d/m/Y')}}
+                    @if (($task->due_time < date('Y-m-d')) && $task->is_complete == 0)
+                    <i class="far fa-clock text-danger"></i>
+                    @endif
                 </td>
                 <td class="">
                     @if ($task->is_complete == 0)
