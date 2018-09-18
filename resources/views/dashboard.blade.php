@@ -51,7 +51,7 @@
                   </div>
                   <div class="mr-5">@lang('dashboard.totalTasks', ['incompleteCount' => $incompleteCount])</div>
                 </div>
-                <a class="card-footer text-white clearfix small z-1" href="#">
+                <a class="card-footer text-white clearfix small z-1" href="{{url('my/tasks')}}">
                   <span class="float-left">@lang('dashboard.view')</span>
                   <span class="float-right">
                     <i class="fas fa-angle-right"></i>
