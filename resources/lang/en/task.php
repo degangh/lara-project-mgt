@@ -19,6 +19,7 @@ return [
     'save' => 'Save',
     'confirm' => 'Confirm',
     'confirm_text' => 'Confirm to Set this task to completed?',
-    'cancel' => 'Cancel'
+    'cancel' => 'Cancel',
+    'assigned_to' => 'Assign Task To'
 
 ];

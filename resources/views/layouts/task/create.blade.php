@@ -5,28 +5,37 @@
             {{csrf_field()}}
             <div class="panel-body">
                 <div class="row">
-                    <label class="form-group col-md-8">
+                    <label class="form-group col-md-12">
                         <div>@lang('task.task')</div>
 
                     
-                        <input type="text" name = "name" id="task-name" class="form-control required">
+                        <input type="text" name = "name" id="task-name" class="form-control form-control-sm required input-small">
                         
                         <input type="hidden" name = "project_id" value = "{{Crypt::encrypt($project->id)}}" >
                     </label>
+
+                    <label class="form-group col-md-12">
+                        <div>@lang('task.assign_to')</div>
+            <select name = "assignee" id="assignee-select" class="form-control form-control-sm">
+            @foreach ($users as $user)
+                <option value="{{$user->id}}" >{{$user->name}}</option>
+            @endforeach
+            </select>
+            </label>
                     
-                    <label class="form-group col-md-4">
+                    <label class="form-group col-md-12">
                         <div>@lang('task.due_date')</div>
 
                     
-                        <input type="text" name = "due_date" id="due-date" readonly class="form-control required">
+                        <input type="text" name = "due_date" id="due-date" readonly class="form-control form-control-sm required">
                         
                     </label>
                     
                 </div>
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <button class="btn btn-primary save-task-btn">
-                        <i class="fa fasave"></i> Save Task
+                        <button class="btn btn-primary btn-sm save-task-btn">
+                        <i class="fa fasave"></i> @lang('task.save')
                         </button>
                     </div>
                 </div>
@@ -60,6 +69,11 @@ jQuery(function(){
 
     var form_error = [];
     var form = jQuery("[name='create-task-form']");
+
+    jQuery("#assignee-select").select2({
+        theme: "classic",
+        width: "resolve"
+    });
 
     form.find("input").on("change",function(){
         jQuery(this).parent().removeClass("has-error");

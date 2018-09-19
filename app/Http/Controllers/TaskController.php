@@ -57,12 +57,14 @@ class TaskController extends Controller
         //
         $messages  = [
             "name.required" => "Task's name is required",
-            "due_date.required" => "Due time is required"
+            "due_date.required" => "Due time is required",
+            "assignee" => "Assignee must be specified"
         ];
         
         $request->validate([
             "name" => "required",
             "due_date" => "required",
+            "assignee" => "required",
             "project_id" => "required",
         ], $messages);
         
@@ -70,7 +72,8 @@ class TaskController extends Controller
             "name" => $request->name,
             "project_id" => $project_id,
             "user_id" => $request->user()->id,
-            "due_time" => $request->due_date
+            "due_time" => $request->due_date,
+            "assignee" => $request->assignee
         ]);
         Session::flash('success', 'Task Saved Successfully');
         return redirect(url("/projects/".Crypt::decrypt($request->project_id)));   

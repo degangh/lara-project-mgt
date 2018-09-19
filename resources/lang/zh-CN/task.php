@@ -19,5 +19,6 @@ return [
     'save' => '保存' ,
     'confirm' => '确认',
     'confirm_text' => '确认将此任务设置为已完成',
-    'cancel' => '取消'
+    'cancel' => '取消',
+    'assigned_to' => '将任务分配给',
 ];
