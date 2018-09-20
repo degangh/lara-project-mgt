@@ -7,13 +7,17 @@ use App\User;
 use App\Task;
 use App\Project;
 use Auth;
+use App\Repositories\ProjectRepository;
 
 class DashboardController extends Controller
 {
+    protected $projects;
+    
     //
-    public function __construct()
+    public function __construct(ProjectRepository $projects)
     {
         $this->middleware('auth');
+        $this->projects = $projects;
     }
     
     
@@ -21,7 +25,7 @@ class DashboardController extends Controller
     {
         
 
-        $projectCount = Project::where('owner_id',Auth::user()->id)->count();
+        $projectCount = $this->projects->userProjectsCount(Auth::user());
 
         $onProjectCount = User::find(Auth::user()->id)->onProjects->count();
 

@@ -9,6 +9,6 @@ class TaskRepository
 {
     public function forProject(Project $project)
     {
-        
+
     }
 }

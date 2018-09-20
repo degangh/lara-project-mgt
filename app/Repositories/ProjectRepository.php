@@ -3,6 +3,7 @@ namespace App\Repositories;
 
 use App\User;
 use App\Project;
+use Auth;
 
 class ProjectRepository
 {
@@ -15,6 +16,16 @@ class ProjectRepository
 
     public function members(Project $project)
     {
+        return Project::find($project->id)->members();
+    }
 
+    public function tasks(Project $project)
+    {
+        return $project->tasks;
+    }
+
+    public function userProjectsCount(User $user)
+    {
+        return Project::where('owner_id',Auth::user()->id)->count();
     }
 }
