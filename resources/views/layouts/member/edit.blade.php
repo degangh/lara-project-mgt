@@ -48,7 +48,9 @@ jQuery(function(){
 
     jQuery(".add-members").dialog({
         autoOpen: false,
-        width: "auto",
+        modal: true,
+        width: 'auto',
+        maxWidth:'500px',
         show: {
             effect: "fade",
             duration: 800
