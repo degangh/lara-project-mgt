@@ -5,7 +5,7 @@
  <lable class="control-label">@lang('file.upload')</label>
 
  <div class="">
-     <input type = 'file' name='attchement'>
+     <input type = 'file' name='attchement' class='form-control form-control-small'>
  </div>
 </div>
 <div class="form-group">
@@ -39,7 +39,8 @@ jQuery(function(){
             effect: "fade",
             duration: 800
         },
-        position: {my: "center", at: "center", of: window}
+        position: {my: "center", at: "center", of: window},
+        fluid: true
     });
 });
 </script>

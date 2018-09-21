@@ -48,7 +48,7 @@ jQuery(function(){
 
     jQuery(".add-members").dialog({
         autoOpen: false,
-        width: "500px",
+        width: "auto",
         show: {
             effect: "fade",
             duration: 800
@@ -58,7 +58,8 @@ jQuery(function(){
             effect: "fade",
             duration: 800
         },
-        position: {my: "center", at: "center", of: window}
+        position: {my: "center", at: "center", of: window},
+        fluid: true,
     });
 
     jQuery("#member-select").select2({
