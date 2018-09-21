@@ -28,4 +28,9 @@ class ProjectRepository
     {
         return Project::where('owner_id',Auth::user()->id)->count();
     }
+
+    public function memberinProjects(User $user)
+    {
+        return $user->onProjects->count();
+    }
 }

@@ -7,8 +7,18 @@ use App\Task;
 
 class TaskRepository
 {
-    public function forProject(Project $project)
+    public function incompleteCount()
     {
+        return Task::where('is_complete', 0)->count();
+    }
 
+    public function overdueCount()
+    {
+        return Task::where('is_complete', 0)->where('due_time', '<', date("Y-m-d"))->count();
+    }
+
+    public function allCount()
+    {
+        return Task::count();
     }
 }
