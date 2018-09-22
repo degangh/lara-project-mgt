@@ -21,7 +21,7 @@ class ProjectRepository
 
     public function tasks(Project $project)
     {
-        return $project->tasks;
+        return $project->tasks()->orderBy('is_complete','asc')->orderBy('due_time','desc')->get();
     }
 
     public function userProjectsCount(User $user)
