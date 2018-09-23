@@ -9,11 +9,11 @@
 }
 </style>
 
-<div class="add-members" title="Add members" style="display:none">
+<div class="add-members" title="@lang('project.add_member')" style="display:none">
  <form method="post" action="{{ url('/projects/'. $project->id. '/members') }}">
  {{csrf_field()}}   
  <div class="form-group">
- <lable class="control-label">Members</label>
+ <lable class="control-label">@lang('project.members')</label>
 
  <div class="">
      <select name = "members[]" id="member-select" class="form-control" multiple>
@@ -29,7 +29,7 @@
 </div>
 <div class="form-group">
     <button class="btn btn-primary btn-xs new-project-btn pull-right">
-        <i class="fa fa-user-plus"></i> Add Members
+        <i class="fa fa-user-plus"></i> @lang('project.save')
     </button>
 </div>
   </form>          
