@@ -102,6 +102,12 @@
           </a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="/my/tasks">
+            <i class="fas fa-tasks"></i>
+            <span>@lang('layout.my_tasks')</span>
+          </a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="/users">
             <i class="fas fa-fw fa-users"></i>
             <span>@lang('layout.users')</span>

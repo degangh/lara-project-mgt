@@ -22,5 +22,6 @@ return [
     'english' => '英文',
     'chinese' => '中文',
     'project' => '项目',
+    'my_tasks' => '我的任务'
 
 ];
