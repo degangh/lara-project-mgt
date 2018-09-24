@@ -21,4 +21,9 @@ class TaskRepository
     {
         return Task::count();
     }
+
+    public function assignedTo(User $user)
+    {
+        return $user->assignedTasks()->orderBy('due_time', 'desc')->get();
+    }
 }

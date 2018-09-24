@@ -6,6 +6,7 @@ use App\Task;
 use App\Project;
 use App\User;
 use Auth;
+use App\Repositories\TaskRepository;
 
 use \Crypt;
 use Session;
@@ -14,9 +15,12 @@ use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
-    public function __construct()
+    protected $tasks;
+    
+    public function __construct(TaskRepository $tasks)
     {
-        $this->middleware('auth');   
+        $this->middleware('auth'); 
+        $this->tasks = $tasks;  
     }
     
     /**
@@ -149,7 +153,7 @@ class TaskController extends Controller
      */
     public function myTasks(Request $request)
     {
-        $tasks = Auth::user()->assignedTasks()->orderBy('due_time', 'desc')->get();
+        $tasks = $this->tasks->assignedTo(Auth::user());
 
         return view('my_task', ['tasks' => $tasks]);
 
