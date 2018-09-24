@@ -13,7 +13,10 @@
                 <td class="">
                 {{$task->name}}
                 </td>
-               
+                <td class=''>
+               {{$task->user->name}} -> {{$task->assignedTo->name}}
+                
+                </td>
                 <td class="">
                     {{ \Carbon\Carbon::parse($task->due_time)->format('d/m/Y')}}
                     @if (($task->due_time < date('Y-m-d')) && $task->is_complete == 0)
