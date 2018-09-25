@@ -27,6 +27,9 @@ return [
     'description' => '项目简介',
     'edit' => '编辑项目',
     'my_tasks' => '我的任务',
+    'save_success' => '项目保存成功',
+    'file_success' => '文件 :filename 上传成功',
+    'member_success' => '项目成员保存成功',
 
 
 ];

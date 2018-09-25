@@ -21,4 +21,6 @@ return [
     'confirm_text' => '确认将此任务设置为已完成',
     'cancel' => '取消',
     'assign_to' => '将任务分配给',
+    'save_success' => '任务保存成功',
+    'complete_success' => '任务状态更新为已完成',
 ];
