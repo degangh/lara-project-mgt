@@ -35,7 +35,7 @@ class ProjectMemberController extends Controller
             $project->members()->save($ProjectMember);
         }
 
-        Session::flash('success', 'Members Saved Successfully');
+        Session::flash('success', __('project.member_success'));
         return redirect(url("/projects/".$project->id)); 
 
     }

@@ -82,7 +82,7 @@ class ProjectController extends Controller
         //owner will not be saved to project_user
         //$project->members()->save($request->user());
         
-        Session::flash('success', 'Project Created Successfully');
+        Session::flash('success', __('project.save_success'));
         return redirect(url("/projects"));
  
     }
@@ -143,7 +143,7 @@ class ProjectController extends Controller
         $project->name = $request->name;
         $project->desc = $request->desc;
         $project->save();
-        Session::flash('success', 'Project Saved Successfully');
+        Session::flash('success', __('project.save_success'));
         return redirect(url("/projects"));
     }
 
@@ -185,7 +185,7 @@ class ProjectController extends Controller
             'project_id' => $project->id
         ]);
 
-        Session::flash('success', 'File ' . $filename . ' uploaded Successfully');
+        Session::flash('success', __('project.file_success', ['filename' => $filename]));
         return back();
     }
 

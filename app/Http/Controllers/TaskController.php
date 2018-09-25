@@ -79,7 +79,7 @@ class TaskController extends Controller
             "due_time" => $request->due_date,
             "assignee" => $request->assignee
         ]);
-        Session::flash('success', 'Task Saved Successfully');
+        Session::flash('success', __('task.save_success'));
         return redirect(url("/projects/".Crypt::decrypt($request->project_id)));   
     }
 
