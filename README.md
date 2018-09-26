@@ -33,7 +33,7 @@ Testing consists 2 part:
 
 1 PHPUnit Test
 ```
-./vendor/bin/phpuni
+./vendor/bin/phpunit
 ```
 2 Browser Test supported by Laravel Dusk
 ```
