@@ -23,4 +23,7 @@ return [
     'assign_to' => '将任务分配给',
     'save_success' => '任务保存成功',
     'complete_success' => '任务状态更新为已完成',
+    'name_required' => '任务名称必须填写',
+    'due_date_required' => '截止日期必须填写',
+    'assignee_required' => '分配人必须填写'
 ];

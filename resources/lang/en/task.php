@@ -23,5 +23,9 @@ return [
     'assign_to' => 'Assign Task To',
     'save_success' => 'Task Saved Successfully',
     'complete_success' => 'Task has been marked as completed',
+    'name_required' => 'Task\'s name is required',
+    'due_date_required' => 'Due date is reqired',
+    'assignee' => 'Assignee is required'
+
 
 ];

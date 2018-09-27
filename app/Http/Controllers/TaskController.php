@@ -60,9 +60,9 @@ class TaskController extends Controller
 
         //
         $messages  = [
-            "name.required" => "Task's name is required",
-            "due_date.required" => "Due time is required",
-            "assignee" => "Assignee must be specified"
+            "name.required" => __('task.name_required'),
+            "due_date.required" => __('task.due_date_required'),
+            "assignee" => __('task.assignee_required')
         ];
         
         $request->validate([
@@ -140,7 +140,7 @@ class TaskController extends Controller
         
         $task->is_complete = 1;
         $task->save();
-        Session::flash('success', 'Task has been marked as completed');
+        Session::flash('success', __('complete_success'));
         return back();
 
     }
