@@ -6,12 +6,17 @@ use Illuminate\Http\Request;
 use App\User;
 use Session;
 
+use App\Repositories\UserRepository;
+
 class UserController extends Controller
 {
     
-    public function __construct()
+    protected $users;
+    
+    public function __construct(UserRepository $users)
     {
         $this->middleware('auth');
+        $this->users = $users;
     }
     
     /**
@@ -23,7 +28,7 @@ class UserController extends Controller
     {
         $this->authorize("edit", User::class);   
         
-        $users = User::all();
+        $users = $this->users->all();
 
         return view('users', [
             'users' => $users
