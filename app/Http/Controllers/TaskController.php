@@ -140,7 +140,7 @@ class TaskController extends Controller
         
         $task->is_complete = 1;
         $task->save();
-        Session::flash('success', __('complete_success'));
+        Session::flash('success', __('task.complete_success'));
         return back();
 
     }
