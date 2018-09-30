@@ -69,6 +69,8 @@ class UserController extends Controller
         //create
         $this->users->create($request);
 
+        Session::flash('success', __('user.create_success'));
+
         return redirect("/users");
 
     }

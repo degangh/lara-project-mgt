@@ -24,5 +24,6 @@ return [
 'email' => '电子邮件',
 'password' => '密码',
 'repeat_password' => '再次输入密码',
-'save' => '保存用户'
+'save' => '保存用户',
+'create_success' => '用户创建成功',
 ];

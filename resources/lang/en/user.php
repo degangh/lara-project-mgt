@@ -25,4 +25,5 @@ return [
 'password' => 'Password',
 'repeat_password' => 'Repeat Password',
 'save' => 'Save User',
+'create_success' => 'User is created successfully',
 ];
