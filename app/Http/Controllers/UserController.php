@@ -67,11 +67,7 @@ class UserController extends Controller
         ]);
 
         //create
-        User::create([
-            "name" => $request->name,
-            "email" => $request->email,
-            "password" => bcrypt($request->password)
-        ]);
+        $this->users->create($request);
 
         return redirect("/users");
 
