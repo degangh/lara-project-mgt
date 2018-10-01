@@ -27,7 +27,7 @@ return [
     'description' => 'Description',
     'edit' => 'Edit Project',
     'my_tasks' => 'My Tasks',
-    'save_success' => 'The project created successfully',
+    'save_success' => 'The project is saved successfully',
     'file_success' => 'File  :filename uploaded Successfully',
     'member_success' => 'Members Saved Successfully',
 

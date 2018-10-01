@@ -31,7 +31,7 @@ class ProjectTest extends TestCase
             'name' => $project->name,
             'desc' => $project->desc
         ]);
-        $response->assertSessionHas("success","Project Created Successfully");
+        $response->assertSessionHas("success",__("project.save_success"));
 
     }
 
@@ -45,7 +45,7 @@ class ProjectTest extends TestCase
             'desc' => $project->desc
         ]);
 
-        $response->assertSessionHas("success","Project Saved Successfully");
+        $response->assertSessionHas("success",__("project.save_success"));
     }
 
     public function testProjectAddMember()
@@ -62,6 +62,6 @@ class ProjectTest extends TestCase
             "members" => $member_id
         ]);
         $response->assertStatus(302);
-        $response->assertSessionHas("success","Members Saved Successfully");
+        $response->assertSessionHas("success",__("project.member_success"));
     }
 }

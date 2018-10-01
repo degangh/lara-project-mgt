@@ -28,12 +28,13 @@ class TaskTest extends TestCase
             'project_id' => Crypt::encrypt($project->id),
             'due_date' => $task->due_time,
             'name' => $task->name,
-            'user_id' => $user->id
+            'user_id' => $user->id,
+            'assignee' => $user->id
         ]);
         var_dump(Session::get('errors'));
         $response->assertStatus(302);
         
-        $response->assertSessionHas('success', 'Task Saved Successfully');
+        $response->assertSessionHas('success', __('task.save_success'));
 
     }
 

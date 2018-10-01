@@ -7,21 +7,18 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 
-class UserTest extends TestCase
-{
-    public function testUserBasic()
-    {
-        $this->withoutMiddleware();
-        $this->assertTrue(true);
-    }
+use App\User;
 
-    
+class UserTest extends TestCase
+{   
 
     public function testUserBtn()
     {
-        $this->withoutMiddleware();
-        $response = $this->get('/users');
+        $user = User::where('is_admin', 1)->first();
 
-        $response->assertSee("Add New User");
+        
+        $response = $this->actingAs($user)->get('/users');
+
+        $response->assertSee(__("user.create"));
     }
 }
