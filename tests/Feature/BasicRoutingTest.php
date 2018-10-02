@@ -83,7 +83,7 @@ class BasicRoutingTest extends TestCase
         $project = $user->projects()->first();
         \Auth::login($user);
         $response = $this->actingAs($user)->get('/projects');
-        $response->assertSee("Add New Project");
+        $response->assertSee(__('project.new_project'));
     }
 
     /* open a project belong to a specific user 
@@ -95,7 +95,7 @@ class BasicRoutingTest extends TestCase
         $project = $user->projects()->first();
         \Auth::login($user);
         $response = $this->actingAs($user)->get('/projects/'.$project->id);
-        $response->assertSee("Add Members");
+        $response->assertSee(__("project.add_member"));
     }
 
     /* open a project belong to a specific user 
@@ -107,7 +107,7 @@ class BasicRoutingTest extends TestCase
         $project = $user->projects()->first();
         \Auth::login($user);
         $response = $this->actingAs($user)->get('/projects/'.$project->id);
-        $response->assertSee("Add New Task");
+        $response->assertSee(__("project.add_task"));
     }
 
 
