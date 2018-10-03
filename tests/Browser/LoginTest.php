@@ -15,7 +15,7 @@ class LoginTest extends DuskTestCase
         parent::setUp();
         foreach (static::$browsers as $browser)
         {
-            $browser->driver->manage()->deleteAllCookies();
+            //$browser->driver->manage()->deleteAllCookies();
         }
     }
     
@@ -35,8 +35,8 @@ class LoginTest extends DuskTestCase
                     ->type('email', $user->email)
                     ->type('password', '123456')
                     ->press('Login')
-                    ->assertSee('Project List');
-            //$browser->deleteCookie('project_session');
+                    ->assertSee(__('dashboard.dashboard'));
+                
   
         });
     }
@@ -49,6 +49,7 @@ class LoginTest extends DuskTestCase
      */
     public function testLoginWrongCredential()
     {
+        //$browser->deleteCookie('project_session');
         
         $this->browse(function ($browser)  {
 

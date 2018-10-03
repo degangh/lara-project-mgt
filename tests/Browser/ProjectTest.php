@@ -20,7 +20,7 @@ class ProjectTest extends DuskTestCase
         $this->browse(function ($browser){
             $browser->loginAs(User::find(1))
                     ->visit('/projects')
-                    ->assertSee('Project List');
+                    ->assertSee(__('project.project_list'));
         });
     }
 
@@ -37,7 +37,7 @@ class ProjectTest extends DuskTestCase
             $browser->loginAs(User::find(1))
                     ->visit('/projects')
                     ->press('Add New Project')
-                    ->assertSee('Create a New Project');
+                    ->assertSee(__('project.new_project'));
         });
     }
     

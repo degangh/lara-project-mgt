@@ -13,17 +13,11 @@ class ExampleTest extends DuskTestCase
      *
      * @return void
      */
-    public function testBasicExample()
-    {
-        $this->browse(function (Browser $browser) {
-            $browser->visit('/')->assertTitle('Project Tool');
-        });
-    }
 
     public function testNoLogin()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('/')->assertSee('Login');
+            $browser->visit('/')->assertTitle('Project Tool - Login');
         });
     }
 
