@@ -19,6 +19,28 @@ class LoginTest extends DuskTestCase
         }
     }
     
+    
+
+    /**
+     * Login Test.
+     * Incorrect Login
+     *
+     * @return void
+     */
+    public function testLoginWrongCredential()
+    {
+        
+        $this->browse(function ($browser)  {
+            $browser->deleteCookie('project_session');
+            $browser->visit('/login')
+                    ->type('email', 'xxxx@xxxxx.xx')
+                    ->type('password', '123456')
+                    ->press('Login')
+                    ->assertSee('These credentials do not match our records.');
+     
+        });
+    }
+
     /**
      * Login Test.
      * Correct Login
@@ -39,26 +61,5 @@ class LoginTest extends DuskTestCase
                 
   
         });
-    }
-
-    /**
-     * Login Test.
-     * Incorrect Login
-     *
-     * @return void
-     */
-    public function testLoginWrongCredential()
-    {
-        //$browser->deleteCookie('project_session');
-        
-        $this->browse(function ($browser)  {
-
-            $browser->visit('/login')
-                    ->type('email', 'xxxx@xxxxx.xx')
-                    ->type('password', '123456')
-                    ->press('Login')
-                    ->assertSee('These credentials do not match our records.');
-     
-        });
-    }
+    }   
 }
