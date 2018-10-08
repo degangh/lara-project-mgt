@@ -12,6 +12,7 @@ use \Crypt;
 use Session;
 
 use Illuminate\Http\Request;
+use App\Events\OnTaskComplete;
 
 class TaskController extends Controller
 {
@@ -141,6 +142,7 @@ class TaskController extends Controller
         $task->is_complete = 1;
         $task->save();
         Session::flash('success', __('task.complete_success'));
+        event(new OnTaskComplete($task));
         return back();
 
     }
