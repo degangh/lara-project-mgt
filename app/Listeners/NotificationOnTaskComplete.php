@@ -6,6 +6,7 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
 use App\Events\OnTaskComplete;
+use App\Notification;
 
 class NotificationOnTaskComplete
 {
@@ -27,6 +28,10 @@ class NotificationOnTaskComplete
      */
     public function handle($event)
     {
-        dd($event->task->assignee);
+        Notification::create([
+            'sender_id' => $event->task->assignee,
+            'reader_id' => $event->task->user_id,
+            'content' => 'Task ' . $event->task->name . ' is marked as completed'
+        ]);
     }
 }
