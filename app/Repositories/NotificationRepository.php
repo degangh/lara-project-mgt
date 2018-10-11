@@ -11,19 +11,16 @@ class NotificationRepository
     public function ReminderforUser(User $user)
     {
         return Notification::where('reader_id', $user->id)
-                        ->where('is_viewd', 0)
+                        ->where('is_viewed', 0)
                         ->orderBy('created_at', 'asc')
                         ->get();
     }
     
-    public function MessageListForUser(User $user)
-    {
-
-    }
 
     public function MarkAsViewed(Notification $notification)
     {
-
+        $notification->is_viewed = 1;
+        $notification->save();
     }
 
     public function create($data)
