@@ -47,6 +47,8 @@ Route::get('lang/{locale}', function ($locale) {
     //
 });
 
+Route::get('/notification/new', 'NotificationController@newNotifications');
+
 Route::get('/my/tasks' , 'TaskController@myTasks');
 
 Route::get('/test', function(){
