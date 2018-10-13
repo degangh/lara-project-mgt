@@ -61,13 +61,12 @@
         <li class="nav-item dropdown no-arrow mx-1">
           <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-envelope fa-fw"></i>
-            <span class="badge badge-danger">7</span>
+            <span class="badge badge-danger message-count">0</span>
           </a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="messagesDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
+          <div class="dropdown-menu dropdown-menu-right drop-down-content" aria-labelledby="messagesDropdown">
+            <a class="dropdown-item" href="#">No Message</a>
+            
+            <!--div class="dropdown-divider"></div-->
           </div>
         </li>
         <li class="nav-item dropdown no-arrow">
@@ -209,7 +208,20 @@
     
 
     <!-- Custom scripts for all pages-->
-    
+    <script>
+    jQuery(document).ready(function(){
+      jQuery.get('/notification/new', function(data){
+        console.log(data.notification.length);
+        var messageCount = data.notification.length;
+        jQuery('.message-count').text(messageCount);
+
+        for (var i = 0; i < data.notification.length; i++)
+        {
+          console.log(data.notification[i].sender.name);
+        }
+      })
+    })
+    </script>
 
   </body>
 
