@@ -10,7 +10,7 @@ class NotificationRepository
 {
     public function ReminderforUser(User $user)
     {
-        return Notification::where('reader_id', $user->id)
+        return Notification::with('sender')->where('reader_id', $user->id)
                         ->where('is_viewed', 0)
                         ->orderBy('created_at', 'asc')
                         ->get();
