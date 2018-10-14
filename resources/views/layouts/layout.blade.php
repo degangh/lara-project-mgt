@@ -63,8 +63,7 @@
             <i class="fas fa-envelope fa-fw"></i>
             <span class="badge badge-danger message-count">0</span>
           </a>
-          <div class="dropdown-menu dropdown-menu-right drop-down-content" aria-labelledby="messagesDropdown">
-            <a class="dropdown-item" href="#">No Message</a>
+          <div class="dropdown-menu dropdown-menu-right message-drop-down" aria-labelledby="messagesDropdown">
             
             <!--div class="dropdown-divider"></div-->
           </div>
@@ -218,7 +217,12 @@
         for (var i = 0; i < data.notification.length; i++)
         {
           console.log(data.notification[i].sender.name);
+          jQuery(".message-drop-down").append('<a class="dropdown-item" href="#"><div><strong>'+ data.notification[i].sender.name +'</strong></div>' + data.notification[i].content + '</a>')
+          if (i+1 < data.notification.length) jQuery(".message-drop-down").append('<div class="dropdown-divider"></div>');
         }
+
+        if (data.notification.length < 1)
+        jQuery(".message-drop-down").append('<a class="dropdown-item" href="#">No New Message</a>')
       })
     })
     </script>
