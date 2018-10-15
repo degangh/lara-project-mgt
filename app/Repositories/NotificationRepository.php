@@ -15,6 +15,13 @@ class NotificationRepository
                         ->orderBy('created_at', 'asc')
                         ->get();
     }
+
+    public function AllMessageforUser(User $user)
+    {
+        return Notification::with('sender')->where('reader_id', $user->id)
+                        ->orderBy('created_at', 'asc')
+                        ->get();
+    }
     
 
     public function MarkAsViewed(Notification $notification)
