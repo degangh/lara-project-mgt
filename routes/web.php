@@ -48,6 +48,7 @@ Route::get('lang/{locale}', function ($locale) {
 });
 
 Route::get('/notification/new', 'NotificationController@newNotifications');
+Route::get('/notification/inbox', 'NotificationController@inbox');
 
 Route::get('/my/tasks' , 'TaskController@myTasks');
 
