@@ -25,4 +25,13 @@ class NotificationController extends Controller
             'notification' => $notifications
         ]);
     }
+
+    public function inbox()
+    {
+        $notifications = $this->notification->AllMessageforUser(Auth::user());
+
+        return view('notification', [
+            'notifications' => $notifications
+        ]);
+    }
 }
