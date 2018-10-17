@@ -7,12 +7,15 @@
             <div class="table-responsive">
             <table class="table table-striped">
                 @foreach($notifications as $notification)
-                <tr>
+                <tr @if($notification->is_viewed == 0) class="font-weight-bold" @endif>
                 <td>
                 {{$notification->sender->name}}
                 </td>
                 <td>
                 {{$notification->content}}
+                </td>
+                <td class="text-right">
+                {{$notification->created_at}}
                 </td>
                 
                 </tr>
