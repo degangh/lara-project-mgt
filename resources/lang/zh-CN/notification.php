@@ -14,6 +14,7 @@ return [
 */
 
 'notification_list' => '收件箱',
+'taskComplete' => 'Task :taskName is completed'
 
 
 ];

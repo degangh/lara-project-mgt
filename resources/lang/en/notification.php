@@ -14,6 +14,7 @@ return [
 */
 
 'notification_list' => 'Inbox',
+'taskComplete' => 'Task :taskName is completed'
 
 
 ];
