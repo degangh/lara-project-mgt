@@ -21,6 +21,8 @@ class NotificationController extends Controller
     {
         $notifications = $this->notification->ReminderforUser(Auth::user());
 
+        foreach($notifications as $key => $notification) $notifications[$key]['translated'] = __($notification['content']);
+
         return response()->json([
             'notification' => $notifications
         ]);
