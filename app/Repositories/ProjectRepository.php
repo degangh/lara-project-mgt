@@ -33,4 +33,9 @@ class ProjectRepository
     {
         return $user->onProjects->count();
     }
+
+    public function findById($id)
+    {
+        return Project::find($id);
+    }
 }

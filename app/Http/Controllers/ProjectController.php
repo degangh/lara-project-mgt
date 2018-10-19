@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Repositories\ProjectRepository;
+use App\Repositories\UserRepository;
 use Illuminate\Support\Facades\Storage;
 use App\Project;
 use App\User;
@@ -19,12 +20,14 @@ class ProjectController extends Controller
      * @return \Illuminate\View\View
      */
     protected $projects;
+    protected $users;
     
     
-     public function __construct(ProjectRepository $projects)
+     public function __construct(ProjectRepository $projects, UserRepository $users)
      {
          $this->middleware('auth');
          $this->projects = $projects;
+         $this->users = $users;
      }
 
     
@@ -96,7 +99,7 @@ class ProjectController extends Controller
     public function show(Project $project)
     {
         //prepare user list
-        $users = User::all()->except($project->owner_id)->sortBy('name');
+        $users = $this->users->all()->except($project->owner_id)->sortBy('name');
         $this->authorize('show', $project);
         return view('tasks', [
             'tasks' => $this->projects->tasks($project),
@@ -115,16 +118,7 @@ class ProjectController extends Controller
      */
     public function edit($id, Request $request)
     {
-        /*
-        $current_project=Project::find($id);
 
-        $this->authorize('edit', $current_project);
-        
-        $projects = $this->projects->forUser($request->user());
-        return view('project_edit', [
-            'projects' => $projects,
-            'current_project' =>$current_project
-            ]);*/
     }
 
     /**
@@ -136,7 +130,7 @@ class ProjectController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $project = Project::find($id);
+        $project = $this->projects->findById($id);
         
         $this->authorize('edit', $project);
 
