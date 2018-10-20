@@ -222,9 +222,9 @@
         }
 
         if (data.notification.length < 1)
-        jQuery(".message-drop-down").append('<a class="dropdown-item" href="#">No New Message</a>')
-        else
-        jQuery(".message-drop-down").append('<a class="dropdown-item" href="/notification/inbox"><strong>Read All Message <i class="fas fa-angle-right"></i></strong></a>');
+        jQuery(".message-drop-down").append('<a class="dropdown-item" href="#">@lang('notification.no_new')</a>')
+        
+        jQuery(".message-drop-down").append('<a class="dropdown-item" href="/notification/inbox"><strong>@lang("notification.view_all")<i class="fas fa-angle-right"></i></strong></a>');
       })
     })
     </script>

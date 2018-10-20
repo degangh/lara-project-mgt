@@ -14,7 +14,9 @@ return [
 */
 
 'notification_list' => '收件箱',
-'taskComplete' => '任务 :taskName 已完成'
+'taskComplete' => '任务 :taskName 已完成',
+'no_new' => '没有新消息',
+'view_all' => '查看全部消息'
 
 
 ];

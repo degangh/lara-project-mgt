@@ -14,7 +14,9 @@ return [
 */
 
 'notification_list' => 'Inbox',
-'taskComplete' => 'Task :taskName is completed'
+'taskComplete' => 'Task :taskName is completed',
+'no_new' => 'No New Message',
+'view_all' => 'View All Message'
 
 
 ];
