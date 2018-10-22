@@ -7,9 +7,9 @@ use App\Task;
 
 class TaskRepository
 {
-    public function incompleteCount()
+    public function incompleteCount(User $user)
     {
-        return Task::where('is_complete', 0)->count();
+        return Task::where('is_complete', 0)->where('assignee', $user->id)->count();
     }
 
     public function overdueCount()

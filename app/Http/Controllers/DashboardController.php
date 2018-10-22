@@ -34,9 +34,9 @@ class DashboardController extends Controller
 
         //$userCount = User::count();
 
-        $taskCount = $this->tasks->allCount();
+        $taskCount = $this->tasks->assignedTo(Auth::user())->count();
 
-        $incompleteCount = $this->tasks->incompleteCount();
+        $incompleteCount = $this->tasks->incompleteCount(Auth::user());
 
         $overdueCount = $this->tasks->overdueCount();
 
