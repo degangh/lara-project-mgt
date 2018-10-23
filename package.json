@@ -17,7 +17,7 @@
     "cross-env": "^5.1",
     "jquery": "^3.2",
     "jquery-ui-dist": "^1.12.1",
-    "laravel-mix": "^2.0",
+    "laravel-mix": "^2.1.14",
     "lodash": "^4.17.4",
     "metismenu": "^2.7.7",
     "popper.js": "^1.14.3",
