@@ -19,10 +19,11 @@ These instructions will get you a copy of the project up and running on your loc
 ### Installing
 
 ```
-Clone git repo to your local folder, or download zipped file and unzip 
-Run "composer install"
-Run "php artisan migrate" to initialize the database
-Point your browser to your local server
+1 Clone git repo to your local folder, or download zipped file and unzip 
+2 Run "composer install"
+3 Run "php artisan migrate" to initialize the database
+4 Run "php artisan db:seed" to seed initial data (for demo purpose)
+5 Point your browser to your local server
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
@@ -40,20 +41,13 @@ Testing consists 2 part:
 php artisan dusk
 ```
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ### And coding style tests
 
 Explain what these tests test and why
 
 ```
-Give an example
+Todo
 ```
 
 ## Deployment
@@ -67,6 +61,7 @@ Add additional notes about how to deploy this on a live system
 * [Homestead](https://laravel.com/docs/5.0/homestead) - A development environment pre-packaged Vagrant "box"
 * Composer
 * npm
+* [sb-admin](https://github.com/BlackrockDigital/startbootstrap-sb-admin) - Theme pack for the application
 
 
 
