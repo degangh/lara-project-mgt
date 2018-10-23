@@ -23,7 +23,7 @@ class TaskTest extends TestCase
         $user = User::first();
         $project = $user->projects()->first();
         $task = factory(Task::class)->make();
-        var_dump($task);
+
         $response = $this->actingAs($user)->post(route('tasks.store'), [
             'project_id' => Crypt::encrypt($project->id),
             'due_date' => $task->due_time,
@@ -31,7 +31,7 @@ class TaskTest extends TestCase
             'user_id' => $user->id,
             'assignee' => $user->id
         ]);
-        var_dump(Session::get('errors'));
+
         $response->assertStatus(302);
         
         $response->assertSessionHas('success', __('task.save_success'));
@@ -42,6 +42,21 @@ class TaskTest extends TestCase
     */
     public function testTaskComplete()
     {
+        $user = User::first();
+        $project = $user->projects()->first();
+        
+        $task = Task::where('user_id', $user->id)->where('is_complete', 0)->first();
 
+        $response = $this->actingAs($user)->patch(url('tasks/'.$task->id.'/complete'));
+        
+        $response->assertSessionHas('success', __('task.complete_success'));
+
+        //assert the task statu is updated
+        $this->assertDatabaseHas('tasks', ['id'=>$task->id, 'is_complete' => 1]);
+
+
+
+        //todo
+        //$this->assertDatabaseHas('notification', []);
     }
 }
