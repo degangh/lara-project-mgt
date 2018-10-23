@@ -14,7 +14,7 @@ class UserRepository
         return User::all();
     }
 
-    public function create(Request $request)
+    public function create($request)
     {
         User::create([
             "name" => $request->name,
