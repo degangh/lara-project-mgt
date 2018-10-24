@@ -35,7 +35,9 @@ class NotificationRepository
         Notification::create([
             'sender_id' => $data->task->assignee,
             'reader_id' => $data->task->user_id,
-            'content' => 'notification.taskComplete' 
+            'content' => 'notification.taskComplete' ,
+            'type' => 'task',
+            'associate_id' => $data->task->id
         ]);
     }
 }
