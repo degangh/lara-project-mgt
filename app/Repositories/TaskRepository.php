@@ -26,4 +26,9 @@ class TaskRepository
     {
         return $user->assignedTasks()->orderBy('due_time', 'desc')->get();
     }
+
+    public function find($id)
+    {
+        return Task::find($id);
+    }
 }
