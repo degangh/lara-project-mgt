@@ -29,7 +29,7 @@ class NotificationController extends Controller
         foreach($notifications as $key => $notification) 
         
         $notifications[$key]['translated'] = __($notification['content'], [
-            'taskName' => $this->{$notification['type']}->find($notification['associate_id'])->name
+            'taskName' => $this->{$notification['notifiable_type']}->find($notification['notifiable_id'])->name
             ]);
 
         return response()->json([

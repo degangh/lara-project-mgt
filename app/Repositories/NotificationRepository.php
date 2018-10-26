@@ -36,8 +36,8 @@ class NotificationRepository
             'sender_id' => $data->task->assignee,
             'reader_id' => $data->task->user_id,
             'content' => 'notification.taskComplete' ,
-            'type' => 'task',
-            'associate_id' => $data->task->id
+            'notifiable_type' => 'task',
+            'notifiable_id' => $data->task->id
         ]);
     }
 }
