@@ -12,7 +12,7 @@
                 {{$notification->sender->name}}
                 </td>
                 <td>
-                @lang($notification->content)
+                @lang($notification->translated)
                 </td>
                 <td class="text-right">
                 {{$notification->created_at}}

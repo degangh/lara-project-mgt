@@ -41,6 +41,12 @@ class NotificationController extends Controller
     {
         $notifications = $this->notification->AllMessageforUser(Auth::user());
 
+        foreach($notifications as $key => $notification) 
+        
+        $notifications[$key]['translated'] = __($notification['content'], [
+            'taskName' => $this->{$notification['notifiable_type']}->find($notification['notifiable_id'])->name
+            ]);
+
         return view('notification', [
             'notifications' => $notifications
         ]);
