@@ -8,6 +8,13 @@ use Auth;
 
 class NotificationRepository
 {
+    /**
+     * retrieve collection of new notification of a user.
+     *
+     * @param  \App\User $user
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    
     public function ReminderforUser(User $user)
     {
         return Notification::with('sender')->where('reader_id', $user->id)
@@ -16,6 +23,12 @@ class NotificationRepository
                         ->get();
     }
 
+    /**
+     * retrieve collection of all notification of a user.
+     *
+     * @param  \App\User $user
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
     public function AllMessageforUser(User $user)
     {
         return Notification::with('sender')->where('reader_id', $user->id)
@@ -23,13 +36,24 @@ class NotificationRepository
                         ->get();
     }
     
-
+    /**
+     * retrieve collection of new notification of a user.
+     *
+     * @param  \App\Notification $notfication
+     * 
+     */
     public function MarkAsViewed(Notification $notification)
     {
         $notification->is_viewed = 1;
         $notification->save();
     }
 
+    /**
+     * retrieve collection of new notification of a user.
+     *
+     * @param  Request $request
+     * @return \App\Notification
+     */
     public function create($data)
     {
         Notification::create([

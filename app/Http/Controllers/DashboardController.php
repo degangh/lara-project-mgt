@@ -22,7 +22,12 @@ class DashboardController extends Controller
         $this->projects = $projects;
         $this->tasks = $tasks;
     }
-    
+    /**
+     * Display the overall statics of the system
+     *
+     * @param  \App\Projects $project
+     * @return \Illuminate\View\View
+     */
     
     public function index()
     {
