@@ -30,6 +30,6 @@ class NotificationOnTaskComplete
      */
     public function handle($event)
     {
-        $this->notification->create($event);
+        $this->notification->createOnComplete($event);
     }
 }

@@ -16,6 +16,9 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\OnTaskComplete' => [
             'App\Listeners\NotificationOnTaskComplete',
         ],
+        'App\Events\OnTaskAssigned' => [
+            'App\Listeners\NotificationOnTaskAssigned',
+        ],
     ];
 
     /**

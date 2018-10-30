@@ -13,6 +13,7 @@ use Session;
 
 use Illuminate\Http\Request;
 use App\Events\OnTaskComplete;
+use App\Events\OnTaskAssigned;
 
 class TaskController extends Controller
 {
@@ -80,6 +81,8 @@ class TaskController extends Controller
             "due_time" => $request->due_date,
             "assignee" => $request->assignee
         ]);
+
+        event(new OnTaskAssigned($task));
         Session::flash('success', __('task.save_success'));
         return redirect(url("/projects/".Crypt::decrypt($request->project_id)));   
     }
