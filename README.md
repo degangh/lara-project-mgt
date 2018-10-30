@@ -3,7 +3,7 @@
 
 # Project Management Tool
 
-A project managemnt system
+A project/task/invoice managemnt system
 
 ## Getting Started
 
