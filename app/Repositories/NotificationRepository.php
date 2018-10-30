@@ -54,12 +54,29 @@ class NotificationRepository
      * @param  Request $request
      * @return \App\Notification
      */
-    public function create($data)
+    public function createOnComplete($data)
     {
         Notification::create([
             'sender_id' => $data->task->assignee,
             'reader_id' => $data->task->user_id,
             'content' => 'notification.taskComplete' ,
+            'notifiable_type' => 'task',
+            'notifiable_id' => $data->task->id
+        ]);
+    }
+
+    /**
+     * retrieve collection of new notification of a user.
+     *
+     * @param  Request $request
+     * @return \App\Notification
+     */
+    public function createOnAssigned($data)
+    {
+        Notification::create([
+            'sender_id' => $data->task->user_id,
+            'reader_id' => $data->task->assignee,
+            'content' => 'notification.taskAssigned' ,
             'notifiable_type' => 'task',
             'notifiable_id' => $data->task->id
         ]);
