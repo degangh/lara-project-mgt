@@ -16,7 +16,8 @@ return [
 'notification_list' => 'Inbox',
 'taskComplete' => 'Task ":taskName" is marked as completed',
 'no_new' => 'No New Message',
-'view_all' => 'View All Message'
+'view_all' => 'View All Message',
+'taskAssigned' => 'Task ":taskName" is assigned to you'
 
 
 ];
