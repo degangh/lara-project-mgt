@@ -37,15 +37,7 @@ Route::get('/dashboard', 'DashboardController@index');
 /**
  * Language setting
  */
-Route::get('lang/{locale}', function ($locale) {
-    Session::put('locale', $locale);
-    $user = Auth::user();
-    $user->locale = $locale;
-    $user->save();
-    return back();
-
-    //
-});
+Route::get('lang/{locale}','SettingController@lang');
 
 Route::get('/notification/new', 'NotificationController@newNotifications');
 Route::get('/notification/inbox', 'NotificationController@inbox');
