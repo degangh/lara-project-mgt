@@ -19,7 +19,7 @@ class NotificationRepository
     {
         return Notification::with('sender')->where('reader_id', $user->id)
                         ->where('is_viewed', 0)
-                        ->orderBy('created_at', 'asc')
+                        ->orderBy('created_at', 'desc')
                         ->get();
     }
 
@@ -32,7 +32,7 @@ class NotificationRepository
     public function AllMessageforUser(User $user)
     {
         return Notification::with('sender')->where('reader_id', $user->id)
-                        ->orderBy('created_at', 'asc')
+                        ->orderBy('created_at', 'desc')
                         ->get();
     }
     
