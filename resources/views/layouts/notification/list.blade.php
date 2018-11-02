@@ -9,6 +9,9 @@
                 @foreach($notifications as $notification)
                 <tr @if($notification->is_viewed == 0) class="font-weight-bold" @endif>
                 <td>
+                <input type="checkbox" >
+                </td>
+                <td>
                 {{$notification->sender->name}}
                 </td>
                 <td>
@@ -22,6 +25,7 @@
                 @endforeach
                 </div>
             </table>  
+            {{$notifications->links()}}
             </div>
             </div>
 
