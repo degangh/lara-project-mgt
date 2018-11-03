@@ -23,6 +23,7 @@ return [
     'chinese' => 'Chinese',
     'project' => 'Project',
     'my_tasks' => 'My Tasks',
+    'inbox' => 'Inbox'
 
 
 ];

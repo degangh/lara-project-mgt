@@ -106,6 +106,12 @@
           </a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="/inbox">
+            <i class="far fa-fw fa-envelope"></i>
+            <span>@lang('layout.inbox')</span>
+          </a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="/users">
             <i class="fas fa-fw fa-users"></i>
             <span>@lang('layout.users')</span>
