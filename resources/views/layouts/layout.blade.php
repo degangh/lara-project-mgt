@@ -216,13 +216,12 @@
     <script>
     jQuery(document).ready(function(){
       jQuery.get('/notification/new', function(data){
-        console.log(data.notification.length);
+        
         var messageCount = data.notification.length;
         jQuery('.message-count').text(messageCount);
 
         for (var i = 0; i < data.notification.length; i++)
         {
-          console.log(data.notification[i].sender.name);
           jQuery(".message-drop-down").append('<a class="dropdown-item" href="#"><div><strong>'+ data.notification[i].sender.name +'</strong></div>' + data.notification[i].translated + '</a>')
           jQuery(".message-drop-down").append('<div class="dropdown-divider"></div>');
         }
