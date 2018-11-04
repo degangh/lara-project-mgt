@@ -9,7 +9,7 @@
                 @foreach($notifications as $notification)
                 <tr @if($notification->is_viewed == 0) class="font-weight-bold" @endif>
                 <td>
-                <input type="checkbox" >
+                <input type="checkbox" class="notification-checkbox" data-notification_id="{{$notification->id}}">
                 </td>
                 <td>
                 {{$notification->sender->name}}
@@ -30,3 +30,20 @@
             </div>
 
  </div>
+<script>
+jQuery('.notification-checkbox').change(function()
+{
+ var nid = jQuery(this).data('notification_id');
+
+ jQuery.ajax({
+   
+  headers: {
+            'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
+        },
+  url : '/notification/'+nid+'/viewed',
+  type: 'PATCH',
+
+ })
+
+})
+</script>

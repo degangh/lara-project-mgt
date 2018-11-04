@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Repositories\NotificationRepository;
 use App\Repositories\TaskRepository;
 use Auth;
+use App\Notification;
 
 
 class NotificationController extends Controller
@@ -49,6 +50,13 @@ class NotificationController extends Controller
 
         return view('notification', [
             'notifications' => $notifications
+        ]);
+    }
+
+    public function markAsViewed(notification $notification)
+    {
+        return response()->json([
+            'notification' => $notification
         ]);
     }
 }

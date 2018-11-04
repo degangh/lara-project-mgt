@@ -42,6 +42,10 @@ Route::get('lang/{locale}','SettingController@lang');
 Route::get('/notification/new', 'NotificationController@newNotifications');
 Route::get('/notification/inbox', 'NotificationController@inbox');
 
+Route::patch('/notification/{notification}/viewed', 'NotificationController@markAsViewed');
+
+Route::get('/notification/{notification}/viewed', 'NotificationController@markAsViewed');
+
 Route::get('/my/tasks' , 'TaskController@myTasks');
 
 Route::get('/test', function(){
