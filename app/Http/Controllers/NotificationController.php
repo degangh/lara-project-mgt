@@ -55,6 +55,9 @@ class NotificationController extends Controller
 
     public function markAsViewed(notification $notification)
     {
+        $notification->is_viewed = 1;
+        $notification->save();
+        
         return response()->json([
             'notification' => $notification
         ]);

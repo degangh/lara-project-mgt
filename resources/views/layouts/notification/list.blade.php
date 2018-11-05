@@ -9,7 +9,7 @@
                 @foreach($notifications as $notification)
                 <tr @if($notification->is_viewed == 0) class="font-weight-bold" @endif>
                 <td>
-                <input type="checkbox" class="notification-checkbox" data-notification_id="{{$notification->id}}">
+                <input type="checkbox" class="notification-checkbox" data-notification_id="{{$notification->id}}" @if($notification->is_viewed) checked @endif>
                 </td>
                 <td>
                 {{$notification->sender->name}}
@@ -34,6 +34,7 @@
 jQuery('.notification-checkbox').change(function()
 {
  var nid = jQuery(this).data('notification_id');
+ var ele = jQuery(this);
 
  jQuery.ajax({
    
@@ -43,6 +44,9 @@ jQuery('.notification-checkbox').change(function()
   url : '/notification/'+nid+'/viewed',
   type: 'PATCH',
 
+ }).done(function(data){
+     console.log(ele.closest('tr'));
+     if(data.notification.is_viewed == 1) ele.closest('tr').removeClass('font-weight-bold')
  })
 
 })
