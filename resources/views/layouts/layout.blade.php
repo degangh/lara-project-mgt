@@ -106,7 +106,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/inbox">
+          <a class="nav-link" href="/notification/inbox">
             <i class="far fa-fw fa-envelope"></i>
             <span>@lang('layout.inbox')</span>
           </a>
