@@ -100,12 +100,20 @@ class ProjectController extends Controller
     {
         //prepare user list
         $users = $this->users->all()->except($project->owner_id)->sortBy('name');
-        $this->authorize('show', $project);
+        try
+        {
+            $this->authorize('show', $project);
+        }
+        catch (\Exception $e)
+        {
+            abort('403', 'Project is not accessible to you');
+        }
+
         return view('tasks', [
             'tasks' => $this->projects->tasks($project),
             'project' => $project,
             'users' => $users
-            ]);
+        ]);
         
     }
 
