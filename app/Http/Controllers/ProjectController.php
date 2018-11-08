@@ -106,7 +106,7 @@ class ProjectController extends Controller
         }
         catch (\Exception $e)
         {
-            abort('403', __('exception.projectNotAllowed'));
+            abort('403', __('exception.projectReadNotAllowed'));
             //throw new \App\Exceptions\ResourceNotAllowedException('not allowed');
         }
 
@@ -140,8 +140,15 @@ class ProjectController extends Controller
     public function update(Request $request, $id)
     {
         $project = $this->projects->findById($id);
+        try
+        {
+            $this->authorize('edit', $project);
+        }
+        catch(\Exception $e)
+        {
+            abort('403', __('exception.projectEditNotAllowed'));
+        }
         
-        $this->authorize('edit', $project);
 
         $project->name = $request->name;
         $project->desc = $request->desc;

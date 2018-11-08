@@ -14,6 +14,7 @@ return [
 */
 
 
-'projectNotAllowed' => '项目禁止访问',
+'projectNotAllowed' => '项目禁止此账户访问',
+'projectEditNotAllowed' => '项目禁止此账户编辑',
 
 ];

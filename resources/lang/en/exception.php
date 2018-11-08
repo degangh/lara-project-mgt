@@ -14,6 +14,7 @@ return [
 */
 
 
-'projectNotAllowed' => 'The Project is Not Accessible',
+'projectReadNotAllowed' => 'The Project is Not Accessible',
+'projectEditNotAllowed' => 'You are not allowed to edit project',
 
 ];
