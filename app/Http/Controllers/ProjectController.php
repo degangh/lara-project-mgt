@@ -106,7 +106,7 @@ class ProjectController extends Controller
         }
         catch (\Exception $e)
         {
-            abort('403', 'Project is not accessible to you');
+            abort('403', __('exception.projectNotAllowed'));
             //throw new \App\Exceptions\ResourceNotAllowedException('not allowed');
         }
 
