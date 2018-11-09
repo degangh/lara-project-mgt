@@ -130,7 +130,14 @@ class UserController extends Controller
 
     public function updateActiveStatus(User $user, $action)
     {
-        $this->authorize("edit", User::class);
+        try
+        {
+            $this->authorize("edit", User::class);
+        }
+        catch(\Exception $e)
+        {
+            abort('403', __('exception.userEditNotAllowed'));
+        }
         
         $is_active = ($action == 'activate') ? 1 : 0;
         
