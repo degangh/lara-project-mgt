@@ -181,8 +181,15 @@ class ProjectController extends Controller
 
     public function file(Request $request, Project $project)
     {
-        $this->authorize('edit', $project);
-
+        try
+        {
+            $this->authorize('edit', $project);
+        }
+        catch(\Exception $e)
+        {
+            abort('403', 'You have no access to upload files to this project');
+        }
+        
         $uploadedFile = $request->file('attchement');
         
         $filename = $uploadedFile->getClientOriginalName();
