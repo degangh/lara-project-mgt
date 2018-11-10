@@ -110,5 +110,22 @@ class BasicRoutingTest extends TestCase
         $response->assertSee(__("project.add_task"));
     }
 
+    /* @test */
+    public function testNotificationInboxWithUser()
+    {
+        $user = User::first();
+        
+        $response = $this->actingAs($user)->get('/notification/inbox');
+        $response->assertStatus(200);
+    }
+
+    /* test new notification json */
+    public function testNewNotificationJson()
+    {
+        $user = User::first();
+        $response = $this->actingAs($user)->get('/notification/new');
+        $response->assertStatus(200);
+    }
+
 
 }
