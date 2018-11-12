@@ -22,6 +22,7 @@ class ProjectFileUploadTest extends TestCase
     {
         Storage::fake('upload');
         $file = UploadedFile::fake()->image('test.jpg');
+        var_dump($file);
         $project = Project::first();
         $user = User::first();
 
@@ -29,7 +30,7 @@ class ProjectFileUploadTest extends TestCase
             'attchement' => $file
         ]);
         $response->assertStatus(302);
-        //$response->assertSessionHas("success",__("project.file_success"));
+        $response->assertSessionHas("success",__("project.file_success",  ['filename' => $file->name]));
 
         Storage::disk('upload')->assertExists($file->hashName());
 
