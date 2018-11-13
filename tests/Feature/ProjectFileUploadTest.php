@@ -22,7 +22,6 @@ class ProjectFileUploadTest extends TestCase
     {
         Storage::fake('upload');
         $file = UploadedFile::fake()->image('test.jpg');
-        var_dump($file);
         $project = Project::first();
         $user = User::first();
 
@@ -32,17 +31,41 @@ class ProjectFileUploadTest extends TestCase
         $response->assertStatus(302);
         $response->assertSessionHas("success",__("project.file_success",  ['filename' => $file->name]));
 
-        Storage::disk('upload')->assertExists($file->hashName());
+        //Storage::disk('upload')->assertExists($file->hashName());
 
     }
 
-    public function testMemberUploadFile()
+    public function testMemberCannotUploadFile()
     {
+        Storage::fake('upload');
+        $file = UploadedFile::fake()->image('test.jpg');
+        $project = Project::first();
+        $user = User::first();
 
+        $member_id = array();
+        $member_id[] = User::find(2)->id;
+        $this->actingAs($user)->post(url("projects/".$project->id."/members"), [
+            "members" => $member_id
+        ]);
+
+        $member = User::find(2);
+
+        $response = $this->actingAs($member)->post('/projects/'.$project->id.'/file', [
+            'attchement' => $file
+        ]);
+        $response->assertStatus(403);
     }
 
     public function testOutsiderUploadFile()
     {
+        Storage::fake('upload');
+        $file = UploadedFile::fake()->image('test.jpg');
+        $project = Project::first();
 
+        $user = $user = factory(User::class)->create();
+        $response = $this->actingAs($user)->post('/projects/'.$project->id.'/file', [
+            'attchement' => $file
+        ]);
+        $response->assertStatus(403);
     }
 }
