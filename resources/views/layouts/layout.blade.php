@@ -219,10 +219,11 @@
         
         var messageCount = data.notification.length;
         jQuery('.message-count').text(messageCount);
-
-        for (var i = 0; i < data.notification.length; i++)
+        
+        var max_records = (data.notification.length > 5) ? 5 : data.notification.length;
+        for (var i = 0; i < max_records; i++)
         {
-          jQuery(".message-drop-down").append('<a class="dropdown-item" href="#"><div><strong>'+ data.notification[i].sender.name +'</strong></div>' + data.notification[i].translated + '</a>')
+          jQuery(".message-drop-down").append('<a class="dropdown-item" href="#"><div><strong>'+ data.notification[i].sender.name +'</strong><span class="float-right">' + data.notification[i].created_at + '</span></div>' + data.notification[i].translated + '</a>')
           jQuery(".message-drop-down").append('<div class="dropdown-divider"></div>');
         }
 
