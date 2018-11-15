@@ -45,8 +45,11 @@ jQuery('.notification-checkbox').change(function()
   type: 'PATCH',
 
  }).done(function(data){
-     console.log(ele.closest('tr'));
      if(data.notification.is_viewed == 1) ele.closest('tr').removeClass('font-weight-bold')
+     var messageCount = jQuery('.message-count').text();
+     jQuery('.message-count').text(messageCount-1);
+
+     if (messageCount <= 1) jQuery('.message-count').hide();
  })
 
 })
