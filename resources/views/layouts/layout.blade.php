@@ -237,9 +237,10 @@
             jQuery(".message-drop-down").append('<div class="dropdown-divider"></div>');
             
           }
+          jQuery('.message-count').show();
+
         }
         jQuery(".message-drop-down").append('<a class="dropdown-item" href="/notification/inbox"><strong>@lang("notification.view_all")<i class="fas fa-angle-right"></i></strong></a>');
-        jQuery('.message-count').show();
       })
     })
     </script>
