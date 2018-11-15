@@ -61,7 +61,7 @@
         <li class="nav-item dropdown no-arrow mx-1">
           <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-envelope fa-fw"></i>
-            <span class="badge badge-danger message-count">0</span>
+            <span class="badge badge-danger message-count" style="display:none">0</span>
           </a>
           <div class="dropdown-menu dropdown-menu-right message-drop-down" aria-labelledby="messagesDropdown">
             
@@ -221,16 +221,25 @@
         jQuery('.message-count').text(messageCount);
         
         var max_records = (data.notification.length > 5) ? 5 : data.notification.length;
-        for (var i = 0; i < max_records; i++)
-        {
-          jQuery(".message-drop-down").append('<a class="dropdown-item" href="#"><div><strong>'+ data.notification[i].sender.name +'</strong><span class="float-right">' + data.notification[i].created_at + '</span></div>' + data.notification[i].translated + '</a>')
-          jQuery(".message-drop-down").append('<div class="dropdown-divider"></div>');
-        }
+        
 
         if (data.notification.length < 1)
-        jQuery(".message-drop-down").append('<a class="dropdown-item" href="#">@lang('notification.no_new')</a>')
-        
+        {
+          jQuery(".message-drop-down").append('<a class="dropdown-item" href="#">@lang('notification.no_new')</a>')
+          
+          
+        }
+        else
+        {
+          for (var i = 0; i < max_records; i++)
+          {
+            jQuery(".message-drop-down").append('<a class="dropdown-item" href="#"><div><strong>'+ data.notification[i].sender.name +'</strong><span class="float-right">' + data.notification[i].created_at + '</span></div>' + data.notification[i].translated + '</a>')
+            jQuery(".message-drop-down").append('<div class="dropdown-divider"></div>');
+            
+          }
+        }
         jQuery(".message-drop-down").append('<a class="dropdown-item" href="/notification/inbox"><strong>@lang("notification.view_all")<i class="fas fa-angle-right"></i></strong></a>');
+        jQuery('.message-count').show();
       })
     })
     </script>
