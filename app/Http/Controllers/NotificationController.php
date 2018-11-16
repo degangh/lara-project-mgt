@@ -40,7 +40,7 @@ class NotificationController extends Controller
 
     public function inbox()
     {
-        $notifications = $this->notification->AllMessageforUser(Auth::user())->paginate(5);
+        $notifications = $this->notification->AllMessageforUser(Auth::user())->paginate(15);
 
         foreach($notifications as $key => $notification) 
         
