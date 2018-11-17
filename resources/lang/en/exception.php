@@ -17,5 +17,6 @@ return [
 'projectReadNotAllowed' => 'The Project is Not Accessible',
 'projectEditNotAllowed' => 'You are not allowed to edit project',
 'userEditNotAllowed' => 'You are not allowed to edit user profiles',
+'projectFileNotAllowed' => 'You are not allowed to upload file to this project',
 
 ];

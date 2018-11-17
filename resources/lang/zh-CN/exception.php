@@ -17,5 +17,6 @@ return [
 'projectNotAllowed' => '项目禁止此账户访问',
 'projectEditNotAllowed' => '项目禁止此账户编辑',
 'userEditNotAllowed' => '用户资料禁止此账户更改',
+'projectFileNotAllowed' => '项目禁止此账户上传文件',
 
 ];

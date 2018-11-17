@@ -187,7 +187,7 @@ class ProjectController extends Controller
         }
         catch(\Exception $e)
         {
-            abort('403', 'You have no access to upload files to this project');
+            abort('403', __('exception.projectFileNotAllowed'));
         }
         
         $uploadedFile = $request->file('attchement');
