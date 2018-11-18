@@ -7,10 +7,12 @@ use App\Project;
 use App\Task;
 use App\File;
 use App\User;
+use App\Notification;
 use App\Policies\ProjectPolicy;
 use App\Policies\TaskPolicy;
 use App\Policies\FilePolicy;
 use App\Policies\UserAdminPolicy;
+use App\Policies\NotificationPolicy;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
@@ -27,7 +29,8 @@ class AuthServiceProvider extends ServiceProvider
         Project::class => ProjectPolicy::class,
         Task::class => TaskPolicy::class,
         File::class => FilePolicy::class,
-        User::class => UserAdminPolicy::class
+        User::class => UserAdminPolicy::class,
+        Notification::class => NotificationPolicy::class
     ];
 
     /**

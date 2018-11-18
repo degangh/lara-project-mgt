@@ -55,6 +55,16 @@ class NotificationController extends Controller
 
     public function markAsViewed(notification $notification)
     {
+        try
+        {
+            $this->authorize('edit', $notification);
+        }
+
+        catch(\Exception $e)
+        {
+            abort('403', 'Edit notification is now allowed');
+        }
+        
         $notification->is_viewed = 1;
         $notification->save();
         
