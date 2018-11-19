@@ -45,12 +45,24 @@ jQuery('.notification-checkbox').change(function()
   type: 'PATCH',
 
  }).done(function(data){
-     if(data.notification.is_viewed == 1) ele.closest('tr').removeClass('font-weight-bold')
-     else ele.closest('tr').addClass('font-weight-bold')
-     var messageCount = jQuery('.message-count').text();
-     jQuery('.message-count').text(messageCount-1);
+  
+  if(data.notification.is_viewed == 1) 
+     {
+       ele.closest('tr').removeClass('font-weight-bold')
+       var messageCount = jQuery('.message-count').text();   
+       jQuery('.message-count').text(messageCount-1);
+     }
+     else 
+     {
+       ele.closest('tr').addClass('font-weight-bold')
+       var messageCount = jQuery('.message-count').text();   
+       jQuery('.message-count').text(parseInt(messageCount)+1);
+     }
+     
+     console.log(messageCount);
 
      if (messageCount <= 1) jQuery('.message-count').hide();
+     else jQuery('.message-count').show();
  })
 
 })
