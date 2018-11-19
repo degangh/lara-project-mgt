@@ -65,7 +65,7 @@ class NotificationController extends Controller
             abort('403', 'Edit notification is now allowed');
         }
         
-        $notification->is_viewed = 1;
+        $notification->is_viewed = $notification->is_viewed ? 0: 1;
         $notification->save();
         
         return response()->json([

@@ -46,6 +46,7 @@ jQuery('.notification-checkbox').change(function()
 
  }).done(function(data){
      if(data.notification.is_viewed == 1) ele.closest('tr').removeClass('font-weight-bold')
+     else ele.closest('tr').addClass('font-weight-bold')
      var messageCount = jQuery('.message-count').text();
      jQuery('.message-count').text(messageCount-1);
 
