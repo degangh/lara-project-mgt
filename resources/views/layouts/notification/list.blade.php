@@ -50,18 +50,20 @@ jQuery('.notification-checkbox').change(function()
      {
        ele.closest('tr').removeClass('font-weight-bold')
        var messageCount = jQuery('.message-count').text();   
-       jQuery('.message-count').text(messageCount-1);
+       messageCount--;
+       jQuery('.message-count').text(messageCount);
      }
      else 
      {
        ele.closest('tr').addClass('font-weight-bold')
        var messageCount = jQuery('.message-count').text();   
-       jQuery('.message-count').text(parseInt(messageCount)+1);
+       messageCount++;
+       jQuery('.message-count').text(parseInt(messageCount));
      }
      
      console.log(messageCount);
 
-     if (messageCount <= 1) jQuery('.message-count').hide();
+     if (messageCount < 1) jQuery('.message-count').hide();
      else jQuery('.message-count').show();
  })
 
