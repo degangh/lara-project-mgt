@@ -179,6 +179,14 @@ class ProjectController extends Controller
         
     }
 
+    /**
+     * upload file to local storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  Project  \App\Project
+     * @return \Illuminate\Http\Response
+     */
+
     public function file(Request $request, Project $project)
     {
         try

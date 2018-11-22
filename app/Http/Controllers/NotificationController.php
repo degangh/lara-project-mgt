@@ -21,7 +21,12 @@ class NotificationController extends Controller
          $this->task = $task;
     }
 
-
+     /**
+     * Display the specified resource.
+     *
+     * @param  null
+     * @return \Illuminate\Http\Response
+     */
     public function newNotifications()
     {
         $notifications = $this->notification->ReminderforUser(Auth::user());
@@ -38,6 +43,13 @@ class NotificationController extends Controller
         ]);
     }
 
+     /**
+     * Display current user's notification message.
+     *
+     * @param  null
+     * @return \Illuminate\View\View
+     */
+
     public function inbox()
     {
         $notifications = $this->notification->AllMessageforUser(Auth::user())->paginate(15);
@@ -52,6 +64,13 @@ class NotificationController extends Controller
             'notifications' => $notifications
         ]);
     }
+
+    /**
+     * toggle viewed status of notification
+     * @param notification $notification
+     * @return \Illuminate\Http\Response
+     *
+    */
 
     public function markAsViewed(notification $notification)
     {
