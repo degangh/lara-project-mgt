@@ -28,7 +28,7 @@ class UserController extends Controller
     {
         $this->authorize("edit", User::class);   
         
-        $users = $this->users->all();
+        $users = $this->users->all()->paginate(15);
 
         return view('users', [
             'users' => $users
