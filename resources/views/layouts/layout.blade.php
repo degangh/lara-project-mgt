@@ -53,8 +53,8 @@
             
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
-            <a class="dropdown-item" href="/lang/en">@lang('layout.english')</a>
-            <a class="dropdown-item" href="/lang/zh-CN">@lang('layout.chinese')</a>
+            <a class="dropdown-item" href="{{url('/lang/en')}}">@lang('layout.english')</a>
+            <a class="dropdown-item" href="{{url('/lang/zh-CN')}}">@lang('layout.chinese')</a>
             
           </div>
         </li>
