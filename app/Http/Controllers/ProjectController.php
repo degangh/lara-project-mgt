@@ -99,7 +99,7 @@ class ProjectController extends Controller
     public function show(Project $project)
     {
         //prepare user list
-        $users = $this->users->all()->except($project->owner_id)->sortBy('name');
+        $users = $this->users->all()->get()->except($project->owner_id)->sortBy('name');
         try
         {
             $this->authorize('show', $project);
