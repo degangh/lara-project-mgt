@@ -17,12 +17,12 @@
     <!-- Custom fonts for this template-->
 <!-- Bootstrap core JavaScript-->
 
-    <script src="{{ mix('js/app.js') }}"></script>
-    <script src="{{ mix('js/jquery-ui.min.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
     
     
     <!-- Custom styles for this template-->
-    <link href="{{ mix('css/sbadmin/sb-admin.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/sbadmin/sb-admin.css') }}" rel="stylesheet">
 
 
     <script>
