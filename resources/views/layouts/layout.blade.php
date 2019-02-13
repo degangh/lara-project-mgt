@@ -12,8 +12,8 @@
 
     <title>@lang('layout.page_title')</title>
 
-   <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
-   <link href="{{ mix('/css/jquery-ui.min.css') }}" rel="stylesheet">
+   <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+   <link href="{{ mix('css/jquery-ui.min.css') }}" rel="stylesheet">
     <!-- Custom fonts for this template-->
 <!-- Bootstrap core JavaScript-->
 
@@ -22,7 +22,7 @@
     
     
     <!-- Custom styles for this template-->
-    <link href="{{ mix('/css/sbadmin/sb-admin.css') }}" rel="stylesheet">
+    <link href="{{ mix('css/sbadmin/sb-admin.css') }}" rel="stylesheet">
 
 
     <script>

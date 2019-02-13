@@ -13,11 +13,11 @@
     <title>{{config('app.name', 'Project')}} - Login</title>
 
     <!-- Bootstrap core CSS-->
-    <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 
     
     <!-- Custom styles for this template-->
-    <link href="{{ mix('/css/sbadmin/sb-admin.css') }}" rel="stylesheet">
+    <link href="{{ mix('css/sbadmin/sb-admin.css') }}" rel="stylesheet">
 
   </head>
 
