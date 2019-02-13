@@ -208,8 +208,8 @@
     
 
     <!-- Core plugin JavaScript-->
-    <script src="{{ mix('js/sbadmin/sb-admin.min.js') }}"></script>
-    <script src="{{ mix('js/jquery.easing.js') }}"></script>
+    <script src="{{ asset('js/sbadmin/sb-admin.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.easing.js') }}"></script>
     
 
     <!-- Custom scripts for all pages-->
