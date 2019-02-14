@@ -88,13 +88,13 @@
       <!-- Sidebar -->
       <ul class="sidebar navbar-nav toggled">
         <li class="nav-item">
-          <a class="nav-link" href="/dashboard">
+          <a class="nav-link" href="./dashboard">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>@lang('layout.dashboard')</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/projects">
+          <a class="nav-link" href="./projects">
             <i class="fas fa-fw fa-project-diagram"></i>
             <span>@lang('layout.projects')</span>
           </a>
