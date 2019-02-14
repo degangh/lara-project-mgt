@@ -88,31 +88,31 @@
       <!-- Sidebar -->
       <ul class="sidebar navbar-nav toggled">
         <li class="nav-item">
-          <a class="nav-link" href="./dashboard">
+          <a class="nav-link" href="{{url('/dashboard')}}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>@lang('layout.dashboard')</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./projects">
+          <a class="nav-link" href="{{url('./projects')}}">
             <i class="fas fa-fw fa-project-diagram"></i>
             <span>@lang('layout.projects')</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./my/tasks">
+          <a class="nav-link" href="{{url('/my/tasks')}}">
             <i class="fas fa-tasks"></i>
             <span>@lang('layout.my_tasks')</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./notification/inbox">
+          <a class="nav-link" href="{{url('/notification/inbox')}}">
             <i class="far fa-fw fa-envelope"></i>
             <span>@lang('layout.inbox')</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./users">
+          <a class="nav-link" href="{{url('/users')}}">
             <i class="fas fa-fw fa-users"></i>
             <span>@lang('layout.users')</span>
           </a>
