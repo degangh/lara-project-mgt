@@ -30,11 +30,11 @@ class ProjectPolicy
             if ($user->id == $member->id) $onProject = true;
         }
         
-        return ( ($user->id === $project->owner_id) || $onProject);
+        return ( ($user->id === $project->user->id) || $onProject);
     }
 
     public function edit(User $user, Project $project)
     {
-        return $user->id === $project->owner_id;
+        return $user->id === $project->user->id;
     }
 }
