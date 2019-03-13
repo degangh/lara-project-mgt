@@ -4,10 +4,10 @@
 <!-- Breadcrumbs-->
 <ol class="breadcrumb">
     <li class="breadcrumb-item">
-        <a href="/dashboard">@lang('layout.dashboard')</a>
+        <a href="{{url("/dashboard")}}">@lang('layout.dashboard')</a>
     </li>
     <li class="breadcrumb-item">
-        <a href="/projects">@lang('layout.projects')</a>
+        <a href="{{url("/projects")}}">@lang('layout.projects')</a>
     </li>
     <li class="breadcrumb-item active">{{$project->name}}</li>
 </ol>

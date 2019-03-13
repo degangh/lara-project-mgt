@@ -5,7 +5,7 @@
 <!-- Breadcrumbs-->
 <ol class="breadcrumb">
     <li class="breadcrumb-item">
-        <a href="/dashboard">@lang('layout.dashboard')</a>
+        <a href="{{url("/dashboard")}}">@lang('layout.dashboard')</a>
     </li>
     <li class="breadcrumb-item active">@lang('layout.projects')</li>
 </ol>
