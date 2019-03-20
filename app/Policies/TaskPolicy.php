@@ -66,6 +66,6 @@ class TaskPolicy
      */
     public function complete(User $user, Task $task)
     {
-        return $user->id === $task->user_id || $user->id === $task->assignee;
+        return $user->id == $task->user_id || $user->id == $task->assignee;
     }
 }
