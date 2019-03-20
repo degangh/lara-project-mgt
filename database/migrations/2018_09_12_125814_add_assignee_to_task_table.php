@@ -14,7 +14,7 @@ class AddAssigneeToTaskTable extends Migration
     public function up()
     {
         Schema::table('tasks', function (Blueprint $table) {
-            $table->integer('assignee');
+            $table->integer('assignee')->default(0);
         });
     }
 

@@ -15,6 +15,14 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class TaskTest extends TestCase
 {
+    use RefreshDatabase;
+    function setup()
+    {
+        parent::setup();
+        \Artisan::call('db:seed');
+
+    }
+    
     /*
 
     */

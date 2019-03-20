@@ -16,7 +16,7 @@ class AddDescriptionToProject extends Migration
         //add column
         Schema::table('projects', function(Blueprint $table)
         {
-            $table->string('desc');
+            $table->string('desc')->nullable();
         });
     }
 

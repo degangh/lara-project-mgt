@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -14,7 +14,10 @@ class ChangeColumnNameNotification extends Migration
     public function up()
     {
         Schema::table("notifications", function (Blueprint $table){
-            $table->renameColumn('type', 'notifiable_type');
+            $table->renameColumn('type', 'notifiable_type'); 
+        });
+        Schema::table("notifications", function (Blueprint $table){
+           
             $table->renameColumn('associate_id', 'notifiable_id');
         });
     }
@@ -28,6 +31,10 @@ class ChangeColumnNameNotification extends Migration
     {
         Schema::table("notifications", function (Blueprint $table){
             $table->renameColumn('notifiable_type','type');
+           
+        });
+        Schema::table("notifications", function (Blueprint $table){
+           
             $table->renameColumn('notifiable_id' , 'associate_id');
         });
     }

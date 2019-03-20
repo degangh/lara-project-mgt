@@ -11,7 +11,13 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class UserRepositoryTest extends TestCase
 {
-    
+    use RefreshDatabase;
+    function setup()
+    {
+        parent::setup();
+        \Artisan::call('db:seed');
+
+    }
     public function testUserCreation()
     {
         $data = factory(User::class)->make();

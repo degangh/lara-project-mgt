@@ -11,7 +11,13 @@ use App\User;
 
 class UserTest extends TestCase
 {   
+    use RefreshDatabase;
+    function setup()
+    {
+        parent::setup();
+        \Artisan::call('db:seed');
 
+    }
     public function testUserBtn()
     {
         $user = User::where('is_admin', 1)->first();

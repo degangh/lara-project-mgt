@@ -14,7 +14,13 @@ use App\User;
 
 class ProjectTest extends TestCase
 {
-    
+    use RefreshDatabase;
+    function setup()
+    {
+        parent::setup();
+        \Artisan::call('db:seed');
+
+    }
     
     /**
      * A basic test example.
