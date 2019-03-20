@@ -56,6 +56,8 @@ class TaskTest extends TestCase
         $task = Task::where('user_id', $user->id)->where('is_complete', 0)->first();
 
         $response = $this->actingAs($user)->patch(url('tasks/'.$task->id.'/complete'));
+
+        $response->assertStatus(302);
         
         $response->assertSessionHas('success', __('task.complete_success'));
 
