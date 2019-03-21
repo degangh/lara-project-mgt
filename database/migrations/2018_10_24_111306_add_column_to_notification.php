@@ -14,8 +14,8 @@ class AddColumnToNotification extends Migration
     public function up()
     {
         Schema::table('notifications', function (Blueprint $table) {
-            $table->text('type')->default('');
-            $table->integer('associate_id')->default(0);
+            $table->text('type')->nullable();
+            $table->integer('associate_id')->nullable();
         });
     }
 
