@@ -11,6 +11,7 @@ use App\User;
 use App\File;
 use Session;
 use Auth;
+use App\Http\Requests\StoreProject;
 
 class ProjectController extends Controller
 {
@@ -65,20 +66,13 @@ class ProjectController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\View\View
      */
-    public function store(Request $request)
+    public function store(StoreProject $request)
     {
-        $messages  = [
-            "desc.required" => "Please describe this project"
-        ];
-        
-        $request->validate([
-            "name" => "required",
-            "desc" => "required"
-        ], $messages);
+        $validated = $request->validated();
         
         $project = $request->user()->projects()->create([
-            "name" => $request->name,
-            "desc" => $request->desc
+            'name' => $validated['name'],
+            'desc' => $validated['desc']
         ]);
         
         //save project owner as a default member when creating the project
