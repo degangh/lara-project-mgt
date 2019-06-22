@@ -131,7 +131,7 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreProject $request, $id)
     {
         $project = $this->projects->findById($id);
         try
@@ -143,9 +143,10 @@ class ProjectController extends Controller
             abort('403', __('exception.projectEditNotAllowed'));
         }
         
+        $validated = $request->validated();
 
-        $project->name = $request->name;
-        $project->desc = $request->desc;
+        $project->name = $validated['name'];
+        $project->desc = $validated['desc'];
         $project->save();
         Session::flash('success', __('project.save_success'));
         return redirect(url("/projects"));
