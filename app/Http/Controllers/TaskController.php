@@ -12,6 +12,7 @@ use \Crypt;
 use Session;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreTask;
 use App\Events\OnTaskComplete;
 use App\Events\OnTaskAssigned;
 
@@ -52,34 +53,26 @@ class TaskController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreTask $request)
     {
-        //authorize?
-        $project_id = Crypt::decrypt($request->project_id);
+        
+        
+        $validated = $request->validated();
+        
+        
+        $project_id = Crypt::decrypt($validated['project_id']);
 
         $project = Project::find($project_id);
         $this->authorize('show', $project);
 
-        //
-        $messages  = [
-            "name.required" => __('task.name_required'),
-            "due_date.required" => __('task.due_date_required'),
-            "assignee" => __('task.assignee_required')
-        ];
         
-        $request->validate([
-            "name" => "required",
-            "due_date" => "required",
-            "assignee" => "required",
-            "project_id" => "required",
-        ], $messages);
         
         $task = $request->user()->tasks()->create([
-            "name" => $request->name,
+            "name" => $validated['name'],
             "project_id" => $project_id,
             "user_id" => $request->user()->id,
-            "due_time" => $request->due_date,
-            "assignee" => $request->assignee
+            "due_time" => $validated['due_date'],
+            "assignee" => $validated['assignee']
         ]);
 
         event(new OnTaskAssigned($task));
