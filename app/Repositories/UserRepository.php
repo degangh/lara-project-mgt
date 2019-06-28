@@ -19,9 +19,9 @@ class UserRepository
     public function create($request)
     {
         User::create([
-            "name" => $request->name,
-            "email" => $request->email,
-            "password" => bcrypt($request->password)
+            "name" => $request['name'],
+            "email" => $request['email'],
+            "password" => bcrypt($request['password'])
         ]);
     }
 }

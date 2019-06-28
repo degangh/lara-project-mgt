@@ -7,6 +7,7 @@ use App\User;
 use Session;
 
 use App\Repositories\UserRepository;
+use App\Http\Requests\StoreUser;
 
 class UserController extends Controller
 {
@@ -53,21 +54,21 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreUser $request)
     {
         //validator
         /*
         $message = [
             'email' => "Email has been taken by another registered user"
         ];*/
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
-        ]);
+        $validated = $request->validated();
 
         //create
-        $this->users->create($request);
+        $this->users->create([
+            'name' => $validated['name'],
+            'email' => $validated['email'],
+            'password' => $validated['password']
+        ]);
 
         Session::flash('success', __('user.create_success'));
 
