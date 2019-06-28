@@ -26,4 +26,8 @@ return [
 'repeat_password' => 'Repeat Password',
 'save' => 'Save User',
 'create_success' => 'User is created successfully',
+'name_required' => 'User\'s name is required',
+'email_required' => 'Email is required',
+'password_required' => 'Password is required',
+'password_confirmed' => 'Password not matched'
 ];

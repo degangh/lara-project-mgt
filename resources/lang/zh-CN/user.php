@@ -26,4 +26,8 @@ return [
 'repeat_password' => '再次输入密码',
 'save' => '保存用户',
 'create_success' => '用户创建成功',
+'name_required' => '用户姓名必须填写',
+'email_required' => '电子邮件必须填写',
+'password_required' => '密码必须填写',
+'password_confirmed' => '两次输入密码不一致'
 ];
