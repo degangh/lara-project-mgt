@@ -16,7 +16,7 @@ class UserRepository
         return User::where('id', '>' , 0);
     }
 
-    public function create($request)
+    public function create(Array $request)
     {
         User::create([
             "name" => $request['name'],
