@@ -1,4 +1,4 @@
-<div class="row create-task" title="@lang('task.create')" style="display:none">
+<div class="row create-task col-md-8 col-sm-12" title="@lang('task.create')" style="display:none">
 
         <div class="col-md-12">
             <form action="{{ url('/tasks') }}" method="post" name="create-task-form">
