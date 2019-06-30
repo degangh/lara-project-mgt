@@ -38,7 +38,7 @@ class StoreUser extends FormRequest
             'email.required' => __('user.email_required'),
             'email.unique' => __('user.email_unique'),
             'password.required' => __('user.password_required'),
-            'password.confirmed' => ('user.password_confirmed')
+            'password.confirmed' => __('user.password_confirmed')
         ];
         
     }

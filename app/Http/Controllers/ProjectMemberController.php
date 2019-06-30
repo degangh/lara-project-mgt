@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreProjectMember;
 
 use App\Project;
 use App\User;
@@ -23,13 +24,14 @@ class ProjectMemberController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Project $project, Request $request)
+    public function store(Project $project, StoreProjectMember $request)
     {
+        $validated = $request->validated();        
         //detach all users in the first place
         $project->members()->detach();
         
         //dd($request->members);
-        foreach ($request->members as $member)
+        foreach ($validated['members'] as $member)
         {
             $ProjectMember = User::find($member);
             $project->members()->save($ProjectMember);
