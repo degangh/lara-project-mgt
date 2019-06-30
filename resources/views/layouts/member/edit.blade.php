@@ -49,7 +49,7 @@ jQuery(function(){
     jQuery(".add-members").dialog({
         autoOpen: false,
         modal: true,
-        width: 'auto',
+        width: '90%',
         maxWidth:'500px',
         show: {
             effect: "fade",
