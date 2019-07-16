@@ -12,17 +12,17 @@
 
     <title>@lang('layout.page_title')</title>
 
-   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-   <link href="{{ asset('css/jquery-ui.min.css') }}" rel="stylesheet">
+   <link href="{{ asset('sbadmin/css/app.css') }}" rel="stylesheet">
+   <link href="{{ asset('sbadmin/css/jquery-ui.min.css') }}" rel="stylesheet">
     <!-- Custom fonts for this template-->
 <!-- Bootstrap core JavaScript-->
 
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
+    <script src="{{ asset('sbadmin/js/app.js') }}"></script>
+    <script src="{{ asset('sbadmin/js/jquery-ui.min.js') }}"></script>
     
     
     <!-- Custom styles for this template-->
-    <link href="{{ asset('css/sbadmin/sb-admin.css') }}" rel="stylesheet">
+    <link href="{{ asset('sbadmin/css/sbadmin/sb-admin.css') }}" rel="stylesheet">
 
 
     <script>
@@ -30,8 +30,8 @@
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
-    <script src="{{ asset('js/select2/select2.min.js') }}"></script>
-    <link href="{{ asset('css/select2/select2.min.css') }}" rel="stylesheet">
+    <script src="{{ asset('sbadmin/js/select2/select2.min.js') }}"></script>
+    <link href="{{ asset('sbadmin/css/select2/select2.min.css') }}" rel="stylesheet">
   </head>
 
   <body id="page-top" class='sidebar-toggled'>
@@ -208,8 +208,8 @@
     
 
     <!-- Core plugin JavaScript-->
-    <script src="{{ asset('js/sbadmin/sb-admin.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.easing.js') }}"></script>
+    <script src="{{ asset('sbadmin/js/sbadmin/sb-admin.min.js') }}"></script>
+    <script src="{{ asset('sbadmin/js/jquery.easing.js') }}"></script>
     
 
     <!-- Custom scripts for all pages-->
