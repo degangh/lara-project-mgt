@@ -1,5 +1,10 @@
 let mix = require('laravel-mix');
 
+/**
+ * path variables
+ */
+
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -31,5 +36,11 @@ mix.copy('node_modules/select2/dist/css/select2.min.css', 'public/sbadmin/css/se
 
 /**
  * for new theme gentelella
+ * nprogress
+ * bootstrap-progressbar
  */
 mix.js('resources/assets/js/app.js', 'public/gentelella/js');
+mix.sass('resources/assets/sass/app.scss', 'public/gentelella/css')
+.options({
+    processCssUrls: false
+});
