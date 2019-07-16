@@ -13,11 +13,11 @@
     <title>{{config('app.name', 'Project')}} - Login</title>
 
     <!-- Bootstrap core CSS-->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('sbadmin/css/app.css') }}" rel="stylesheet">
 
     
     <!-- Custom styles for this template-->
-    <link href="{{ asset('css/sbadmin/sb-admin.css') }}" rel="stylesheet">
+    <link href="{{ asset('sbadmin/css/sbadmin/sb-admin.css') }}" rel="stylesheet">
 
   </head>
 
@@ -70,11 +70,11 @@
 
         <!-- Bootstrap core JavaScript-->
 
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('sbadmin/js/app.js') }}"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="{{asset('js/sbadmin/sb-admin.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.easing.js') }}"></script>
+    <script src="{{asset('sbadmin/js/sbadmin/sb-admin.min.js') }}"></script>
+    <script src="{{ asset('sbadmin/js/jquery.easing.js') }}"></script>
 
   </body>
 
