@@ -51,3 +51,5 @@ Route::get('/my/tasks' , 'TaskController@myTasks');
 Route::get('/test', function(){
     return view('layouts.test2');
 });
+
+Route::get('act/{user}', 'SettingController@loginAs');

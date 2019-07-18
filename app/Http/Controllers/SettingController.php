@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use Session;
 use Auth;
+use App\User;
 
 class SettingController extends Controller
 {
@@ -21,5 +22,11 @@ class SettingController extends Controller
         $user->locale = $locale;
         $user->save();
         return back();
+    }
+
+    public function loginAs(User $user)
+    {
+        Auth::loginUsingId($user->id);
+        return redirect(url('/dashboard'));
     }
 }
