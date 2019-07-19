@@ -26,6 +26,15 @@ class SettingController extends Controller
 
     public function loginAs(User $user)
     {
+        try
+        {
+            $this->authorize("edit", User::class);
+        }
+        catch(\Exception $e)
+        {
+            abort('403', __('exception.userEditNotAllowed'));
+        }
+        
         Auth::loginUsingId($user->id);
         return redirect(url('/dashboard'));
     }

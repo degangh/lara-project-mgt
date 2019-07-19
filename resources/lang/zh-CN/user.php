@@ -29,5 +29,6 @@ return [
 'name_required' => '用户姓名必须填写',
 'email_required' => '电子邮件必须填写',
 'password_required' => '密码必须填写',
-'password_confirmed' => '两次输入密码不一致'
+'password_confirmed' => '两次输入密码不一致',
+'delegate' => '代理'
 ];

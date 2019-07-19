@@ -34,6 +34,8 @@
     @endif
     </form>
     </td>
+    <td>
+        <a href="/act/{{$user->id}}" class="btn btn-outline-secondary btn-sm">@lang('user.delegate')</a>
     
     </tr>
     @endforeach

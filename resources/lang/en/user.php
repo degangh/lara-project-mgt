@@ -29,5 +29,6 @@ return [
 'name_required' => 'User\'s name is required',
 'email_required' => 'Email is required',
 'password_required' => 'Password is required',
-'password_confirmed' => 'Password not matched'
+'password_confirmed' => 'Password not matched',
+'delegate' => 'Delegate'
 ];
