@@ -19,6 +19,7 @@ class ProjectTest extends TestCase
     {
         parent::setup();
         \Artisan::call('db:seed');
+        factory(User::class, 5)->create();
 
     }
     
@@ -58,11 +59,14 @@ class ProjectTest extends TestCase
     {
         $user = User::first();
         $project = $user->projects()->first();
-        $members = User::where("id", "!=", $user->id)->take(3);
+        $members = User::where("id", "!=", $user->id)->take(3)->get();
         $member_id = array();
-        $members->each(function($member){
-            $member_id[] = $member->id;
-        });
+        
+        foreach($members as $member) {
+           $member_id[] = $member->id;
+        }
+
+
 
         $response = $this->actingAs($user)->post(url("projects/".$project->id."/members"), [
             "members" => $member_id
