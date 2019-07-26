@@ -15424,3 +15424,10 @@ readers do not read off random characters that represent icons */
   position: static;
   width: auto;
 }
+
+.btn-xs {
+  padding: 0.4rem 0.25rem;
+  font-size: 0.875rem;
+  line-height: 0.5;
+  border-radius: 0.2rem;
+}
