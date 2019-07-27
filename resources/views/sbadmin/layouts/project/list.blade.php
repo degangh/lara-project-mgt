@@ -15,11 +15,10 @@
                 @endif
                 </td>
                 <td>
-                <a href="{{url('/projects')}}/{{$project->id}}" ><i class="far fa-folder-open"></i></a>
-                </td>
-                <td>
+                <a class="btn btn-xs btn-success" href="{{url('/projects')}}/{{$project->id}}" ><i class="far fa-folder-open"></i>  </a>
+                
                 @if ($project->user->id == Auth::user()->id)
-                <a href="#" class="edit-project-btn" data-project-name="{{$project->name}}" data-desc="{{$project->desc}}" data-id = "{{$project->id}}"><i class="fa fa-edit"></i></a>
+                <button class="edit-project-btn btn btn-info btn-xs" data-project-name="{{$project->name}}" data-desc="{{$project->desc}}" data-id = "{{$project->id}}"><i class="fa fa-edit"></i></button>
                 @else
                 <span class="fa fa-lock"></span>
                 @endif

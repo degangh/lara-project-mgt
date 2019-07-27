@@ -20,7 +20,7 @@ $btn-padding-y-xs: .25rem !default;
 
 $btn-line-height-xs: .5;
 $btn-border-radius-xs: .2rem;
-$font-size-xs: .875rem;
+$font-size-xs: .75rem;
 
 .btn-xs {
     @include button-size($btn-padding-y-xs, $btn-padding-x-xs, $font-size-xs, $btn-line-height-xs, $btn-border-radius-xs);
