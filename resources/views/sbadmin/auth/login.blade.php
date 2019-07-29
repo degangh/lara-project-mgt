@@ -37,7 +37,7 @@
                             <strong>{{ $errors->first('email') }}</strong>
                         </span>
                 @endif
-                <label for="inputEmail">Email address</label>
+                <label for="email">Email address</label>
               </div>
             </div>
             <div class="form-group">
@@ -48,7 +48,7 @@
                             <strong>{{ $errors->first('password') }}</strong>
                         </span>
                     @endif
-                <label for="inputPassword">Password</label>
+                <label for="password">Password</label>
               </div>
             </div>
             <div class="form-group">
