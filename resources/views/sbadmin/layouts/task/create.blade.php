@@ -49,16 +49,16 @@
 
 <div class="row" style="margin-bottom:15px;">
     <div class="col-md-12 mt-2">
-        <button class="btn btn-sm add-member-btn btn-success" >
+        <button class="btn btn-xs add-member-btn btn-success" >
         <i class="fa fa-user-plus"></i> 
         <span class='d-none d-md-inline'>@lang('project.add_member')</span>
         </button> 
         
-        <button class="btn btn-sm create-task-btn btn-success" >
+        <button class="btn btn-xs create-task-btn btn-success" >
         <i class="fas fa-tasks"></i> <span class='d-none d-md-inline'>@lang('project.add_task')</span>
         </button>
 
-        <button class="btn btn-sm upload-btn btn-success" >
+        <button class="btn btn-xs upload-btn btn-success" >
         <i class="fas fa-file-upload"></i> <span class='d-none d-md-inline'>@lang('project.add_file')</span>
         </button>
     </div>
