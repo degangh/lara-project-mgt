@@ -2650,7 +2650,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-info {
-  color: #212529;
+  color: #fff;
   background-color: #5bc0de;
   border-color: #5bc0de;
 }
@@ -2667,7 +2667,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-info.disabled, .btn-info:disabled {
-  color: #212529;
+  color: #fff;
   background-color: #5bc0de;
   border-color: #5bc0de;
 }
@@ -2686,13 +2686,13 @@ fieldset:disabled a.btn {
 }
 
 .btn-warning {
-  color: #212529;
+  color: #fff;
   background-color: #f0ad4e;
   border-color: #f0ad4e;
 }
 
 .btn-warning:hover {
-  color: #212529;
+  color: #fff;
   background-color: #ed9d2b;
   border-color: #ec971f;
 }
@@ -2703,14 +2703,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-warning.disabled, .btn-warning:disabled {
-  color: #212529;
+  color: #fff;
   background-color: #f0ad4e;
   border-color: #f0ad4e;
 }
 
 .btn-warning:not(:disabled):not(.disabled):active, .btn-warning:not(:disabled):not(.disabled).active,
 .show > .btn-warning.dropdown-toggle {
-  color: #212529;
+  color: #fff;
   background-color: #ec971f;
   border-color: #ea9214;
 }
@@ -2758,13 +2758,13 @@ fieldset:disabled a.btn {
 }
 
 .btn-light {
-  color: #212529;
+  color: #fff;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
 
 .btn-light:hover {
-  color: #212529;
+  color: #fff;
   background-color: #e2e6ea;
   border-color: #dae0e5;
 }
@@ -2775,14 +2775,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-light.disabled, .btn-light:disabled {
-  color: #212529;
+  color: #fff;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
 
 .btn-light:not(:disabled):not(.disabled):active, .btn-light:not(:disabled):not(.disabled).active,
 .show > .btn-light.dropdown-toggle {
-  color: #212529;
+  color: #fff;
   background-color: #dae0e5;
   border-color: #d3d9df;
 }
@@ -2945,7 +2945,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-info:hover {
-  color: #212529;
+  color: #fff;
   background-color: #5bc0de;
   border-color: #5bc0de;
 }
@@ -2962,7 +2962,7 @@ fieldset:disabled a.btn {
 
 .btn-outline-info:not(:disabled):not(.disabled):active, .btn-outline-info:not(:disabled):not(.disabled).active,
 .show > .btn-outline-info.dropdown-toggle {
-  color: #212529;
+  color: #fff;
   background-color: #5bc0de;
   border-color: #5bc0de;
 }
@@ -2981,7 +2981,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-warning:hover {
-  color: #212529;
+  color: #fff;
   background-color: #f0ad4e;
   border-color: #f0ad4e;
 }
@@ -2998,7 +2998,7 @@ fieldset:disabled a.btn {
 
 .btn-outline-warning:not(:disabled):not(.disabled):active, .btn-outline-warning:not(:disabled):not(.disabled).active,
 .show > .btn-outline-warning.dropdown-toggle {
-  color: #212529;
+  color: #fff;
   background-color: #f0ad4e;
   border-color: #f0ad4e;
 }
@@ -3053,7 +3053,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-light:hover {
-  color: #212529;
+  color: #fff;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
@@ -3070,7 +3070,7 @@ fieldset:disabled a.btn {
 
 .btn-outline-light:not(:disabled):not(.disabled):active, .btn-outline-light:not(:disabled):not(.disabled).active,
 .show > .btn-outline-light.dropdown-toggle {
-  color: #212529;
+  color: #fff;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
@@ -5087,23 +5087,23 @@ input[type="button"].btn-block {
 }
 
 .badge-info {
-  color: #212529;
+  color: #fff;
   background-color: #5bc0de;
 }
 
 .badge-info[href]:hover, .badge-info[href]:focus {
-  color: #212529;
+  color: #fff;
   text-decoration: none;
   background-color: #31b0d5;
 }
 
 .badge-warning {
-  color: #212529;
+  color: #fff;
   background-color: #f0ad4e;
 }
 
 .badge-warning[href]:hover, .badge-warning[href]:focus {
-  color: #212529;
+  color: #fff;
   text-decoration: none;
   background-color: #ec971f;
 }
@@ -5120,12 +5120,12 @@ input[type="button"].btn-block {
 }
 
 .badge-light {
-  color: #212529;
+  color: #fff;
   background-color: #f8f9fa;
 }
 
 .badge-light[href]:hover, .badge-light[href]:focus {
-  color: #212529;
+  color: #fff;
   text-decoration: none;
   background-color: #dae0e5;
 }
@@ -14326,3 +14326,8 @@ readers do not read off random characters that represent icons */
   line-height: 0.5;
   border-radius: 0.2rem;
 }
+
+/*
+.btn-info, .btn-warning{
+    color: #ffffff;
+}*/
