@@ -1,4 +1,4 @@
-<div class="edit-project row" title = "@lang('project.edit')" style="display:none">
+<div class="edit-project" title = "@lang('project.edit')" style="display:none">
     <div class="col-md-12">
     <form method="post" id="edit-project-form">
             {{csrf_field()}}
@@ -39,16 +39,16 @@ jQuery(function(){
     ctrl.dialog({
         autoOpen:false,
         mondal: true,
-        width:'auto',
+        width: '80%',
         maxWidth: 500,
         show: {
             effect: "fade",
-            duration: 800
+            duration: 400
         },
 
         hide: {
             effect: "fade",
-            duration: 800
+            duration: 400
         }
     });
 

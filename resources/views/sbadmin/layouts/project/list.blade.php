@@ -14,11 +14,11 @@
                 <span class="fa fa-users"></span>
                 @endif
                 </td>
-                <td>
-                <a class="btn btn-xs btn-success" href="{{url('/projects')}}/{{$project->id}}" ><i class="far fa-folder-open"></i>  </a>
+                <td width="20%">
+                <a class="btn btn-xs btn-success" href="{{url('/projects')}}/{{$project->id}}" ><i class="far fa-folder-open"></i> @lang('general.open')  </a>
                 
                 @if ($project->user->id == Auth::user()->id)
-                <button class="edit-project-btn btn btn-info btn-xs" data-project-name="{{$project->name}}" data-desc="{{$project->desc}}" data-id = "{{$project->id}}"><i class="fa fa-edit"></i></button>
+                <button class="edit-project-btn btn btn-info btn-xs" data-project-name="{{$project->name}}" data-desc="{{$project->desc}}" data-id = "{{$project->id}}"><i class="fa fa-edit"></i> @lang('general.edit') </button>
                 @else
                 <span class="fa fa-lock"></span>
                 @endif
