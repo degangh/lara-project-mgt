@@ -33,8 +33,8 @@
         </div>
 </div>
 <script>
-jQuery(function(){
-    var ctrl = jQuery(".edit-project");
+$(function(){
+    var ctrl = $(".edit-project");
     
     ctrl.dialog({
         autoOpen:false,
@@ -42,8 +42,8 @@ jQuery(function(){
         width: '80%',
         maxWidth: 500,
         show: {
-            effect: "fade",
-            duration: 400
+            effect: "slide",
+            direction: "up"
         },
 
         hide: {
@@ -52,14 +52,14 @@ jQuery(function(){
         }
     });
 
-    jQuery(".edit-project-btn").on("click", function(){
+    $(".edit-project-btn").on("click", function(){
         ctrl.dialog("open");
-        ctrl.find("[name='name']").val(jQuery(this).data("project-name"));
-        ctrl.find("[name='desc']").val(jQuery(this).data("desc"));
-        $('#edit-project-form').attr('action', "{{url('/projects')}}/" + jQuery(this).data("id"))
+        ctrl.find("[name='name']").val($(this).data("project-name"));
+        ctrl.find("[name='desc']").val($(this).data("desc"));
+        $('#edit-project-form').attr('action', "{{url('/projects')}}/" + $(this).data("id"))
     });
 
-    jQuery(".save-project-btn").on("click", function(e){
+    $(".save-project-btn").on("click", function(e){
         $('#edit-project-form').submit();
     })
 })

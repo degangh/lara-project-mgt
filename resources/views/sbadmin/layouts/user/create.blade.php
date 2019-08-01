@@ -1,6 +1,6 @@
 <div class="row" style="margin-bottom:15px">
     <div class="col-md-12 pt-2">
-        <button class="btn btn-default create-user-btn btn-success pull-right pt-1 pb-1" >
+        <button class="btn btn-default create-user-btn btn-success btn-sm pull-right pt-1 pb-1" >
         <i class="fa fa-user"></i> @lang('user.create')
         </button>
     </div>
@@ -56,18 +56,18 @@
 </div>
 
 <script>
-jQuery(function(){
-    jQuery(".edit-user").dialog({
+$(function(){
+    $(".edit-user").dialog({
         width:650,
         autoOpen: false
     })
 
-    jQuery(".create-user-btn").on("click", function(){
-        jQuery(".edit-user").dialog("open");
+    $(".create-user-btn").on("click", function(){
+        $(".edit-user").dialog("open");
     })
 
-    jQuery(".save-user-btn").on("click", function(){
-        jQuery("[name='edit-user-form']").submit();
+    $(".save-user-btn").on("click", function(){
+        $("[name='edit-user-form']").submit();
     })
 })
 </script>

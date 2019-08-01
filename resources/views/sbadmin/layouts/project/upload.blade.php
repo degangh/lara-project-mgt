@@ -16,16 +16,16 @@
   </form>          
 </div>
 <script>
-jQuery(function(){
+$(function(){
     
-    //jQuery(".member-select").select2();
+    //$(".member-select").select2();
     
     
-    jQuery(".upload-btn").on("click", function(){
-        jQuery(".upload-file").dialog("open")
+    $(".upload-btn").on("click", function(){
+        $(".upload-file").dialog("open")
     })
 
-    jQuery(".upload-file").dialog({
+    $(".upload-file").dialog({
         autoOpen: false,
         modal: true,
         width: 'auto',

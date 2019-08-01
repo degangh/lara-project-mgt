@@ -39,11 +39,11 @@
 </div>
 
 <script>
-jQuery(function(){
+$(function(){
 
-    var form = jQuery("[name='create-project-form']");
+    var form = $("[name='create-project-form']");
 
-    jQuery(".create-project").dialog({
+    $(".create-project").dialog({
         autoOpen: false,
         mondal: true,
         width: "auto",
@@ -59,11 +59,11 @@ jQuery(function(){
         position: {my: "center", at: "center", of: window}
     });
 
-    jQuery(".create-project-btn").on("click", function(){
-        jQuery(".create-project").dialog("open")
+    $(".create-project-btn").on("click", function(){
+        $(".create-project").dialog("open")
     })
 
-    jQuery(".new-project-btn").on("click", function(e){
+    $(".new-project-btn").on("click", function(e){
         e.preventDefault();
         
         console.log("submit clicked");
@@ -75,16 +75,16 @@ jQuery(function(){
   
 
     /*
-       var: inputs: jQuery collections, include input textarea select etc...
+       var: inputs: $ collections, include input textarea select etc...
     */
     function validateForm(inputs)
     {
         var flag = true;
         
         inputs.each(function(){
-            if (jQuery(this).hasClass("required") && jQuery(this).val() == "")
+            if ($(this).hasClass("required") && $(this).val() == "")
             {
-                jQuery(this).parent().addClass("has-error");
+                $(this).parent().addClass("has-error");
                 flag = false;
             }
         })

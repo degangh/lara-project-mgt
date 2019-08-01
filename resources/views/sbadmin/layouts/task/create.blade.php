@@ -65,23 +65,23 @@
 </div>
 
     <script>
-jQuery(function(){
+$(function(){
 
     var form_error = [];
-    var form = jQuery("[name='create-task-form']");
+    var form = $("[name='create-task-form']");
 
-    jQuery("#assignee-select").select2({
+    $("#assignee-select").select2({
         theme: "classic",
         width: "resolve"
     });
 
     form.find("input").on("change",function(){
-        jQuery(this).parent().removeClass("has-error");
+        $(this).parent().removeClass("has-error");
     })
 
-    jQuery("#due-date").datepicker({"dateFormat": "yy-mm-dd"});
+    $("#due-date").datepicker({"dateFormat": "yy-mm-dd"});
 
-    jQuery(".create-task").dialog({
+    $(".create-task").dialog({
         autoOpen: false,
         modal: true,
         width: 'auto',
@@ -98,11 +98,11 @@ jQuery(function(){
         fluid: true
     })
 
-    jQuery(".create-task-btn").on("click",function(){
-        jQuery(".create-task").dialog("open");
+    $(".create-task-btn").on("click",function(){
+        $(".create-task").dialog("open");
     });
 
-    jQuery(".save-task-btn").on("click", function(e){
+    $(".save-task-btn").on("click", function(e){
         e.preventDefault();
         
         console.log("submit clicked");
@@ -113,16 +113,16 @@ jQuery(function(){
     })
 
     /*
-       var: inputs: jQuery collections, include input textarea select etc...
+       var: inputs: $ collections, include input textarea select etc...
     */
     function validateForm(inputs)
     {
         var flag = true;
         
         inputs.each(function(){
-            if (jQuery(this).hasClass("required") && jQuery(this).val() == "")
+            if ($(this).hasClass("required") && $(this).val() == "")
             {
-                jQuery(this).parent().addClass("has-error");
+                $(this).parent().addClass("has-error");
                 flag = false;
             }
         })
