@@ -24,18 +24,18 @@
     {{csrf_field()}}
     {{method_field('PATCH')}}
     @if($user->is_active == 1)
-    <button class='btn btn-outline-secondary btn-sm'>
+    <button class='btn btn-danger btn-xs'>
     @lang('user.deactivate')
     </button>
     @else
-    <button class='btn btn-outline-secondary btn-sm'>
+    <button class='btn btn-danger btn-xs'>
     @lang('user.recover')
     </button>
     @endif
     </form>
     </td>
     <td>
-        <a href="/act/{{$user->id}}" class="btn btn-outline-secondary btn-sm">@lang('user.delegate')</a>
+        <a href="/act/{{$user->id}}" class="btn btn-warning btn-xs">@lang('user.delegate')</a>
     
     </tr>
     @endforeach
