@@ -18,6 +18,7 @@
     
     <!-- Custom styles for this template-->
     <link href="{{ asset('sbadmin/css/sbadmin/sb-admin.css') }}" rel="stylesheet">
+    <link id="favicon" rel="icon" type="image/x-icon" href="/favicon.ico">
 
   </head>
 

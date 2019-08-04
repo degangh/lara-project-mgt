@@ -19,6 +19,7 @@
     <script src="{{ asset('js/app.js') }}"></script>
     
     <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
+    <link id="favicon" rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
 <body>
     <div id="app">
