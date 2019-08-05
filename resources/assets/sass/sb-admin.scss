@@ -10,3 +10,8 @@ $sticky-footer-height: 35px;
 @import "~startbootstrap-sb-admin/scss/_cards.scss";
 @import "~startbootstrap-sb-admin/scss/_login.scss";
 @import "~startbootstrap-sb-admin/scss/_footer.scss";
+
+:root {
+    --input-padding-x: 0.5rem;
+    --input-padding-y: 0.5rem;
+}

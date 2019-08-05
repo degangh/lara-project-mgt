@@ -367,3 +367,8 @@ body.sidebar-toggled footer.sticky-footer {
     width: calc(100% - 90px);
   }
 }
+
+:root {
+  --input-padding-x: 0.5rem;
+  --input-padding-y: 0.5rem;
+}
