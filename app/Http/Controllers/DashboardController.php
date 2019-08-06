@@ -18,7 +18,6 @@ class DashboardController extends Controller
     //
     public function __construct(ProjectRepository $projects, TaskRepository $tasks)
     {
-        $this->middleware('auth');
         $this->projects = $projects;
         $this->tasks = $tasks;
     }

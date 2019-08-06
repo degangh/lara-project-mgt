@@ -16,7 +16,6 @@ class NotificationController extends Controller
     
     public function __construct(NotificationRepository $notification, TaskRepository $task)
     {
-         $this->middleware('auth');
          $this->notification = $notification;
          $this->task = $task;
     }
