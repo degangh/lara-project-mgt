@@ -20,7 +20,7 @@
     {{ $user->is_active ? __('user.activated') : __('user.deactivated')}}
     </td>
     <td class="10%">
-    <form method='post' action="{{url('/users/')}}/{{$user->id}}/{{$user->is_ative == 0 ? 'activate' : 'deactivate'}}">
+    <form method='post' action="{{url('/users/')}}/{{$user->id}}/{{$user->is_active == 0 ? 'activate' : 'deactivate'}}">
     {{csrf_field()}}
     {{method_field('PATCH')}}
     @if($user->is_active == 1)
@@ -28,7 +28,7 @@
     @lang('user.deactivate')
     </button>
     @else
-    <button class='btn btn-danger btn-xs'>
+    <button class='btn btn-success btn-xs'>
     @lang('user.recover')
     </button>
     @endif
