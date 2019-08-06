@@ -10,14 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', 'DashboardController@index');
-
-
-
 Auth::routes();
 
 Route::middleware('auth')->group(function(){
+    Route::get('/', 'DashboardController@index');
     Route::resource('tasks', 'TaskController');
     Route::resource('users', 'UserController');
     Route::get('act/{user}', 'SettingController@loginAs');
